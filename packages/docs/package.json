@@ -1,0 +1,33 @@
+{
+  "name": "@you-uniapp/docs",
+  "version": "1.0.0",
+  "description": "You-UniApp UI 文档站点",
+  "private": true,
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "preview": "serve storybook-static",
+    "test": "test-storybook"
+  },
+  "dependencies": {
+    "@you-uniapp/ui-core": "workspace:*",
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.0",
+    "@storybook/addon-interactions": "^7.6.0",
+    "@storybook/addon-links": "^7.6.0",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.0",
+    "@storybook/test": "^7.6.0",
+    "@storybook/test-runner": "^0.16.0",
+    "@storybook/vue3": "^7.6.0",
+    "@storybook/vue3-vite": "^7.6.0",
+    "@vitejs/plugin-vue": "^4.5.0",
+    "sass": "^1.77.0",
+    "serve": "^14.2.1",
+    "storybook": "^7.6.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  }
+}

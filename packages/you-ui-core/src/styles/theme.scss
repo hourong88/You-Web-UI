@@ -1,0 +1,150 @@
+// You-UniApp UI CSS 变量定义 - 用于主题化支持
+
+:root {
+  // ==================== 颜色系统 CSS 变量 ====================
+  // 主色调
+  --you-color-primary: #{$color-primary};
+  --you-color-primary-light: #{$color-primary-light};
+  --you-color-primary-dark: #{$color-primary-dark};
+
+  // 辅助色
+  --you-color-success: #{$color-success};
+  --you-color-warning: #{$color-warning};
+  --you-color-danger: #{$color-danger};
+  --you-color-info: #{$color-info};
+
+  // 中性色
+  --you-color-white: #{$color-white};
+  --you-color-black: #{$color-black};
+  --you-color-gray-50: #{$color-gray-50};
+  --you-color-gray-100: #{$color-gray-100};
+  --you-color-gray-200: #{$color-gray-200};
+  --you-color-gray-300: #{$color-gray-300};
+  --you-color-gray-400: #{$color-gray-400};
+  --you-color-gray-500: #{$color-gray-500};
+  --you-color-gray-600: #{$color-gray-600};
+  --you-color-gray-700: #{$color-gray-700};
+  --you-color-gray-800: #{$color-gray-800};
+  --you-color-gray-900: #{$color-gray-900};
+
+  // 文本颜色
+  --you-color-text-primary: #{$color-text-primary};
+  --you-color-text-secondary: #{$color-text-secondary};
+  --you-color-text-disabled: #{$color-text-disabled};
+  --you-color-text-inverse: #{$color-text-inverse};
+
+  // 背景色
+  --you-color-bg-primary: #{$color-bg-primary};
+  --you-color-bg-secondary: #{$color-bg-secondary};
+  --you-color-bg-disabled: #{$color-bg-disabled};
+
+  // 边框色
+  --you-color-border-primary: #{$color-border-primary};
+  --you-color-border-secondary: #{$color-border-secondary};
+
+  // ==================== 字体系统 CSS 变量 ====================
+  // 字体族
+  --you-font-family-base: #{$font-family-base};
+  --you-font-family-mono: #{$font-family-mono};
+
+  // 字体大小
+  --you-font-size-xs: #{$font-size-xs};
+  --you-font-size-sm: #{$font-size-sm};
+  --you-font-size-base: #{$font-size-base};
+  --you-font-size-md: #{$font-size-md};
+  --you-font-size-lg: #{$font-size-lg};
+  --you-font-size-xl: #{$font-size-xl};
+  --you-font-size-2xl: #{$font-size-2xl};
+  --you-font-size-3xl: #{$font-size-3xl};
+
+  // 行高
+  --you-line-height-xs: #{$line-height-xs};
+  --you-line-height-sm: #{$line-height-sm};
+  --you-line-height-base: #{$line-height-base};
+  --you-line-height-md: #{$line-height-md};
+  --you-line-height-lg: #{$line-height-lg};
+
+  // 字重
+  --you-font-weight-light: #{$font-weight-light};
+  --you-font-weight-normal: #{$font-weight-normal};
+  --you-font-weight-medium: #{$font-weight-medium};
+  --you-font-weight-semibold: #{$font-weight-semibold};
+  --you-font-weight-bold: #{$font-weight-bold};
+
+  // ==================== 间距系统 CSS 变量 ====================
+  --you-spacing-xs: #{$spacing-xs};
+  --you-spacing-sm: #{$spacing-sm};
+  --you-spacing-base: #{$spacing-base};
+  --you-spacing-md: #{$spacing-md};
+  --you-spacing-lg: #{$spacing-lg};
+  --you-spacing-xl: #{$spacing-xl};
+  --you-spacing-2xl: #{$spacing-2xl};
+  --you-spacing-3xl: #{$spacing-3xl};
+  --you-spacing-4xl: #{$spacing-4xl};
+
+  // ==================== 圆角系统 CSS 变量 ====================
+  --you-border-radius-none: #{$border-radius-none};
+  --you-border-radius-xs: #{$border-radius-xs};
+  --you-border-radius-sm: #{$border-radius-sm};
+  --you-border-radius-base: #{$border-radius-base};
+  --you-border-radius-md: #{$border-radius-md};
+  --you-border-radius-lg: #{$border-radius-lg};
+  --you-border-radius-xl: #{$border-radius-xl};
+  --you-border-radius-2xl: #{$border-radius-2xl};
+  --you-border-radius-full: #{$border-radius-full};
+
+  // ==================== 阴影系统 CSS 变量 ====================
+  --you-box-shadow-xs: #{$box-shadow-xs};
+  --you-box-shadow-sm: #{$box-shadow-sm};
+  --you-box-shadow-base: #{$box-shadow-base};
+  --you-box-shadow-md: #{$box-shadow-md};
+  --you-box-shadow-lg: #{$box-shadow-lg};
+  --you-box-shadow-xl: #{$box-shadow-xl};
+
+  // ==================== 边框系统 CSS 变量 ====================
+  --you-border-width-none: #{$border-width-none};
+  --you-border-width-thin: #{$border-width-thin};
+  --you-border-width-base: #{$border-width-base};
+  --you-border-width-thick: #{$border-width-thick};
+
+  // ==================== 组件尺寸 CSS 变量 ====================
+  // 按钮高度
+  --you-button-height-sm: #{$button-height-sm};
+  --you-button-height-base: #{$button-height-base};
+  --you-button-height-lg: #{$button-height-lg};
+
+  // 输入框高度
+  --you-input-height-sm: #{$input-height-sm};
+  --you-input-height-base: #{$input-height-base};
+  --you-input-height-lg: #{$input-height-lg};
+
+  // ==================== 动画系统 CSS 变量 ====================
+  --you-transition-duration-fast: #{$transition-duration-fast};
+  --you-transition-duration-base: #{$transition-duration-base};
+  --you-transition-duration-slow: #{$transition-duration-slow};
+
+  --you-transition-timing-function-ease: #{$transition-timing-function-ease};
+  --you-transition-timing-function-ease-in: #{$transition-timing-function-ease-in};
+  --you-transition-timing-function-ease-out: #{$transition-timing-function-ease-out};
+  --you-transition-timing-function-ease-in-out: #{$transition-timing-function-ease-in-out};
+
+  // ==================== Z-index 层级 CSS 变量 ====================
+  --you-z-index-dropdown: #{$z-index-dropdown};
+  --you-z-index-sticky: #{$z-index-sticky};
+  --you-z-index-fixed: #{$z-index-fixed};
+  --you-z-index-modal-backdrop: #{$z-index-modal-backdrop};
+  --you-z-index-modal: #{$z-index-modal};
+  --you-z-index-popover: #{$z-index-popover};
+  --you-z-index-tooltip: #{$z-index-tooltip};
+  --you-z-index-toast: #{$z-index-toast};
+}
+
+// 暗色主题
+[data-theme="dark"] {
+  --you-color-text-primary: #{$color-white};
+  --you-color-text-secondary: #{$color-gray-300};
+  --you-color-bg-primary: #{$color-gray-900};
+  --you-color-bg-secondary: #{$color-gray-800};
+  --you-color-border-primary: #{$color-gray-700};
+  --you-color-border-secondary: #{$color-gray-800};
+}
