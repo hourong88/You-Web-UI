@@ -1,7 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/vue3'
 import { YButton } from '@you-uniapp/ui-core'
 
-const meta: Meta<typeof YButton> = {
+export default {
   title: '基础组件/Button 按钮',
   component: YButton,
   parameters: {
@@ -58,18 +57,15 @@ const meta: Meta<typeof YButton> = {
   }
 }
 
-export default meta
-type Story = StoryObj<typeof meta>
-
 // 基础用法
-export const Default: Story = {
+export const Default = {
   args: {
     text: '默认按钮'
   }
 }
 
 // 按钮类型
-export const Types: Story = {
+export const Types = {
   render: () => ({
     components: { YButton },
     template: `
@@ -93,7 +89,7 @@ export const Types: Story = {
 }
 
 // 朴素按钮
-export const Plain: Story = {
+export const Plain = {
   render: () => ({
     components: { YButton },
     template: `
@@ -117,7 +113,7 @@ export const Plain: Story = {
 }
 
 // 按钮尺寸
-export const Sizes: Story = {
+export const Sizes = {
   render: () => ({
     components: { YButton },
     template: `
@@ -138,7 +134,7 @@ export const Sizes: Story = {
 }
 
 // 圆角和圆形按钮
-export const Shapes: Story = {
+export const Shapes = {
   render: () => ({
     components: { YButton },
     template: `
@@ -159,7 +155,7 @@ export const Shapes: Story = {
 }
 
 // 禁用状态
-export const Disabled: Story = {
+export const Disabled = {
   render: () => ({
     components: { YButton },
     template: `
@@ -181,7 +177,7 @@ export const Disabled: Story = {
 }
 
 // 加载状态
-export const Loading: Story = {
+export const Loading = {
   render: () => ({
     components: { YButton },
     template: `
@@ -201,7 +197,7 @@ export const Loading: Story = {
 }
 
 // 块级按钮
-export const Block: Story = {
+export const Block = {
   render: () => ({
     components: { YButton },
     template: `
