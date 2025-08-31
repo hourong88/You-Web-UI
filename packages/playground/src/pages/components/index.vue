@@ -1,32 +1,35 @@
 <template>
-  <view class="container">
-    <view class="header">
-      <text class="title">组件展示</text>
-      <text class="subtitle">You-UniApp UI 组件库</text>
-    </view>
+  <div class="container">
+    <div class="header">
+      <h1 class="title">组件展示</h1>
+      <p class="subtitle">You-UniApp UI 组件库</p>
+    </div>
     
-    <view class="content">
-      <view class="category" v-for="category in componentCategories" :key="category.name">
-        <text class="category-title">{{ category.name }}</text>
-        <view class="component-grid">
-          <view 
+    <div class="content">
+      <div class="category" v-for="category in componentCategories" :key="category.name">
+        <h2 class="category-title">{{ category.name }}</h2>
+        <div class="component-grid">
+          <div 
             class="component-card" 
             v-for="component in category.components" 
             :key="component.name"
             @click="navigateToComponent(component)"
           >
-            <view class="component-icon">{{ component.icon }}</view>
-            <text class="component-name">{{ component.name }}</text>
-            <text class="component-desc">{{ component.desc }}</text>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>
+            <div class="component-icon">{{ component.icon }}</div>
+            <h3 class="component-name">{{ component.name }}</h3>
+            <p class="component-desc">{{ component.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 interface Component {
   name: string
@@ -44,7 +47,7 @@ const componentCategories = ref<Category[]>([
   {
     name: '基础组件',
     components: [
-      { name: 'Button', desc: '按钮组件', icon: '🔘' },
+      { name: 'Button', desc: '按钮组件', icon: '🔘', path: '/button' },
       { name: 'Icon', desc: '图标组件', icon: '⭐' },
       { name: 'Text', desc: '文本组件', icon: '📝' },
       { name: 'Image', desc: '图片组件', icon: '🖼️' }
@@ -100,102 +103,100 @@ const componentCategories = ref<Category[]>([
 ])
 
 const navigateToComponent = (component: Component) => {
-  uni.showToast({
-    title: `${component.name} 组件演示`,
-    icon: 'none'
-  })
-  // 这里可以导航到具体的组件演示页面
-  // uni.navigateTo({
-  //   url: `/pages/demo/${component.name.toLowerCase()}`
-  // })
+  if (component.path) {
+    router.push(component.path)
+  } else {
+    alert(`${component.name} 组件演示页面开发中`)
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .container {
-  padding: 20rpx;
+  padding: 20px;
   background-color: #f5f5f5;
   min-height: 100vh;
 }
 
 .header {
   text-align: center;
-  padding: 40rpx 0;
+  padding: 40px 0;
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  border-radius: 20rpx;
-  margin-bottom: 40rpx;
+  border-radius: 20px;
+  margin-bottom: 40px;
   color: white;
 }
 
 .title {
-  font-size: 44rpx;
+  font-size: 44px;
   font-weight: bold;
   display: block;
-  margin-bottom: 16rpx;
+  margin-bottom: 16px;
 }
 
 .subtitle {
-  font-size: 26rpx;
+  font-size: 26px;
   opacity: 0.8;
   display: block;
 }
 
 .content {
-  padding: 0 20rpx;
+  padding: 0 20px;
 }
 
 .category {
-  margin-bottom: 60rpx;
+  margin-bottom: 60px;
 }
 
 .category-title {
-  font-size: 32rpx;
+  font-size: 32px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 30rpx;
+  margin-bottom: 30px;
   display: block;
-  padding-left: 20rpx;
-  border-left: 6rpx solid #4facfe;
+  padding-left: 20px;
+  border-left: 6px solid #4facfe;
 }
 
 .component-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300rpx, 1fr));
-  gap: 20rpx;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .component-card {
   background: white;
-  border-radius: 16rpx;
-  padding: 30rpx;
+  border-radius: 16px;
+  padding: 30px;
   text-align: center;
-  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.2s;
-  border: 2rpx solid transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
 }
 
-.component-card:active {
-  transform: translateY(-4rpx);
-  box-shadow: 0 8rpx 30rpx rgba(0, 0, 0, 0.12);
+.component-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   border-color: #4facfe;
 }
 
 .component-icon {
-  font-size: 60rpx;
-  margin-bottom: 20rpx;
+  font-size: 60px;
+  margin-bottom: 20px;
   display: block;
 }
 
 .component-name {
-  font-size: 28rpx;
+  font-size: 28px;
   font-weight: bold;
   color: #333;
   display: block;
-  margin-bottom: 12rpx;
+  margin-bottom: 12px;
 }
 
 .component-desc {
-  font-size: 24rpx;
+  font-size: 24px;
   color: #666;
   display: block;
 }

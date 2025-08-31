@@ -1,5 +1,4 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
     "target": "esnext",
     "useDefineForClassFields": true,
@@ -12,22 +11,18 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
-    "noEmit": true,
+    "noEmit": false,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
+    "outDir": "dist",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/utils/*": ["./src/utils/*"]
-    },
-    "types": [
-      "@dcloudio/types",
-      "@types/wechat-miniprogram",
-      "@uni-helper/uni-app-types"
-    ]
+    }
   },
   "include": [
     "src/**/*.ts",

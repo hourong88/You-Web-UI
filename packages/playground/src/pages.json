@@ -11,6 +11,12 @@
       "style": {
         "navigationBarTitleText": "组件展示"
       }
+    },
+    {
+      "path": "pages/button/index",
+      "style": {
+        "navigationBarTitleText": "Button 按钮"
+      }
     }
   ],
   "globalStyle": {

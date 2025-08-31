@@ -1,120 +1,122 @@
 <template>
-  <view class="container">
-    <view class="header">
-      <text class="title">You-UniApp UI Playground</text>
-      <text class="subtitle">组件库演示项目</text>
-    </view>
+  <div class="container">
+    <div class="header">
+      <h1 class="title">You-UniApp UI Playground</h1>
+      <p class="subtitle">组件库演示项目</p>
+    </div>
     
-    <view class="content">
-      <view class="section">
-        <text class="section-title">快速开始</text>
-        <view class="card-list">
-          <view class="card" @click="navigateToComponents">
-            <text class="card-title">组件展示</text>
-            <text class="card-desc">查看所有可用的UI组件</text>
-          </view>
+    <div class="content">
+      <div class="section">
+        <h2 class="section-title">快速开始</h2>
+        <div class="card-list">
+          <div class="card" @click="navigateToComponents">
+            <h3 class="card-title">组件展示</h3>
+            <p class="card-desc">查看所有可用的UI组件</p>
+          </div>
           
-          <view class="card">
-            <text class="card-title">设计规范</text>
-            <text class="card-desc">了解设计系统和使用规范</text>
-          </view>
+          <div class="card">
+            <h3 class="card-title">设计规范</h3>
+            <p class="card-desc">了解设计系统和使用规范</p>
+          </div>
           
-          <view class="card">
-            <text class="card-title">开发指南</text>
-            <text class="card-desc">学习如何使用和定制组件</text>
-          </view>
-        </view>
-      </view>
+          <div class="card">
+            <h3 class="card-title">开发指南</h3>
+            <p class="card-desc">学习如何使用和定制组件</p>
+          </div>
+        </div>
+      </div>
       
-      <view class="section">
-        <text class="section-title">特性</text>
-        <view class="feature-list">
-          <view class="feature-item">
-            <text class="feature-icon">🎨</text>
-            <text class="feature-text">现代化设计系统</text>
-          </view>
-          <view class="feature-item">
-            <text class="feature-icon">📱</text>
-            <text class="feature-text">多端适配</text>
-          </view>
-          <view class="feature-item">
-            <text class="feature-icon">⚡</text>
-            <text class="feature-text">高性能优化</text>
-          </view>
-          <view class="feature-item">
-            <text class="feature-icon">🔧</text>
-            <text class="feature-text">TypeScript 支持</text>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>
+      <div class="section">
+        <h2 class="section-title">特性</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">🎨</span>
+            <span class="feature-text">现代化设计系统</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📱</span>
+            <span class="feature-text">多端适配</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">⚡</span>
+            <span class="feature-text">高性能优化</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🔧</span>
+            <span class="feature-text">TypeScript 支持</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 const navigateToComponents = () => {
-  uni.navigateTo({
-    url: '/pages/components/index'
-  })
+  router.push('/components')
 }
 </script>
 
 <style lang="scss" scoped>
 .container {
-  padding: 20rpx;
+  padding: 20px;
   background-color: #f5f5f5;
   min-height: 100vh;
 }
 
 .header {
   text-align: center;
-  padding: 60rpx 0;
+  padding: 60px 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 20rpx;
-  margin-bottom: 40rpx;
+  border-radius: 20px;
+  margin-bottom: 40px;
   color: white;
 }
 
 .title {
-  font-size: 48rpx;
+  font-size: 48px;
   font-weight: bold;
   display: block;
-  margin-bottom: 20rpx;
+  margin-bottom: 20px;
 }
 
 .subtitle {
-  font-size: 28rpx;
+  font-size: 28px;
   opacity: 0.8;
   display: block;
 }
 
 .content {
-  padding: 0 20rpx;
+  padding: 0 20px;
 }
 
 .section {
-  margin-bottom: 60rpx;
+  margin-bottom: 60px;
 }
 
 .section-title {
-  font-size: 36rpx;
+  font-size: 36px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 30rpx;
+  margin-bottom: 30px;
   display: block;
 }
 
 .card-list {
   display: flex;
   flex-direction: column;
-  gap: 20rpx;
+  gap: 20px;
 }
 
 .card {
   background: white;
-  border-radius: 16rpx;
-  padding: 40rpx;
-  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
 
@@ -123,11 +125,11 @@ const navigateToComponents = () => {
 }
 
 .card-title {
-  font-size: 32rpx;
+  font-size: 32px;
   font-weight: bold;
   color: #333;
   display: block;
-  margin-bottom: 16rpx;
+  margin-bottom: 16px;
 }
 
 .card-desc {
@@ -144,18 +146,18 @@ const navigateToComponents = () => {
 
 .feature-item {
   flex: 1;
-  min-width: 300rpx;
+  min-width: 300px;
   background: white;
-  border-radius: 16rpx;
-  padding: 30rpx;
+  border-radius: 16px;
+  padding: 30px;
   text-align: center;
-  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .feature-icon {
-  font-size: 48rpx;
+  font-size: 48px;
   display: block;
-  margin-bottom: 16rpx;
+  margin-bottom: 16px;
 }
 
 .feature-text {

@@ -1,6 +1,6 @@
 // You-UniApp UI 工具函数
 
-import type { ComponentSize, ComponentSizeAlias } from '../types'
+import type { ComponentSize, ComponentSizeAlias } from '../types/index.js'
 
 /**
  * 判断是否为开发环境
@@ -147,7 +147,7 @@ export const merge = <T extends Record<string, any>>(
     for (const key in source) {
       if (isObject(source[key])) {
         if (!target[key]) Object.assign(target, { [key]: {} })
-        merge(target[key], source[key])
+        merge(target[key], source[key] as Partial<T[Extract<keyof T, string>]>)
       } else {
         Object.assign(target, { [key]: source[key] })
       }
@@ -203,42 +203,7 @@ export const addUnit = (value: string | number, unit = 'px'): string => {
   return value as string
 }
 
-/**
- * 获取系统信息
- */
-export const getSystemInfo = (): Promise<UniApp.GetSystemInfoResult> => {
-  return new Promise((resolve, reject) => {
-    uni.getSystemInfo({
-      success: resolve,
-      fail: reject
-    })
-  })
-}
-
-/**
- * 显示 Toast
- */
-export const showToast = (options: {
-  title: string
-  icon?: 'success' | 'error' | 'loading' | 'none'
-  duration?: number
-  mask?: boolean
-}): Promise<void> => {
-  return new Promise((resolve, reject) => {
-    uni.showToast({
-      ...options,
-      success: () => resolve(),
-      fail: reject
-    })
-  })
-}
-
-/**
- * 隐藏 Toast
- */
-export const hideToast = (): void => {
-  uni.hideToast()
-}
+// UniApp specific utilities removed for component library compatibility
 
 /**
  * 日志工具

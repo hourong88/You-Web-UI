@@ -42,6 +42,37 @@
   --you-color-border-primary: #{$color-border-primary};
   --you-color-border-secondary: #{$color-border-secondary};
 
+  // ==================== 按钮组件专用变量 (--y-color-*) ====================
+  // 主色调
+  --y-color-primary: #{$color-primary};
+  --y-color-primary-light: #{$color-primary-light};
+  --y-color-primary-dark: #{$color-primary-dark};
+
+  // 辅助色
+  --y-color-success: #{$color-success};
+  --y-color-success-light: #{lighten($color-success, 10%)};
+  --y-color-success-dark: #{darken($color-success, 10%)};
+  --y-color-warning: #{$color-warning};
+  --y-color-warning-light: #{lighten($color-warning, 10%)};
+  --y-color-warning-dark: #{darken($color-warning, 10%)};
+  --y-color-danger: #{$color-danger};
+  --y-color-danger-light: #{lighten($color-danger, 10%)};
+  --y-color-danger-dark: #{darken($color-danger, 10%)};
+  --y-color-info: #{$color-info};
+  --y-color-info-light: #{lighten($color-info, 10%)};
+  --y-color-info-dark: #{darken($color-info, 10%)};
+
+  // 中性色
+  --y-color-white: #{$color-white};
+  --y-color-black: #{$color-black};
+  --y-color-gray-1: #{$color-gray-100};
+
+  // 文本颜色
+  --y-color-text-primary: #{$color-text-primary};
+
+  // 边框色
+  --y-color-border: #{$color-border-primary};
+
   // ==================== 字体系统 CSS 变量 ====================
   // 字体族
   --you-font-family-base: #{$font-family-base};

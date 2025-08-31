@@ -1,18 +1,19 @@
 import { defineConfig } from 'vite'
-import uni from '@dcloudio/vite-plugin-uni'
+import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [uni()],
+  plugins: [vue()],
   resolve: {
     alias: {
-      '@': '/src'
+      '@': resolve(__dirname, 'src')
     }
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "@/uni.scss";'
+        additionalData: '@import "@/styles/variables.scss";'
       }
     }
   },

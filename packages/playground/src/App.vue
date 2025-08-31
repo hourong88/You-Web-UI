@@ -1,37 +1,28 @@
 <template>
-  <view id="app">
+  <div id="app">
     <router-view />
-  </view>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { onLaunch, onShow, onHide } from '@dcloudio/uni-app'
-
-// 应用生命周期
-onLaunch(() => {
-  console.log('App Launch')
-})
-
-onShow(() => {
-  console.log('App Show')
-})
-
-onHide(() => {
-  console.log('App Hide')
-})
+// Vue 应用生命周期
+console.log('App mounted')
 </script>
 
 <style lang="scss">
-/* @import '@you-uniapp/ui-core/dist/index.css'; */
+@import '@you-uniapp/ui-core/dist/style.css';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
 /* 全局样式 */
-page {
-  background-color: #f5f5f5;
+body {
+  margin: 0;
+  padding: 0;
 }
 </style>
