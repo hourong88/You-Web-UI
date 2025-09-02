@@ -17,6 +17,18 @@
       "style": {
         "navigationBarTitleText": "Button 按钮"
       }
+    },
+    {
+      "path": "pages/input/index",
+      "style": {
+        "navigationBarTitleText": "Input 输入框"
+      }
+    },
+    {
+      "path": "pages/utils/index",
+      "style": {
+        "navigationBarTitleText": "工具函数演示"
+      }
     }
   ],
   "globalStyle": {

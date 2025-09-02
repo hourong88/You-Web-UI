@@ -205,13 +205,13 @@ const handleTouchEnd = () => {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 0 16px;
-  height: 44px;
-  font-size: 16px;
+  padding: 0 $spacing-lg; // 32rpx
+  height: $button-height-base; // 88rpx
+  font-size: $font-size-md; // 32rpx
   line-height: 1;
   text-align: center;
-  border: 1px solid transparent;
-  border-radius: 4px;
+  border: $border-width-thin solid transparent; // 2rpx
+  border-radius: $border-radius-sm; // 8rpx
   cursor: pointer;
   transition: all 0.3s;
   overflow: hidden;
@@ -232,33 +232,33 @@ const handleTouchEnd = () => {
     font-size: inherit;
     
     &:not(:only-child) {
-      margin: 0 4px;
+      margin: 0 $spacing-xs; // 8rpx
     }
   }
 
   &__loading-icon {
     display: flex;
     align-items: center;
-    margin-right: 8px;
+    margin-right: $spacing-sm; // 16rpx
   }
 
   &__loading-spinner {
-    width: 16px;
-    height: 16px;
-    border: 2px solid currentColor;
+    width: 32rpx;
+    height: 32rpx;
+    border: $border-width-base solid currentColor; // 4rpx
     border-top-color: transparent;
     border-radius: 50%;
     animation: y-button-spin 1s linear infinite;
   }
 
   &__loading-text {
-    margin-left: 4px;
+    margin-left: $spacing-xs; // 8rpx
   }
 
   &__ripple-circle {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 40rpx;
+    height: 40rpx;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.6);
     transform: scale(0);
@@ -388,41 +388,41 @@ const handleTouchEnd = () => {
 
   // 尺寸样式
   &--large {
-    height: 50px;
-    padding: 0 20px;
-    font-size: 18px;
+    height: $button-height-large; // 100rpx
+    padding: 0 $spacing-xl; // 40rpx
+    font-size: $font-size-lg; // 36rpx
   }
 
   &--mini {
-    height: 32px;
-    padding: 0 12px;
-    font-size: 14px;
+    height: $button-height-mini; // 64rpx
+    padding: 0 $spacing-base; // 24rpx
+    font-size: $font-size-sm; // 28rpx
   }
 
   // 形状样式
   &--round {
-    border-radius: 22px;
+    border-radius: 44rpx;
 
     &.y-button--large {
-      border-radius: 25px;
+      border-radius: 50rpx;
     }
 
     &.y-button--mini {
-      border-radius: 16px;
+      border-radius: 32rpx;
     }
   }
 
   &--circle {
-    width: 44px;
+    width: $button-height-base; // 88rpx
     padding: 0;
     border-radius: 50%;
 
     &.y-button--large {
-      width: 50px;
+      width: $button-height-large; // 100rpx
     }
 
     &.y-button--mini {
-      width: 32px;
+      width: $button-height-mini; // 64rpx
     }
   }
 

@@ -5,12 +5,14 @@ import App from './App.vue'
 // 导入页面组件
 import Home from './pages/index/index.vue'
 import Button from './pages/button/index.vue'
+import Input from './pages/input/index.vue'
 import Components from './pages/components/index.vue'
 
 // 创建路由
 const routes = [
   { path: '/', component: Home },
   { path: '/button', component: Button },
+  { path: '/input', component: Input },
   { path: '/components', component: Components }
 ]
 

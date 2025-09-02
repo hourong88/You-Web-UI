@@ -35,39 +35,99 @@
  
  /* 尺寸变量 */ 
  
- /* 文字尺寸 */ 
- $font-size-sm: 12px; 
- $font-size-base: 14px; 
- $font-size-lg: 16px; 
+ /* 文字尺寸 (基于750rpx设计稿标准) */ 
+$font-size-sm: 24rpx; 
+$font-size-base: 28rpx; 
+$font-size-lg: 32rpx;
+
+/* 兼容px单位 */
+$font-size-sm-px: 12px; 
+$font-size-base-px: 14px; 
+$font-size-lg-px: 16px; 
  
- /* 图片尺寸 */ 
- $img-size-sm: 20px; 
- $img-size-base: 26px; 
- $img-size-lg: 40px; 
+ /* 图片尺寸 (基于750rpx设计稿标准) */ 
+$img-size-sm: 40rpx; 
+$img-size-base: 52rpx; 
+$img-size-lg: 80rpx;
+
+/* 兼容px单位 */
+$img-size-sm-px: 20px; 
+$img-size-base-px: 26px; 
+$img-size-lg-px: 40px; 
  
- /* Border Radius */ 
- $border-radius-sm: 2px; 
- $border-radius-base: 3px; 
- $border-radius-lg: 6px; 
- $border-radius-circle: 50%; 
+ /* Border Radius (基于750rpx设计稿标准) */ 
+$border-radius-sm: 8rpx; 
+$border-radius-base: 12rpx; 
+$border-radius-md: 16rpx;
+$border-radius-lg: 24rpx; 
+$border-radius-circle: 50%;
+
+/* 兼容px单位 */
+$border-radius-sm-px: 4px; 
+$border-radius-base-px: 6px; 
+$border-radius-md-px: 8px;
+$border-radius-lg-px: 12px; 
  
- /* 水平间距 */ 
- $spacing-row-sm: 5px; 
- $spacing-row-base: 10px; 
- $spacing-row-lg: 15px; 
+ /* 间距变量 (基于750rpx设计稿标准) */
+$spacing-xs: 8rpx;
+$spacing-sm: 16rpx;
+$spacing-base: 24rpx;
+$spacing-md: 32rpx;
+$spacing-lg: 40rpx;
+$spacing-xl: 48rpx;
+
+/* 水平间距 (基于750rpx设计稿标准) */ 
+$spacing-row-sm: 10rpx; 
+$spacing-row-base: 20rpx; 
+$spacing-row-lg: 30rpx; 
  
- /* 垂直间距 */ 
- $spacing-col-sm: 4px; 
- $spacing-col-base: 8px; 
- $spacing-col-lg: 12px; 
+/* 垂直间距 (基于750rpx设计稿标准) */ 
+$spacing-col-sm: 8rpx; 
+$spacing-col-base: 16rpx; 
+$spacing-col-lg: 24rpx;
+
+/* 兼容px单位 */
+$spacing-xs-px: 4px;
+$spacing-sm-px: 8px;
+$spacing-base-px: 12px;
+$spacing-md-px: 16px;
+$spacing-lg-px: 20px;
+$spacing-xl-px: 24px;
+$spacing-row-sm-px: 5px; 
+$spacing-row-base-px: 10px; 
+$spacing-row-lg-px: 15px;
+$spacing-col-sm-px: 4px; 
+$spacing-col-base-px: 8px; 
+$spacing-col-lg-px: 12px; 
  
- /* 透明度 */ 
- $opacity-disabled: 0.3; // 组件禁用态的透明度 
+ /* 边框宽度 (基于750rpx设计稿标准) */
+$border-width-thin: 2rpx;
+$border-width-base: 4rpx;
+$border-width-thick: 6rpx;
+
+/* 组件尺寸 (基于750rpx设计稿标准) */
+$button-height-mini: 64rpx;
+$button-height-base: 88rpx;
+$button-height-large: 100rpx;
+$input-height-base: 88rpx;
+
+/* 字体尺寸扩展 (基于750rpx设计稿标准) */
+$font-size-xs: 20rpx;
+$font-size-md: 32rpx;
+$font-size-xl: 36rpx;
+
+/* 透明度 */ 
+$opacity-disabled: 0.3; // 组件禁用态的透明度 
  
- /* 文章场景相关 */ 
- $color-title: #2C405A; // 文章标题颜色 
- $font-size-title: 20px; 
- $color-subtitle: #555555; // 二级标题颜色 
- $font-size-subtitle: 18px; 
- $color-paragraph: #3F536E; // 文章段落颜色 
- $font-size-paragraph: 15px;
+ /* 文章场景相关 (基于750rpx设计稿标准) */ 
+$color-title: #2C405A; // 文章标题颜色 
+$font-size-title: 40rpx; 
+$color-subtitle: #555555; // 二级标题颜色 
+$font-size-subtitle: 36rpx; 
+$color-paragraph: #3F536E; // 文章段落颜色 
+$font-size-paragraph: 30rpx;
+
+/* 兼容px单位 */
+$font-size-title-px: 20px; 
+$font-size-subtitle-px: 18px; 
+$font-size-paragraph-px: 15px;

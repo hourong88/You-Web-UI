@@ -46,15 +46,25 @@ $color-border-secondary: $color-gray-100 !default;
 $font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !default;
 $font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
 
-// 字体大小
-$font-size-xs: 10px !default;   // 12rpx
-$font-size-sm: 12px !default;   // 24rpx
-$font-size-base: 14px !default; // 28rpx
-$font-size-md: 16px !default;   // 32rpx
-$font-size-lg: 18px !default;   // 36rpx
-$font-size-xl: 20px !default;   // 40rpx
-$font-size-2xl: 24px !default;  // 48rpx
-$font-size-3xl: 30px !default;  // 60rpx
+// 字体大小 (基于750rpx设计稿标准)
+$font-size-xs: 20rpx !default;   // 超小字体
+$font-size-sm: 24rpx !default;   // 小字体
+$font-size-base: 28rpx !default; // 基础字体
+$font-size-md: 32rpx !default;   // 中等字体
+$font-size-lg: 36rpx !default;   // 大字体
+$font-size-xl: 40rpx !default;   // 超大字体
+$font-size-2xl: 48rpx !default;  // 特大字体
+$font-size-3xl: 60rpx !default;  // 巨大字体
+
+// 兼容px单位（用于特殊场景）
+$font-size-xs-px: 10px !default;
+$font-size-sm-px: 12px !default;
+$font-size-base-px: 14px !default;
+$font-size-md-px: 16px !default;
+$font-size-lg-px: 18px !default;
+$font-size-xl-px: 20px !default;
+$font-size-2xl-px: 24px !default;
+$font-size-3xl-px: 30px !default;
 
 // 行高
 $line-height-xs: 1.2 !default;
@@ -70,27 +80,47 @@ $font-weight-medium: 500 !default;
 $font-weight-semibold: 600 !default;
 $font-weight-bold: 700 !default;
 
-// ==================== 间距系统 ====================
-$spacing-xs: 4px !default;   // 8rpx
-$spacing-sm: 8px !default;   // 16rpx
-$spacing-base: 12px !default; // 24rpx
-$spacing-md: 16px !default;  // 32rpx
-$spacing-lg: 20px !default;  // 40rpx
-$spacing-xl: 24px !default;  // 48rpx
-$spacing-2xl: 32px !default; // 64rpx
-$spacing-3xl: 40px !default; // 80rpx
-$spacing-4xl: 48px !default; // 96rpx
+// ==================== 间距系统 (基于750rpx设计稿标准) ====================
+$spacing-xs: 8rpx !default;   // 超小间距
+$spacing-sm: 16rpx !default;  // 小间距
+$spacing-base: 24rpx !default; // 基础间距
+$spacing-md: 32rpx !default;  // 中等间距
+$spacing-lg: 40rpx !default;  // 大间距
+$spacing-xl: 48rpx !default;  // 超大间距
+$spacing-2xl: 64rpx !default; // 特大间距
+$spacing-3xl: 80rpx !default; // 巨大间距
+$spacing-4xl: 96rpx !default; // 超巨大间距
 
-// ==================== 圆角系统 ====================
+// 兼容px单位（用于特殊场景）
+$spacing-xs-px: 4px !default;
+$spacing-sm-px: 8px !default;
+$spacing-base-px: 12px !default;
+$spacing-md-px: 16px !default;
+$spacing-lg-px: 20px !default;
+$spacing-xl-px: 24px !default;
+$spacing-2xl-px: 32px !default;
+$spacing-3xl-px: 40px !default;
+$spacing-4xl-px: 48px !default;
+
+// ==================== 圆角系统 (基于750rpx设计稿标准) ====================
 $border-radius-none: 0 !default;
-$border-radius-xs: 2px !default;   // 4rpx
-$border-radius-sm: 4px !default;   // 8rpx
-$border-radius-base: 6px !default; // 12rpx
-$border-radius-md: 8px !default;   // 16rpx
-$border-radius-lg: 12px !default;  // 24rpx
-$border-radius-xl: 16px !default;  // 32rpx
-$border-radius-2xl: 20px !default; // 40rpx
-$border-radius-full: 50% !default;
+$border-radius-xs: 4rpx !default;   // 超小圆角
+$border-radius-sm: 8rpx !default;   // 小圆角
+$border-radius-base: 12rpx !default; // 基础圆角
+$border-radius-md: 16rpx !default;   // 中等圆角
+$border-radius-lg: 24rpx !default;  // 大圆角
+$border-radius-xl: 32rpx !default;  // 超大圆角
+$border-radius-2xl: 40rpx !default; // 特大圆角
+$border-radius-full: 50% !default;  // 完全圆角
+
+// 兼容px单位（用于特殊场景）
+$border-radius-xs-px: 2px !default;
+$border-radius-sm-px: 4px !default;
+$border-radius-base-px: 6px !default;
+$border-radius-md-px: 8px !default;
+$border-radius-lg-px: 12px !default;
+$border-radius-xl-px: 16px !default;
+$border-radius-2xl-px: 20px !default;
 
 // ==================== 阴影系统 ====================
 $box-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !default;
@@ -100,22 +130,40 @@ $box-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0
 $box-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !default;
 $box-shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !default;
 
-// ==================== 边框系统 ====================
+// ==================== 边框系统 (基于750rpx设计稿标准) ====================
 $border-width-none: 0 !default;
-$border-width-thin: 1px !default; // 2rpx
-$border-width-base: 2px !default; // 4rpx
-$border-width-thick: 4px !default; // 8rpx
+$border-width-thin: 2rpx !default; // 细边框
+$border-width-base: 4rpx !default; // 基础边框
+$border-width-thick: 8rpx !default; // 粗边框
 
-// ==================== 组件尺寸 ====================
+// 兼容px单位（用于特殊场景）
+$border-width-thin-px: 1px !default;
+$border-width-base-px: 2px !default;
+$border-width-thick-px: 4px !default;
+
+// ==================== 组件尺寸 (基于750rpx设计稿标准) ====================
 // 按钮高度
-$button-height-sm: 28px !default;  // 56rpx
-$button-height-base: 36px !default; // 72rpx
-$button-height-lg: 44px !default;   // 88rpx
+$button-height-mini: 56rpx !default;  // 迷你按钮
+$button-height-sm: 64rpx !default;    // 小按钮
+$button-height-base: 88rpx !default;  // 基础按钮
+$button-height-lg: 100rpx !default;   // 大按钮
+$button-height-large: 120rpx !default; // 超大按钮
 
 // 输入框高度
-$input-height-sm: 28px !default;  // 56rpx
-$input-height-base: 36px !default; // 72rpx
-$input-height-lg: 44px !default;   // 88rpx
+$input-height-mini: 56rpx !default;   // 迷你输入框
+$input-height-sm: 64rpx !default;     // 小输入框
+$input-height-base: 88rpx !default;   // 基础输入框（统一高度）
+$input-height-lg: 100rpx !default;    // 大输入框
+
+// 兼容px单位（用于特殊场景）
+$button-height-mini-px: 28px !default;
+$button-height-sm-px: 32px !default;
+$button-height-base-px: 36px !default;
+$button-height-lg-px: 44px !default;
+$input-height-mini-px: 28px !default;
+$input-height-sm-px: 32px !default;
+$input-height-base-px: 44px !default;
+$input-height-lg-px: 50px !default;
 
 // ==================== 动画系统 ====================
 $transition-duration-fast: 0.15s !default;

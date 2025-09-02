@@ -63,35 +63,35 @@ const navigateToComponents = () => {
 
 <style lang="scss" scoped>
 .container {
-  padding: 20px;
-  background-color: #f5f5f5;
+  padding: $spacing-lg;
+  background-color: $bg-color-grey;
   min-height: 100vh;
 }
 
 .header {
   text-align: center;
   padding: 60px 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 20px;
-  margin-bottom: 40px;
-  color: white;
+  background: linear-gradient(135deg, $color-primary 0%, #764ba2 100%);
+  border-radius: $border-radius-lg;
+  margin-bottom: $spacing-xl;
+  color: $color-white;
 }
 
 .title {
-  font-size: 48px;
+  font-size: $font-size-title;
   font-weight: bold;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: $spacing-lg;
 }
 
 .subtitle {
-  font-size: 28px;
+  font-size: $font-size-subtitle;
   opacity: 0.8;
   display: block;
 }
 
 .content {
-  padding: 0 20px;
+  padding: 0 $spacing-lg;
 }
 
 .section {
@@ -99,22 +99,22 @@ const navigateToComponents = () => {
 }
 
 .section-title {
-  font-size: 36px;
+  font-size: $font-size-xl;
   font-weight: bold;
-  color: #333;
-  margin-bottom: 30px;
+  color: $text-color;
+  margin-bottom: $spacing-xl;
   display: block;
 }
 
 .card-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: $spacing-lg;
 }
 
 .card {
-  background: white;
-  border-radius: 16px;
+  background: $color-white;
+  border-radius: $border-radius-md;
   padding: 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
@@ -125,44 +125,44 @@ const navigateToComponents = () => {
 }
 
 .card-title {
-  font-size: 32px;
+  font-size: $font-size-lg;
   font-weight: bold;
-  color: #333;
+  color: $text-color;
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: $spacing-md;
 }
 
 .card-desc {
-  font-size: 28rpx;
-  color: #666;
+  font-size: $font-size-base;
+  color: $text-color-grey;
   display: block;
 }
 
 .feature-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20rpx;
+  gap: $spacing-lg;
 }
 
 .feature-item {
   flex: 1;
   min-width: 300px;
-  background: white;
-  border-radius: 16px;
+  background: $color-white;
+  border-radius: $border-radius-md;
   padding: 30px;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .feature-icon {
-  font-size: 48px;
+  font-size: $font-size-title;
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: $spacing-md;
 }
 
 .feature-text {
-  font-size: 28rpx;
-  color: #333;
+  font-size: $font-size-base;
+  color: $text-color;
   display: block;
 }
 </style>

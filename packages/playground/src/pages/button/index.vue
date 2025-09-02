@@ -109,32 +109,34 @@ const handleThrottleClick = () => {
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/variables.scss';
+
 .button-demo {
-  padding: 20px;
+  padding: $spacing-xl; // 40rpx
   background-color: #f5f5f5;
   min-height: 100vh;
 }
 
 .demo-section {
-  margin-bottom: 30px;
+  margin-bottom: $spacing-row-lg; // 60rpx
   background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: $border-radius-md; // 16rpx
+  padding: $spacing-xl; // 40rpx
 }
 
 .section-title {
-  font-size: 16px;
+  font-size: $font-size-lg; // 32rpx
   font-weight: 600;
   color: #333;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #eee;
+  margin-bottom: $spacing-row-base; // 30rpx
+  padding-bottom: $spacing-sm; // 16rpx
+  border-bottom: $border-width-thin solid #eee; // 2rpx
 }
 
 .button-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: $spacing-base; // 24rpx
   align-items: center;
 
   .y-button {
@@ -144,7 +146,7 @@ const handleThrottleClick = () => {
   // 块级按钮单独一行
   .y-button--block {
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: $spacing-base; // 24rpx
     
     &:last-child {
       margin-bottom: 0;

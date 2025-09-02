@@ -56,7 +56,7 @@ const componentCategories = ref<Category[]>([
   {
     name: '表单组件',
     components: [
-      { name: 'Input', desc: '输入框', icon: '📝' },
+      { name: 'Input', desc: '输入框', icon: '📝', path: '/input' },
       { name: 'Textarea', desc: '多行输入', icon: '📄' },
       { name: 'Switch', desc: '开关', icon: '🔄' },
       { name: 'Checkbox', desc: '复选框', icon: '☑️' },
@@ -98,6 +98,12 @@ const componentCategories = ref<Category[]>([
       { name: 'Badge', desc: '徽标', icon: '🏷️' },
       { name: 'Tag', desc: '标签', icon: '🏷️' },
       { name: 'Timeline', desc: '时间轴', icon: '⏰' }
+    ]
+  },
+  {
+    name: '工具函数',
+    components: [
+      { name: 'Utils', desc: 'rpx转换函数', icon: '🔧', path: '/utils' }
     ]
   }
 ])

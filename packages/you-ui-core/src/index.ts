@@ -12,6 +12,7 @@ export * from './types'
 
 // 组件导出
 export { default as YButton } from './components/YButton'
+export { default as YInput } from './components/YInput'
 // export { default as YIcon } from './components/YIcon'
 // export { default as YToast } from './components/YToast'
 

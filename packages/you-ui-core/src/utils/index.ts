@@ -2,6 +2,9 @@
 
 import type { ComponentSize, ComponentSizeAlias } from '../types/index.js'
 
+// 导出屏幕适配工具函数
+export * from './screen'
+
 /**
  * 判断是否为开发环境
  */
