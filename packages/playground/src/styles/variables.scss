@@ -14,7 +14,10 @@
  $color-black: #000000; 
  $color-white: #ffffff; 
  $color-pink: #f74d54; 
- $color-link: #586c94; 
+ $color-link: #586c94;
+ $color-danger: #EB0909; // 别名，指向 $color-error
+ $color-info: #007AFF; // 别名，指向 $color-blue
+ $color-grey: #999999; // 灰色 
  
  
  /* 文字基本颜色 */ 

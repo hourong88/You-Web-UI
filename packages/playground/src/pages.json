@@ -29,6 +29,12 @@
       "style": {
         "navigationBarTitleText": "工具函数演示"
       }
+    },
+    {
+      "path": "pages/you-loading/index",
+      "style": {
+        "navigationBarTitleText": "Loading 加载"
+      }
     }
   ],
   "globalStyle": {

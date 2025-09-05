@@ -4,46 +4,57 @@
       <h1 class="title">You-UniApp UI Playground</h1>
       <p class="subtitle">组件库演示项目</p>
     </div>
-    
+
     <div class="content">
+      <!-- 基础组件 -->
       <div class="section">
-        <h2 class="section-title">快速开始</h2>
-        <div class="card-list">
-          <div class="card" @click="navigateToComponents">
-            <h3 class="card-title">组件展示</h3>
-            <p class="card-desc">查看所有可用的UI组件</p>
+        <h2 class="section-title">基础组件</h2>
+        <div class="component-list">
+          <div class="component-item" @click="navigateTo('/button')">
+            <span class="component-icon">🔘</span>
+            <span class="component-name">YButton</span>
+            <span class="component-desc">按钮组件</span>
           </div>
-          
-          <div class="card">
-            <h3 class="card-title">设计规范</h3>
-            <p class="card-desc">了解设计系统和使用规范</p>
-          </div>
-          
-          <div class="card">
-            <h3 class="card-title">开发指南</h3>
-            <p class="card-desc">学习如何使用和定制组件</p>
+          <div class="component-item" @click="navigateTo('/input')">
+            <span class="component-icon">📝</span>
+            <span class="component-name">YInput</span>
+            <span class="component-desc">输入框组件</span>
           </div>
         </div>
       </div>
-      
+
+      <!-- 展示组件 -->
       <div class="section">
-        <h2 class="section-title">特性</h2>
-        <div class="feature-list">
-          <div class="feature-item">
-            <span class="feature-icon">🎨</span>
-            <span class="feature-text">现代化设计系统</span>
+        <h2 class="section-title">展示组件</h2>
+        <div class="component-list">
+          <div class="component-item" @click="navigateTo('/you-list')">
+            <span class="component-icon">📝</span>
+            <span class="component-name">YList</span>
+            <span class="component-desc">移动端列表组件</span>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">📱</span>
-            <span class="feature-text">多端适配</span>
+        </div>
+      </div>
+
+      <!-- 反馈组件 -->
+      <div class="section">
+        <h2 class="section-title">反馈组件</h2>
+        <div class="component-list">
+          <div class="component-item" @click="navigateTo('/you-loading')">
+            <span class="component-icon">⏳</span>
+            <span class="component-name">YLoading</span>
+            <span class="component-desc">加载状态组件</span>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">⚡</span>
-            <span class="feature-text">高性能优化</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">🔧</span>
-            <span class="feature-text">TypeScript 支持</span>
+        </div>
+      </div>
+
+      <!-- 工具函数 -->
+      <div class="section">
+        <h2 class="section-title">工具函数</h2>
+        <div class="component-list">
+          <div class="component-item" @click="navigateTo('/utils')">
+            <span class="component-icon">🔧</span>
+            <span class="component-name">Utils</span>
+            <span class="component-desc">实用工具函数</span>
           </div>
         </div>
       </div>
@@ -56,8 +67,8 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const navigateToComponents = () => {
-  router.push('/components')
+const navigateTo = (path: string) => {
+  router.push(path)
 }
 </script>
 
@@ -71,7 +82,7 @@ const navigateToComponents = () => {
 .header {
   text-align: center;
   padding: 60px 0;
-  background: linear-gradient(135deg, $color-primary 0%, #764ba2 100%);
+  background: #777676;
   border-radius: $border-radius-lg;
   margin-bottom: $spacing-xl;
   color: $color-white;
@@ -106,63 +117,52 @@ const navigateToComponents = () => {
   display: block;
 }
 
-.card-list {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-lg;
-}
-
-.card {
+.component-list {
   background: $color-white;
   border-radius: $border-radius-md;
-  padding: 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 
-.card:active {
-  transform: scale(0.98);
+.component-item {
+  display: flex;
+  align-items: center;
+  padding: $spacing-lg $spacing-xl;
+  border-bottom: 1px solid $border-color;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.card-title {
+.component-item:last-child {
+  border-bottom: none;
+}
+
+.component-item:hover {
+  background-color: $bg-color-hover;
+}
+
+.component-item:active {
+  background-color: $bg-color-grey;
+}
+
+.component-icon {
+  font-size: $font-size-xl;
+  margin-right: $spacing-lg;
+  width: 40px;
+  text-align: center;
+}
+
+.component-name {
   font-size: $font-size-lg;
   font-weight: bold;
   color: $text-color;
-  display: block;
-  margin-bottom: $spacing-md;
+  margin-right: $spacing-lg;
+  min-width: 120px;
 }
 
-.card-desc {
+.component-desc {
   font-size: $font-size-base;
   color: $text-color-grey;
-  display: block;
-}
-
-.feature-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $spacing-lg;
-}
-
-.feature-item {
   flex: 1;
-  min-width: 300px;
-  background: $color-white;
-  border-radius: $border-radius-md;
-  padding: 30px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.feature-icon {
-  font-size: $font-size-title;
-  display: block;
-  margin-bottom: $spacing-md;
-}
-
-.feature-text {
-  font-size: $font-size-base;
-  color: $text-color;
-  display: block;
 }
 </style>

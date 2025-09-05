@@ -7,13 +7,14 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src')
+      '@': resolve(__dirname, 'src'),
+      '@you-uniapp/you-ui-core': resolve(__dirname, '../you-ui-core/src')
     }
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "@/styles/variables.scss";'
+        additionalData: '@use "@/styles/variables.scss" as *;'
       }
     }
   },

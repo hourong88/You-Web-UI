@@ -1,0 +1,50 @@
+/**
+ * 公共样式文件
+ * 包含页面头部、演示区域等通用组件样式
+ */
+
+/* 页面头部样式 */
+.page-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+  padding: 24rpx 32rpx;
+  background: white;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  font-size: 4.8vw;
+  color: #333;
+  cursor: pointer;
+  margin-right: 20rpx;
+}
+
+.back-icon {
+  font-size: 4.8vw;
+  color: #333;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 演示区域样式 */
+.demo-section {
+  margin-bottom: $spacing-row-lg; // 60rpx
+  background-color: #fff;
+  border-radius: $border-radius-md; // 16rpx
+  padding: $spacing-xl; // 40rpx
+}
+
+.section-title {
+  font-size: $font-size-lg; // 32rpx
+  font-weight: 600;
+  color: #333;
+  margin-bottom: $spacing-row-base; // 30rpx
+  padding-bottom: $spacing-sm; // 16rpx
+  border-bottom: $border-width-thin solid #eee; // 2rpx
+}

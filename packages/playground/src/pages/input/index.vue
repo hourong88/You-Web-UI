@@ -1,5 +1,11 @@
 <template>
   <div class="container">
+    <view class="page-header">
+      <view class="back-button" @click="goBack">
+        <text class="back-icon">←</text>
+      </view>
+      <text class="page-title">YInput 输入框组件</text>
+    </view>
     <div class="header">
       <h1 class="title">Input 输入框</h1>
       <p class="subtitle">用于接收用户输入的文本内容</p>
@@ -8,7 +14,7 @@
     <div class="content">
       <!-- 基础用法 -->
       <div class="demo-section">
-        <h2 class="section-title">基础用法</h2>
+        <div class="section-title">基础用法</div>
         <div class="demo-item">
           <YInput placeholder="请输入姓名" v-model="basicValue" />
           <YInput placeholder="请输入手机号" v-model="basicValue" />
@@ -17,7 +23,7 @@
 
       <!-- 带标题 -->
       <div class="demo-section">
-        <h2 class="section-title">带标题</h2>
+        <div class="section-title">带标题</div>
         <div class="demo-item">
           <YInput label="姓名" placeholder="请输入姓名" v-model="nameValue" />
           <YInput label="手机号" placeholder="请输入手机号" v-model="phoneValue" />
@@ -27,7 +33,7 @@
 
       <!-- 必填标识 -->
       <div class="demo-section">
-        <h2 class="section-title">必填标识</h2>
+        <div class="section-title">必填标识</div>
         <div class="demo-item">
           <YInput label="联系电话" placeholder="请输入手机号" :required="true" v-model="phoneValue" />
         </div>
@@ -35,7 +41,7 @@
 
       <!-- 可清除 -->
       <div class="demo-section">
-        <h2 class="section-title">可清除</h2>
+        <div class="section-title">可清除</div>
         <div class="demo-item">
           <YInput label="地址" placeholder="请输入地址" :clearable="true" v-model="addressValue" />
         </div>
@@ -43,7 +49,7 @@
 
       <!-- 密码输入 -->
       <div class="demo-section">
-        <h2 class="section-title">密码输入</h2>
+        <div class="section-title">密码输入</div>
         <div class="demo-item">
           <YInput label="密码" placeholder="请输入密码" :password="true" :clearable="true" v-model="passwordValue" />
         </div>
@@ -51,7 +57,7 @@
 
       <!-- 禁用状态 -->
       <div class="demo-section">
-        <h2 class="section-title">禁用状态</h2>
+        <div class="section-title">禁用状态</div>
         <div class="demo-item">
           <YInput label="用户名" placeholder="张三" :disabled="true" v-model="disabledValue" />
         </div>
@@ -59,7 +65,7 @@
 
       <!-- 数字输入 -->
       <div class="demo-section">
-        <h2 class="section-title">数字输入</h2>
+        <div class="section-title">数字输入</div>
         <div class="demo-item">
           <YInput label="年龄" placeholder="请输入年龄" type="number" :min="0" :max="120" v-model="ageValue" />
         </div>
@@ -67,7 +73,7 @@
 
       <!-- 自定义样式 -->
       <div class="demo-section">
-        <h2 class="section-title">自定义样式</h2>
+        <div class="section-title">自定义样式</div>
         <div class="demo-item">
           <YInput label="备注" placeholder="请输入备注信息" :input-border="true" :is-fillet="true" background-color="#f8f9fa"
             border-color="#007aff" v-model="remarkValue" />
@@ -76,7 +82,7 @@
 
       <!-- 右对齐 -->
       <div class="demo-section">
-        <h2 class="section-title">右对齐</h2>
+        <div class="section-title">右对齐</div>
         <div class="demo-item">
           <YInput label="金额" placeholder="0.00" type="digit" :text-right="true" v-model="amountValue" />
         </div>
@@ -84,7 +90,7 @@
 
       <!-- 字符限制 -->
       <div class="demo-section">
-        <h2 class="section-title">字符限制</h2>
+        <div class="section-title">字符限制</div>
         <div class="demo-item">
           <YInput label="简介" placeholder="请输入个人简介" :maxlength="50" :clearable="true" v-model="introValue" />
           <p class="demo-desc">已输入 {{ introValue.length }}/50 字符</p>
@@ -96,7 +102,14 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { YInput } from '@you-uniapp/ui-core'
+
+const router = useRouter()
+
+const goBack = () => {
+  router.push('/')
+}
 
 // 响应式数据
 const basicValue = ref('')
@@ -113,6 +126,7 @@ const introValue = ref('')
 
 <style lang="scss" scoped>
 @import '../../styles/variables.scss';
+@import '../../styles/common.scss';
 
 .container {
   padding: 40rpx;
@@ -144,81 +158,5 @@ const introValue = ref('')
   }
 }
 
-.content {
-  .demo-section {
-    margin-bottom: 60rpx;
 
-    .section-title {
-      font-size: 32rpx;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 24rpx;
-      padding: 16rpx 0 16rpx 24rpx;
-      border-left: 6rpx solid #007aff;
-      background: white;
-      border-radius: 8rpx;
-      box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1);
-    }
-
-    .demo-item {
-      background: white;
-      border-radius: 16rpx;
-      padding: 40rpx;
-      margin-bottom: 24rpx;
-      box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
-      border: 2rpx solid #eee;
-
-      .demo-desc {
-        margin-top: 24rpx;
-        font-size: 24rpx;
-        color: #666;
-        text-align: left;
-        padding: 16rpx 24rpx;
-        background: #f8f9fa;
-        border-radius: 8rpx;
-        border-left: 6rpx solid #28a745;
-      }
-    }
-  }
-}
-
-// 响应式设计
-@media (max-width: 768px) {
-  .container {
-    padding: 24rpx;
-  }
-
-  .header {
-    margin-bottom: 40rpx;
-    padding: 32rpx;
-
-    .title {
-      font-size: 40rpx;
-    }
-
-    .subtitle {
-      font-size: 26rpx;
-    }
-  }
-
-  .content {
-    .demo-section {
-      margin-bottom: 48rpx;
-
-      .section-title {
-        font-size: 30rpx;
-        padding: 12rpx 0 12rpx 20rpx;
-      }
-
-      .demo-item {
-        padding: 32rpx;
-
-        .demo-desc {
-          font-size: 22rpx;
-          padding: 12rpx 20rpx;
-        }
-      }
-    }
-  }
-}
 </style>

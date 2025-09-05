@@ -139,3 +139,53 @@ export interface ComponentSlots {
   /** 后缀插槽 */
   suffix?: () => any
 }
+
+// ==================== 智能组件库类型定义 ====================
+
+// 通用数据项接口
+export interface DataItem {
+  id: string | number
+  [key: string]: any // 允许任意其他字段
+}
+
+// 字段配置接口
+export interface FieldConfig {
+  key: string      // 对应 DataItem 中的字段名
+  label: string    // 显示的标题/标签
+  type?: 'text' | 'image' | 'price' | 'status' | 'custom' // 渲染类型
+  width?: string   // 仅 YouTable 使用，列宽
+  align?: Alignment // 列对齐方式
+  sortable?: boolean // 是否可排序
+  filterable?: boolean // 是否可筛选
+  slotName?: string // 自定义渲染插槽名
+}
+
+// 分页配置接口
+export interface PaginationConfig {
+  pageSize: number
+  currentPage: number
+  total: number
+  showSizeChanger?: boolean
+}
+
+// 视图模式类型
+export type ViewMode = 'auto' | 'table' | 'list' | 'card'
+
+// 排序配置
+export interface SortConfig {
+  field?: string
+  order?: 'asc' | 'desc'
+}
+
+
+
+// 设备信息接口
+export interface DeviceInfo {
+  isMobile: boolean
+  isPC: boolean
+  isH5: boolean
+  isApp: boolean
+  isMiniProgram: boolean
+  platform: 'h5' | 'app' | 'mp-weixin' | 'mp-alipay' | 'unknown'
+  screenWidth: number
+}

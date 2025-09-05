@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
-    <div class="header">
-      <h1 class="title">工具函数演示</h1>
-      <p class="subtitle">rpx转换函数使用示例</p>
-    </div>
-    
-    <div class="content">
-      <div class="demo-section">
-        <h2 class="section-title">rpx2px 转换</h2>
+  <div class="utils-demo">
+    <view class="page-header">
+      <view class="back-button" @click="goBack">
+        <text class="back-icon">←</text>
+      </view>
+      <text class="page-title">工具函数演示</text>
+    </view>
+    <div class="demo-section">
+      <div class="section-title">rpx2px 转换</div>
         <div class="demo-item">
           <p class="demo-desc">将rpx值转换为px值</p>
           <div class="conversion-demo">
@@ -22,8 +22,8 @@
         </div>
       </div>
       
-      <div class="demo-section">
-        <h2 class="section-title">px2rpx 转换</h2>
+    <div class="demo-section">
+      <div class="section-title">px2rpx 转换</div>
         <div class="demo-item">
           <p class="demo-desc">将px值转换为rpx值</p>
           <div class="conversion-demo">
@@ -38,8 +38,8 @@
         </div>
       </div>
       
-      <div class="demo-section">
-        <h2 class="section-title">设备信息</h2>
+    <div class="demo-section">
+      <div class="section-title">设备信息</div>
         <div class="demo-item">
           <div class="device-info">
             <p><strong>屏幕宽度:</strong> {{ deviceInfo.windowWidth }}px</p>
@@ -50,8 +50,8 @@
         </div>
       </div>
       
-      <div class="demo-section">
-        <h2 class="section-title">实际效果演示</h2>
+    <div class="demo-section">
+      <div class="section-title">实际效果演示</div>
         <div class="demo-item">
           <p class="demo-desc">下面的方块使用rpx单位，会根据屏幕宽度自动适配</p>
           <div class="rpx-demo-box">
@@ -64,13 +64,19 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { rpx2px, px2rpx, getSystemInfo } from '@you-uniapp/ui-core'
+
+const router = useRouter()
+
+const goBack = () => {
+  router.push('/')
+}
 
 // 响应式数据
 const rpxValue = ref(200)
@@ -99,71 +105,30 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @import '../../styles/variables.scss';
+@import '../../styles/common.scss';
 
-.container {
-  padding: $spacing-xl;
+.utils-demo {
+  padding: $spacing-xl; // 40rpx
   background-color: #f5f5f5;
   min-height: 100vh;
-  max-width: 1600rpx;
-  margin: 0 auto;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: $spacing-row-lg;
-  padding: $spacing-xl 0;
+.demo-item {
   background: white;
   border-radius: $border-radius-md;
-  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.1);
+  padding: $spacing-xl;
+  margin-bottom: $spacing-base;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+  border: $border-width-thin solid #eee;
   
-  .title {
-    font-size: $font-size-xl;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: $spacing-sm;
-  }
-  
-  .subtitle {
+  .demo-desc {
+    margin-bottom: $spacing-base;
     font-size: $font-size-base;
     color: #666;
-    margin: 0;
-  }
-}
-
-.content {
-  .demo-section {
-    margin-bottom: $spacing-row-lg;
-    
-    .section-title {
-      font-size: $font-size-lg;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: $spacing-base;
-      padding: $spacing-sm 0 $spacing-sm $spacing-base;
-      border-left: 6rpx solid #007aff;
-      background: white;
-      border-radius: $border-radius-sm;
-      box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1);
-    }
-    
-    .demo-item {
-      background: white;
-      border-radius: $border-radius-md;
-      padding: $spacing-xl;
-      margin-bottom: $spacing-base;
-      box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
-      border: $border-width-thin solid #eee;
-      
-      .demo-desc {
-        margin-bottom: $spacing-base;
-        font-size: $font-size-base;
-        color: #666;
-        padding: $spacing-sm $spacing-base;
-        background: #f8f9fa;
-        border-radius: $border-radius-sm;
-        border-left: 6rpx solid #28a745;
-      }
-    }
+    padding: $spacing-sm $spacing-base;
+    background: #f8f9fa;
+    border-radius: $border-radius-sm;
+    border-left: 6rpx solid #28a745;
   }
 }
 
@@ -239,25 +204,5 @@ onMounted(() => {
   }
 }
 
-// 响应式设计
-@media (max-width: 768px) {
-  .container {
-    padding: $spacing-base;
-  }
-  
-  .conversion-demo {
-    .input-group {
-      flex-direction: column;
-      align-items: stretch;
-      
-      label {
-        margin-bottom: $spacing-xs;
-      }
-    }
-  }
-  
-  .rpx-demo-box {
-    justify-content: center;
-  }
-}
+
 </style>

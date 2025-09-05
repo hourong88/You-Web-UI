@@ -1,5 +1,11 @@
 <template>
   <div class="button-demo">
+    <view class="page-header">
+      <view class="back-button" @click="goBack">
+        <text class="back-icon">←</text>
+      </view>
+      <text class="page-title">YButton 按钮组件</text>
+    </view>
     <div class="demo-section">
       <div class="section-title">基础用法</div>
       <div class="button-group">
@@ -97,7 +103,14 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
 import { YButton } from '@you-uniapp/ui-core'
+
+const router = useRouter()
+
+const goBack = () => {
+  router.push('/')
+}
 
 const handleClick = () => {
   alert('按钮被点击了！')
@@ -110,6 +123,7 @@ const handleThrottleClick = () => {
 
 <style lang="scss" scoped>
 @import '../../styles/variables.scss';
+@import '../../styles/common.scss';
 
 .button-demo {
   padding: $spacing-xl; // 40rpx
@@ -117,21 +131,9 @@ const handleThrottleClick = () => {
   min-height: 100vh;
 }
 
-.demo-section {
-  margin-bottom: $spacing-row-lg; // 60rpx
-  background-color: #fff;
-  border-radius: $border-radius-md; // 16rpx
-  padding: $spacing-xl; // 40rpx
-}
 
-.section-title {
-  font-size: $font-size-lg; // 32rpx
-  font-weight: 600;
-  color: #333;
-  margin-bottom: $spacing-row-base; // 30rpx
-  padding-bottom: $spacing-sm; // 16rpx
-  border-bottom: $border-width-thin solid #eee; // 2rpx
-}
+
+
 
 .button-group {
   display: flex;

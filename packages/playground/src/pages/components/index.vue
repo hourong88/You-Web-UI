@@ -1,20 +1,22 @@
 <template>
   <div class="container">
+    <view class="page-header">
+      <view class="back-button" @click="goBack">
+        <text class="back-icon">←</text>
+      </view>
+      <text class="page-title">组件展示</text>
+    </view>
     <div class="header">
       <h1 class="title">组件展示</h1>
       <p class="subtitle">You-UniApp UI 组件库</p>
     </div>
-    
+
     <div class="content">
       <div class="category" v-for="category in componentCategories" :key="category.name">
         <h2 class="category-title">{{ category.name }}</h2>
         <div class="component-grid">
-          <div 
-            class="component-card" 
-            v-for="component in category.components" 
-            :key="component.name"
-            @click="navigateToComponent(component)"
-          >
+          <div class="component-card" v-for="component in category.components" :key="component.name"
+            @click="navigateToComponent(component)">
             <div class="component-icon">{{ component.icon }}</div>
             <h3 class="component-name">{{ component.name }}</h3>
             <p class="component-desc">{{ component.desc }}</p>
@@ -28,6 +30,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+
+const goBack = () => {
+  router.push('/')
+}
 
 const router = useRouter()
 
@@ -50,8 +56,9 @@ const componentCategories = ref<Category[]>([
       { name: 'Button', desc: '按钮组件', icon: '🔘', path: '/button' },
       { name: 'Icon', desc: '图标组件', icon: '⭐' },
       { name: 'Text', desc: '文本组件', icon: '📝' },
-      { name: 'Image', desc: '图片组件', icon: '🖼️' }
-    ]
+      { name: 'Image', desc: '图片组件', icon: '🖼️' },
+      { name: 'YList', desc: '移动端列表组件', icon: '📝', path: '/you-list' },
+    ],
   },
   {
     name: '表单组件',
@@ -61,8 +68,8 @@ const componentCategories = ref<Category[]>([
       { name: 'Switch', desc: '开关', icon: '🔄' },
       { name: 'Checkbox', desc: '复选框', icon: '☑️' },
       { name: 'Radio', desc: '单选框', icon: '🔘' },
-      { name: 'Picker', desc: '选择器', icon: '📋' }
-    ]
+      { name: 'Picker', desc: '选择器', icon: '📋' },
+    ],
   },
   {
     name: '布局组件',
@@ -70,8 +77,8 @@ const componentCategories = ref<Category[]>([
       { name: 'Layout', desc: '布局容器', icon: '📐' },
       { name: 'Grid', desc: '栅格系统', icon: '⚏' },
       { name: 'Card', desc: '卡片', icon: '🃏' },
-      { name: 'Divider', desc: '分割线', icon: '➖' }
-    ]
+      { name: 'Divider', desc: '分割线', icon: '➖' },
+    ],
   },
   {
     name: '导航组件',
@@ -79,17 +86,17 @@ const componentCategories = ref<Category[]>([
       { name: 'Navbar', desc: '导航栏', icon: '🧭' },
       { name: 'Tabbar', desc: '标签栏', icon: '📑' },
       { name: 'Tabs', desc: '选项卡', icon: '📂' },
-      { name: 'Breadcrumb', desc: '面包屑', icon: '🍞' }
-    ]
+      { name: 'Breadcrumb', desc: '面包屑', icon: '🍞' },
+    ],
   },
   {
     name: '反馈组件',
     components: [
       { name: 'Toast', desc: '轻提示', icon: '💬' },
       { name: 'Modal', desc: '模态框', icon: '🔲' },
-      { name: 'Loading', desc: '加载中', icon: '⏳' },
-      { name: 'Progress', desc: '进度条', icon: '📊' }
-    ]
+      { name: 'Loading', desc: '加载中', icon: '⏳', path: '/you-loading' },
+      { name: 'Progress', desc: '进度条', icon: '📊' },
+    ],
   },
   {
     name: '展示组件',
@@ -97,15 +104,14 @@ const componentCategories = ref<Category[]>([
       { name: 'Avatar', desc: '头像', icon: '👤' },
       { name: 'Badge', desc: '徽标', icon: '🏷️' },
       { name: 'Tag', desc: '标签', icon: '🏷️' },
-      { name: 'Timeline', desc: '时间轴', icon: '⏰' }
-    ]
+      { name: 'Timeline', desc: '时间轴', icon: '⏰' },
+    ],
   },
+
   {
     name: '工具函数',
-    components: [
-      { name: 'Utils', desc: 'rpx转换函数', icon: '🔧', path: '/utils' }
-    ]
-  }
+    components: [{ name: 'Utils', desc: 'rpx转换函数', icon: '🔧', path: '/utils' }],
+  },
 ])
 
 const navigateToComponent = (component: Component) => {
@@ -118,6 +124,8 @@ const navigateToComponent = (component: Component) => {
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/variables.scss';
+@import '../../styles/common.scss';
 .container {
   padding: 20px;
   background-color: #f5f5f5;

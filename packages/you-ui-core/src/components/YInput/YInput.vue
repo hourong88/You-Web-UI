@@ -1,71 +1,42 @@
 <template>
-  <div 
-    class="y-input"
-    :style="{
-      marginTop: marginTop ? `${marginTop}rpx` : '0',
-      backgroundColor: backgroundColor !== '#FFFFFF' ? backgroundColor : 'transparent',
-      padding: inputBorder ? padding : '32rpx 0',
-      borderRadius: radius ? `${radius}rpx` : (isFillet ? '24rpx' : '0')
-    }"
-    :class="{
+  <div class="y-input" :style="{
+    marginTop: marginTop ? `${marginTop}rpx` : '0',
+    backgroundColor: backgroundColor !== '#FFFFFF' ? backgroundColor : 'transparent',
+    padding: inputBorder ? padding : '32rpx 0',
+    borderRadius: radius ? `${radius}rpx` : isFillet ? '24rpx' : '0',
+  }" :class="{
       'y-input--border': inputBorder,
       'y-input--border-top': borderTop,
       'y-input--border-bottom': borderBottom && !inputBorder,
       'y-input--line-left': lineLeft,
-      'y-input--disabled': disabled
-    }"
-    @click="handleClick"
-  >
+      'y-input--disabled': disabled,
+    }" @click="handleClick">
     <!-- 左侧标题 -->
-    <div 
-      v-if="label" 
-      class="y-input__label"
-      :style="{
-          minWidth: `${labelWidth}rpx`,
-          fontSize: `${labelSize}rpx`,
-          color: labelColor
-        }"
-    >
+    <div v-if="label" class="y-input__label" :style="{
+      minWidth: `${labelWidth}rpx`,
+      fontSize: `${labelSize}rpx`,
+      color: labelColor,
+    }">
       <span v-if="required" class="y-input__required" :style="{ color: requiredColor }">*</span>
       {{ label }}
     </div>
 
     <!-- 输入框容器 -->
     <div class="y-input__wrapper">
-      <input
-        ref="inputRef"
-        class="y-input__field"
-        :type="password ? 'password' : type"
-        :name="name"
-        :value="currentValue"
-        :placeholder="placeholder"
-        :disabled="disabled"
-        :maxlength="maxlength === -1 ? undefined : maxlength"
-        :min="min"
-        :max="max"
-        :readonly="disabled"
-        :style="{
+      <input ref="inputRef" class="y-input__field" :type="password ? 'password' : type" :name="name"
+        :value="currentValue" :placeholder="placeholder" :disabled="disabled"
+        :maxlength="maxlength === -1 ? undefined : maxlength" :min="min" :max="max" :readonly="disabled" :style="{
           fontSize: `${size}rpx`,
           color,
           textAlign: textRight ? 'right' : 'left',
-          ...placeholderStyle ? { placeholderStyle } : {}
-        }"
-        @input="handleInput"
-        @focus="handleFocus"
-        @blur="handleBlur"
-        @keyup.enter="handleConfirm"
-      />
+          ...(placeholderStyle ? { placeholderStyle } : {}),
+        }" @input="handleInput" @focus="handleFocus" @blur="handleBlur" @keyup.enter="handleConfirm" />
 
       <!-- 清除按钮 -->
-      <div 
-        v-if="clearable && currentValue && !disabled" 
-        class="y-input__clear"
-        :style="{
-          fontSize: `${clearSize}rpx`,
-          color: clearColor
-        }"
-        @click.stop="handleClear"
-      >
+      <div v-if="clearable && currentValue && !disabled" class="y-input__clear" :style="{
+        fontSize: `${clearSize}rpx`,
+        color: clearColor,
+      }" @click.stop="handleClear">
         ×
       </div>
     </div>
@@ -80,185 +51,185 @@ const props = defineProps({
   // 必填标识
   required: {
     type: Boolean,
-    default: false
+    default: false,
   },
   requiredColor: {
     type: String,
-    default: '#EB0909'
+    default: '#EB0909',
   },
   // 标题相关
   label: {
     type: String,
-    default: ''
+    default: '',
   },
   labelSize: {
     type: Number,
-    default: 32 // 32rpx
+    default: 32, // 32rpx
   },
   labelColor: {
     type: String,
-    default: '#333'
+    default: '#333',
   },
   labelWidth: {
     type: Number,
-    default: 140 // 140rpx
+    default: 140, // 140rpx
   },
   // 清除按钮
   clearable: {
     type: Boolean,
-    default: false
+    default: false,
   },
   clearSize: {
     type: Number,
-    default: 30 // 30rpx
+    default: 30, // 30rpx
   },
   clearColor: {
     type: String,
-    default: '#bfbfbf'
+    default: '#bfbfbf',
   },
   // 输入框基础属性
   focus: {
     type: Boolean,
-    default: false
+    default: false,
   },
   placeholder: {
     type: String,
-    default: ''
+    default: '',
   },
   placeholderStyle: {
     type: String,
-    default: ''
+    default: '',
   },
   name: {
     type: String,
-    default: ''
+    default: '',
   },
   value: {
     type: [Number, String],
-    default: ''
+    default: '',
   },
   modelValue: {
     type: [Number, String],
-    default: ''
+    default: '',
   },
   type: {
     type: String,
-    default: 'text'
+    default: 'text',
   },
   password: {
     type: Boolean,
-    default: false
+    default: false,
   },
   disabled: {
     type: Boolean,
-    default: false
+    default: false,
   },
   maxlength: {
     type: [Number, String],
-    default: 140
+    default: 140,
   },
   min: {
     type: [Number, String],
-    default: NaN
+    default: NaN,
   },
   max: {
     type: [Number, String],
-    default: NaN
+    default: NaN,
   },
   // 键盘相关
   cursorSpacing: {
     type: Number,
-    default: 0
+    default: 0,
   },
   confirmType: {
     type: String,
-    default: 'done'
+    default: 'done',
   },
   confirmHold: {
     type: Boolean,
-    default: false
+    default: false,
   },
   cursor: {
     type: Number,
-    default: -1
+    default: -1,
   },
   selectionStart: {
     type: Number,
-    default: -1
+    default: -1,
   },
   selectionEnd: {
     type: Number,
-    default: -1
+    default: -1,
   },
   adjustPosition: {
     type: Boolean,
-    default: true
+    default: true,
   },
   holdKeyboard: {
     type: Boolean,
-    default: false
+    default: false,
   },
   autoBlur: {
     type: Boolean,
-    default: false
+    default: false,
   },
   // 样式相关
   size: {
     type: [Number, String],
-    default: 32 // 32rpx
+    default: 32, // 32rpx
   },
   color: {
     type: String,
-    default: '#333'
+    default: '#333',
   },
   inputBorder: {
     type: Boolean,
-    default: false
+    default: false,
   },
   borderColor: {
     type: String,
-    default: 'rgba(0, 0, 0, 0.1)'
+    default: 'rgba(0, 0, 0, 0.1)',
   },
   isFillet: {
     type: Boolean,
-    default: false
+    default: false,
   },
   borderTop: {
     type: Boolean,
-    default: false
+    default: false,
   },
   borderBottom: {
     type: Boolean,
-    default: true
+    default: true,
   },
   lineLeft: {
     type: Boolean,
-    default: true
+    default: true,
   },
   trim: {
     type: Boolean,
-    default: true
+    default: true,
   },
   textRight: {
     type: Boolean,
-    default: false
+    default: false,
   },
   padding: {
     type: String,
-    default: '26rpx 30rpx'
+    default: '26rpx 30rpx',
   },
   backgroundColor: {
     type: String,
-    default: '#FFFFFF'
+    default: '#FFFFFF',
   },
   radius: {
     type: [Number, String],
-    default: 0
+    default: 0,
   },
   marginTop: {
     type: [Number, String],
-    default: 0
-  }
+    default: 0,
+  },
 })
 
 // Emits 定义
@@ -269,7 +240,7 @@ const emit = defineEmits([
   'blur',
   'confirm',
   'click',
-  'keyboardheightchange'
+  'keyboardheightchange',
 ])
 
 // 响应式数据
@@ -284,7 +255,7 @@ const actualValue = computed(() => {
 // 监听值变化
 watch(
   () => actualValue.value,
-  (newVal) => {
+  newVal => {
     currentValue.value = newVal || ''
   },
   { immediate: true }
@@ -293,7 +264,7 @@ watch(
 // 监听 focus 属性
 watch(
   () => props.focus,
-  (newVal) => {
+  newVal => {
     if (newVal && inputRef.value) {
       nextTick(() => {
         inputRef.value.focus()
@@ -304,14 +275,14 @@ watch(
 )
 
 // 事件处理函数
-const handleInput = (event) => {
+const handleInput = event => {
   let value = event.target.value
-  
+
   // 自动去除空格
   if (props.trim) {
     value = value.trim()
   }
-  
+
   // 数值类型验证
   if (props.type === 'number' || props.type === 'digit') {
     const numValue = Number(value)
@@ -322,37 +293,37 @@ const handleInput = (event) => {
       value = props.max
     }
   }
-  
+
   currentValue.value = value
-  
+
   // 发射事件
   emit('input', value)
   emit('update:modelValue', value)
 }
 
-const handleFocus = (_event) => {
+const handleFocus = _event => {
   const detail = {
     value: currentValue.value,
-    height: 0 // 在实际应用中可能需要获取键盘高度
+    height: 0, // 在实际应用中可能需要获取键盘高度
   }
   emit('focus', { detail })
 }
 
-const handleBlur = (_event) => {
+const handleBlur = _event => {
   const detail = {
-    value: currentValue.value
+    value: currentValue.value,
   }
   emit('blur', { detail })
 }
 
-const handleConfirm = (_event) => {
+const handleConfirm = _event => {
   const detail = {
-    value: currentValue.value
+    value: currentValue.value,
   }
   emit('confirm', { detail })
 }
 
-const handleClick = (_event) => {
+const handleClick = _event => {
   emit('click', { name: props.name })
 }
 
@@ -360,7 +331,7 @@ const handleClear = () => {
   currentValue.value = ''
   emit('input', '')
   emit('update:modelValue', '')
-  
+
   // 清除后聚焦
   if (inputRef.value) {
     inputRef.value.focus()
@@ -382,9 +353,9 @@ const handleClear = () => {
   border-bottom: 2rpx solid #e0e0e0;
   transition: border-color 0.3s ease;
   background: transparent;
-  
+
   &:focus-within {
-    border-bottom-color: #007AFF;
+    border-bottom-color: #007aff;
   }
 }
 
@@ -393,7 +364,7 @@ const handleClear = () => {
   padding: $spacing-lg $spacing-md; // 40rpx 32rpx
   border-radius: $border-radius-sm; // 8rpx
   position: relative;
-  
+
   &::after {
     content: '';
     position: absolute;
@@ -430,7 +401,7 @@ const handleClear = () => {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  font-weight: 500;
+  font-weight: 400;
   min-width: 160rpx;
   margin-right: 32rpx;
   font-size: 32rpx;
@@ -460,12 +431,12 @@ const handleClear = () => {
   font-size: 32rpx;
   color: #333;
   padding: 0;
-  
+
   &::placeholder {
     color: #c0c0c0;
     font-size: 32rpx;
   }
-  
+
   &:disabled {
     cursor: not-allowed;
     color: #999;
@@ -486,7 +457,7 @@ const handleClear = () => {
   font-weight: $font-weight-bold;
   user-select: none;
   color: $color-text-secondary;
-  
+
   &:hover {
     background-color: $color-gray-200;
   }
