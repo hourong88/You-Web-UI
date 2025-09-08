@@ -1,5 +1,5 @@
 <template>
-  <div class="utils-demo">
+  <div class="demo-page-container">
     <view class="page-header">
       <view class="back-button" @click="goBack">
         <text class="back-icon">←</text>
@@ -107,11 +107,7 @@ onMounted(() => {
 @import '../../styles/variables.scss';
 @import '../../styles/common.scss';
 
-.utils-demo {
-  padding: $spacing-xl; // 40rpx
-  background-color: #f5f5f5;
-  min-height: 100vh;
-}
+
 
 .demo-item {
   background: white;

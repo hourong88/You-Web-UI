@@ -1,5 +1,5 @@
 <template>
-  <div class="loading-demo">
+  <div class="demo-page-container">
     <view class="page-header">
       <view class="back-button" @click="goBack">
         <text class="back-icon">←</text>
@@ -163,11 +163,7 @@ const showCustom = ref(false)
 const showMask = ref(false)
 const showInline = ref(false)
 
-// 新增动画类型状态
-const showSpinner = ref(false)
-const showBars = ref(false)
-const showPulse = ref(false)
-const showColumnBars = ref(false)
+
 
 // 模拟加载状态
 const isLoading = ref(false)
@@ -194,22 +190,7 @@ const toggleInline = () => {
   showInline.value = !showInline.value
 }
 
-// 新增动画类型切换方法
-const toggleSpinner = () => {
-  showSpinner.value = !showSpinner.value
-}
 
-const toggleBars = () => {
-  showBars.value = !showBars.value
-}
-
-const togglePulse = () => {
-  showPulse.value = !showPulse.value
-}
-
-const toggleColumnBars = () => {
-  showColumnBars.value = !showColumnBars.value
-}
 
 // 处理遮罩点击事件
 const handleMaskClick = () => {
@@ -243,11 +224,7 @@ const simulateLoading = () => {
 @import '../../styles/variables.scss';
 @import '../../styles/common.scss';
 
-.loading-demo {
-  padding: $spacing-xl; // 40rpx
-  background-color: #f5f5f5;
-  min-height: 100vh;
-}
+
 
 .demo-item {
   margin-bottom: 40rpx;

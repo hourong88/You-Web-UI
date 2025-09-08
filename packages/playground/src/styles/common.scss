@@ -3,6 +3,13 @@
  * 包含页面头部、演示区域等通用组件样式
  */
 
+/* 页面容器样式 */
+.demo-page-container {
+  padding: $spacing-xl; // 40rpx
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
 /* 页面头部样式 */
 .page-header {
   display: flex;

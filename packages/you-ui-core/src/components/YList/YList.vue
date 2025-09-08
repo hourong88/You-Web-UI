@@ -74,7 +74,9 @@
             <!-- 操作区域 -->
             <div v-if="showActions" class="you-list__actions">
               <slot name="actions" :item="item" :index="index">
-                <div class="you-list__arrow">›</div>
+                <div class="you-list__arrow">
+              <div class="you-list__arrow-icon"></div>
+            </div>
               </slot>
             </div>
           </div>
@@ -468,9 +470,22 @@ onMounted(() => {
   }
 
   &__arrow {
-    font-size: 32rpx;
-    color: #ccc;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16rpx;
+    width: 32rpx;
+    height: 32rpx;
+    flex-shrink: 0;
+  }
+
+  &__arrow-icon {
+    width: 12rpx;
+    height: 12rpx;
+    border-top: 2rpx solid var(--y-color-text-tertiary, #c8c9cc);
+    border-right: 2rpx solid var(--y-color-text-tertiary, #c8c9cc);
+    transform: rotate(45deg);
+    transition: border-color 0.2s ease;
   }
 
   &__loading,

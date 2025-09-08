@@ -10,6 +10,7 @@ import Components from './pages/components/index.vue'
 import Utils from './pages/utils/index.vue'
 import YouList from './pages/you-list/index.vue'
 import YouLoading from './pages/you-loading/index.vue'
+import YouCell from './pages/you-cell/index.vue'
 
 // 创建路由
 const routes = [
@@ -20,6 +21,7 @@ const routes = [
   { path: '/utils', component: Utils },
   { path: '/you-list', component: YouList },
   { path: '/you-loading', component: YouLoading },
+  { path: '/you-cell', component: YouCell },
 ]
 
 const router = createRouter({

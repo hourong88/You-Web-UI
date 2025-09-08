@@ -1,5 +1,5 @@
 <template>
-  <div class="button-demo">
+  <div class="demo-page-container">
     <view class="page-header">
       <view class="back-button" @click="goBack">
         <text class="back-icon">←</text>
@@ -124,16 +124,6 @@ const handleThrottleClick = () => {
 <style lang="scss" scoped>
 @import '../../styles/variables.scss';
 @import '../../styles/common.scss';
-
-.button-demo {
-  padding: $spacing-xl; // 40rpx
-  background-color: #f5f5f5;
-  min-height: 100vh;
-}
-
-
-
-
 
 .button-group {
   display: flex;

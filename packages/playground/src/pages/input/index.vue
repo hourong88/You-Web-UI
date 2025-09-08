@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="demo-page-container">
     <view class="page-header">
       <view class="back-button" @click="goBack">
         <text class="back-icon">←</text>
@@ -128,10 +128,7 @@ const introValue = ref('')
 @import '../../styles/variables.scss';
 @import '../../styles/common.scss';
 
-.container {
-  padding: 40rpx;
-  background-color: #f5f5f5;
-  min-height: 100vh;
+.demo-page-container {
   max-width: 1600rpx;
   margin: 0 auto;
 }

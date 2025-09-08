@@ -32,6 +32,11 @@
             <span class="component-name">YList</span>
             <span class="component-desc">移动端列表组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/you-cell')">
+            <span class="component-icon">📋</span>
+            <span class="component-name">YCell</span>
+            <span class="component-desc">单元格组件</span>
+          </div>
         </div>
       </div>
 
