@@ -77,6 +77,8 @@ const componentCategories = ref<Category[]>([
       { name: 'Layout', desc: '布局容器', icon: '📐' },
       { name: 'Grid', desc: '栅格系统', icon: '⚏' },
       { name: 'Card', desc: '卡片', icon: '🃏' },
+      { name: 'YCard', desc: 'YCard 卡片组件', icon: '🎴', path: '/pages/you-card/index' },
+      { name: 'YCard预览', desc: 'YCard 组件预览', icon: '👁️', path: '/pages/y-card-preview/index' },
       { name: 'Divider', desc: '分割线', icon: '➖' },
     ],
   },
@@ -87,6 +89,7 @@ const componentCategories = ref<Category[]>([
       { name: 'Tabbar', desc: '标签栏', icon: '📑' },
       { name: 'Tabs', desc: '选项卡', icon: '📂' },
       { name: 'Breadcrumb', desc: '面包屑', icon: '🍞' },
+      { name: 'YSwipeAction', desc: '左滑菜单', icon: '👈', path: '/pages/y-swipe-action/index' },
     ],
   },
   {

@@ -35,6 +35,24 @@
       "style": {
         "navigationBarTitleText": "Loading 加载"
       }
+    },
+    {
+      "path": "pages/you-card/index",
+      "style": {
+        "navigationBarTitleText": "YCard 基础卡片"
+      }
+    },
+    {
+      "path": "pages/y-card-preview/index",
+      "style": {
+        "navigationBarTitleText": "YCard 预览"
+      }
+    },
+    {
+      "path": "pages/y-swipe-action/index",
+      "style": {
+        "navigationBarTitleText": "YSwipeAction 左滑菜单"
+      }
     }
   ],
   "globalStyle": {

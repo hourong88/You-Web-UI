@@ -113,6 +113,8 @@ const handleMaskClick = () => {
 </script>
 
 <style scoped lang="scss">
+@import '../../styles/variables.scss';
+
 .y-loading {
   display: flex;
   align-items: center;
@@ -123,7 +125,7 @@ const handleMaskClick = () => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9999;
+  z-index: $z-index-modal;
 }
 
 .y-loading__mask {
@@ -133,7 +135,7 @@ const handleMaskClick = () => {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9900;
+  z-index: $z-index-modal-backdrop;
 }
 
 .y-loading__box {
@@ -141,7 +143,7 @@ const handleMaskClick = () => {
   min-height: 200rpx;
   max-width: 500rpx;
   flex-direction: column;
-  border-radius: 10rpx;
+  border-radius: $border-radius-base;
 }
 
 /* 默认CSS加载器样式 */
@@ -149,31 +151,31 @@ const handleMaskClick = () => {
   width: 64rpx;
   height: 64rpx;
   border: 6rpx solid rgba(200, 200, 200, 0.3);
-  border-radius: 50%;
+  border-radius: $border-radius-full;
   border-top-color: currentColor;
   animation: rotate 0.9s linear infinite;
-  margin-bottom: 30rpx;
+  margin-bottom: $spacing-lg;
   background: transparent;
 }
 
 .y-loading__row {
   width: 100%;
   height: 36rpx;
-  color: #888;
+  color: var(--y-color-text-tertiary, $color-text-tertiary);
 }
 
 .y-loading__row .y-loading__default-spinner {
   width: 36rpx;
   height: 36rpx;
   border: 3rpx solid rgba(150, 150, 150, 0.4);
-  border-top-color: #666;
-  margin-right: 20rpx;
+  border-top-color: var(--y-color-text-secondary, $color-text-secondary);
+  margin-right: $spacing-sm;
   margin-bottom: 0;
 }
 
 .y-loading__text {
-  font-size: 26rpx;
-  line-height: 26rpx;
+  font-size: $font-size-sm;
+  line-height: $font-size-sm;
   text-align: center;
 }
 
@@ -200,33 +202,33 @@ const handleMaskClick = () => {
 /* 添加柱状图加载动画样式 */
 .y-loading__bars {
   display: flex;
-  gap: 8rpx;
+  gap: $spacing-xs;
   align-items: flex-end;
   height: 80rpx;
-  margin-bottom: 20rpx;
+  margin-bottom: $spacing-sm;
 }
 
 .y-loading__bar {
-  width: 16rpx;
+  width: $spacing-sm;
   height: 80rpx;
-  border-radius: 8rpx;
-  background: linear-gradient(to top, #4CAF50, #81C784);
+  border-radius: $border-radius-sm;
+  background: linear-gradient(to top, var(--y-color-success, $color-success), rgba(129, 199, 132, 1));
   animation: barAnimation 1.2s infinite ease-in-out;
   transform-origin: bottom;
 }
 
 .y-loading__bar:nth-child(1) {
-  background: linear-gradient(to top, #2196F3, #64B5F6);
+  background: linear-gradient(to top, var(--y-color-primary, $color-primary), rgba(100, 181, 246, 1));
   animation-delay: -0.32s;
 }
 
 .y-loading__bar:nth-child(2) {
-  background: linear-gradient(to top, #03A9F4, #4FC3F7);
+  background: linear-gradient(to top, var(--y-color-info, $color-info), rgba(79, 195, 247, 1));
   animation-delay: -0.16s;
 }
 
 .y-loading__bar:nth-child(3) {
-  background: linear-gradient(to top, #4CAF50, #81C784);
+  background: linear-gradient(to top, var(--y-color-success, $color-success), rgba(129, 199, 132, 1));
   animation-delay: 0s;
 }
 
@@ -246,23 +248,23 @@ const handleMaskClick = () => {
   width: 60rpx;
   height: 60rpx;
   border: 6rpx solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  border-top-color: #fff;
+  border-radius: $border-radius-full;
+  border-top-color: var(--y-color-white, $color-white);
   border-right-color: rgba(255, 255, 255, 0.6);
   animation: modernSpin 1s ease-in-out infinite;
-  margin-bottom: 20rpx;
-  box-shadow: 0 0 20rpx rgba(255, 255, 255, 0.1);
+  margin-bottom: $spacing-sm;
+  box-shadow: $box-shadow-sm;
 }
 
 @keyframes modernSpin {
   0% {
     transform: rotate(0deg);
-    border-top-color: #fff;
+    border-top-color: var(--y-color-white, $color-white);
     border-right-color: rgba(255, 255, 255, 0.6);
   }
   25% {
     border-top-color: rgba(255, 255, 255, 0.6);
-    border-right-color: #fff;
+    border-right-color: var(--y-color-white, $color-white);
   }
   50% {
     transform: rotate(180deg);
@@ -271,11 +273,11 @@ const handleMaskClick = () => {
   }
   75% {
     border-top-color: rgba(255, 255, 255, 0.6);
-    border-right-color: #fff;
+    border-right-color: var(--y-color-white, $color-white);
   }
   100% {
     transform: rotate(360deg);
-    border-top-color: #fff;
+    border-top-color: var(--y-color-white, $color-white);
     border-right-color: rgba(255, 255, 255, 0.6);
   }
 }
@@ -287,9 +289,9 @@ const handleMaskClick = () => {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
   border-radius: 30rpx;
   animation: modernPulse 2s infinite;
-  margin-bottom: 20rpx;
+  margin-bottom: $spacing-sm;
   position: relative;
-  box-shadow: 0 0 30rpx rgba(255, 255, 255, 0.3);
+  box-shadow: $box-shadow-md;
 }
 
 .y-loading__pulse::before {
@@ -297,10 +299,10 @@ const handleMaskClick = () => {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 20rpx;
-  height: 20rpx;
+  width: $spacing-sm;
+  height: $spacing-sm;
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 10rpx;
+  border-radius: $border-radius-xs;
   transform: translate(-50%, -50%);
   animation: innerPulse 2s infinite;
 }
@@ -309,12 +311,12 @@ const handleMaskClick = () => {
   0%, 100% {
     opacity: 0.4;
     transform: scale(1);
-    box-shadow: 0 0 30rpx rgba(255, 255, 255, 0.2);
+    box-shadow: $box-shadow-sm;
   }
   50% {
     opacity: 0.9;
     transform: scale(1.1);
-    box-shadow: 0 0 50rpx rgba(255, 255, 255, 0.4);
+    box-shadow: $box-shadow-lg;
   }
 }
 

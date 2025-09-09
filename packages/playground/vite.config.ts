@@ -8,7 +8,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      '@you-uniapp/you-ui-core': resolve(__dirname, '../you-ui-core/src')
+      '@you-uniapp/you-ui-core': resolve(__dirname, '../you-ui-core/src'),
+      '@you-ui/core': resolve(__dirname, '../you-ui-core/src')
     }
   },
   css: {
@@ -21,6 +22,10 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
-    open: true
-  }
+    open: true,
+    fs: {
+      strict: false
+    }
+  },
+  assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.png', '**/*.gif', '**/*.svg']
 })

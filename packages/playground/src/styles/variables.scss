@@ -1,77 +1,82 @@
 /** 
   * scss预处理 内置的常用样式变量 
   * 标准 Vue 项目样式变量 
- */ 
- 
- /* 颜色变量 */ 
- 
- /* 行为相关颜色  */ 
- $color-primary: #5677fc; 
- $color-success: #19be6b; 
- $color-warning: #ff7900; 
- $color-error: #EB0909; 
- $color-blue: #007AFF; 
- $color-black: #000000; 
- $color-white: #ffffff; 
- $color-pink: #f74d54; 
- $color-link: #586c94;
- $color-danger: #EB0909; // 别名，指向 $color-error
- $color-info: #007AFF; // 别名，指向 $color-blue
- $color-grey: #999999; // 灰色 
- 
- 
- /* 文字基本颜色 */ 
- $text-color: #333; //基本色 
- $text-color-inverse: #fff; //反色 
- $text-color-grey: #999; //辅助灰色，如加载更多的提示信息 
- $text-color-placeholder: #bfbfbf; 
- $text-color-disable: #c0c0c0; 
- 
- /* 背景颜色 */ 
- $bg-color: #ffffff; 
- $bg-color-grey: #fafafa; 
- $bg-color-hover: #f1f1f1; //点击状态颜色 
- $bg-color-mask: rgba(0, 0, 0, 0.4); //遮罩颜色 
- 
- /* 边框颜色 */ 
- $border-color: #eaeef1; 
- 
- /* 尺寸变量 */ 
- 
- /* 文字尺寸 (基于750rpx设计稿标准) */ 
-$font-size-sm: 24rpx; 
-$font-size-base: 28rpx; 
+ */
+
+/* 颜色变量 */
+
+/* 行为相关颜色  */
+$color-primary: #5677fc;
+$color-success: #19be6b;
+$color-warning: #ff7900;
+$color-error: #eb0909;
+$color-blue: #007aff;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-pink: #f74d54;
+$color-link: #586c94;
+$color-danger: #eb0909; // 别名，指向 $color-error
+$color-info: #007aff; // 别名，指向 $color-blue
+$color-grey: #999999; // 灰色
+
+/* 文字基本颜色 */
+$text-color: #333; //基本色
+$text-color-inverse: #fff; //反色
+$text-color-grey: #999; //辅助灰色，如加载更多的提示信息
+$text-color-placeholder: #bfbfbf;
+$text-color-disable: #c0c0c0;
+$color-text-secondary: #666; // 次要文本颜色
+$color-text-tertiary: #999; // 第三级文本颜色
+
+/* 背景颜色 */
+$bg-color: #ffffff;
+$bg-color-grey: #fafafa;
+$bg-color-hover: #f1f1f1; //点击状态颜色
+$bg-color-mask: rgba(0, 0, 0, 0.4); //遮罩颜色
+
+/* 边框颜色 */
+$border-color: #eaeef1;
+
+/* 阴影 */
+$box-shadow-base: 0 4rpx 16rpx rgba(0, 0, 0, 0.1); // 基础阴影
+
+/* 尺寸变量 */
+
+/* 文字尺寸 (基于750rpx设计稿标准) */
+$font-size-sm: 24rpx;
+$font-size-base: 28rpx;
+$font-size-body: 30rpx;
 $font-size-lg: 32rpx;
 
 /* 兼容px单位 */
-$font-size-sm-px: 12px; 
-$font-size-base-px: 14px; 
-$font-size-lg-px: 16px; 
- 
- /* 图片尺寸 (基于750rpx设计稿标准) */ 
-$img-size-sm: 40rpx; 
-$img-size-base: 52rpx; 
+$font-size-sm-px: 12px;
+$font-size-base-px: 14px;
+$font-size-lg-px: 16px;
+
+/* 图片尺寸 (基于750rpx设计稿标准) */
+$img-size-sm: 40rpx;
+$img-size-base: 52rpx;
 $img-size-lg: 80rpx;
 
 /* 兼容px单位 */
-$img-size-sm-px: 20px; 
-$img-size-base-px: 26px; 
-$img-size-lg-px: 40px; 
- 
- /* Border Radius (基于750rpx设计稿标准) */ 
-$border-radius-sm: 8rpx; 
-$border-radius-base: 12rpx; 
+$img-size-sm-px: 20px;
+$img-size-base-px: 26px;
+$img-size-lg-px: 40px;
+
+/* Border Radius (基于750rpx设计稿标准) */
+$border-radius-sm: 8rpx;
+$border-radius-base: 12rpx;
 $border-radius-md: 16rpx;
-$border-radius-lg: 24rpx; 
+$border-radius-lg: 24rpx;
 $border-radius-circle: 50%;
 
 /* 兼容px单位 */
-$border-radius-sm-px: 4px; 
-$border-radius-base-px: 6px; 
+$border-radius-sm-px: 4px;
+$border-radius-base-px: 6px;
 $border-radius-md-px: 8px;
-$border-radius-lg-px: 12px; 
- 
- /* 间距变量 (基于750rpx设计稿标准) */
+$border-radius-lg-px: 12px;
+
+/* 间距变量 (基于750rpx设计稿标准) */
 $spacing-xs: 8rpx;
 $spacing-sm: 16rpx;
 $spacing-base: 24rpx;
@@ -79,14 +84,14 @@ $spacing-md: 32rpx;
 $spacing-lg: 40rpx;
 $spacing-xl: 48rpx;
 
-/* 水平间距 (基于750rpx设计稿标准) */ 
-$spacing-row-sm: 10rpx; 
-$spacing-row-base: 20rpx; 
-$spacing-row-lg: 30rpx; 
- 
-/* 垂直间距 (基于750rpx设计稿标准) */ 
-$spacing-col-sm: 8rpx; 
-$spacing-col-base: 16rpx; 
+/* 水平间距 (基于750rpx设计稿标准) */
+$spacing-row-sm: 10rpx;
+$spacing-row-base: 20rpx;
+$spacing-row-lg: 30rpx;
+
+/* 垂直间距 (基于750rpx设计稿标准) */
+$spacing-col-sm: 8rpx;
+$spacing-col-base: 16rpx;
 $spacing-col-lg: 24rpx;
 
 /* 兼容px单位 */
@@ -96,14 +101,14 @@ $spacing-base-px: 12px;
 $spacing-md-px: 16px;
 $spacing-lg-px: 20px;
 $spacing-xl-px: 24px;
-$spacing-row-sm-px: 5px; 
-$spacing-row-base-px: 10px; 
+$spacing-row-sm-px: 5px;
+$spacing-row-base-px: 10px;
 $spacing-row-lg-px: 15px;
-$spacing-col-sm-px: 4px; 
-$spacing-col-base-px: 8px; 
-$spacing-col-lg-px: 12px; 
- 
- /* 边框宽度 (基于750rpx设计稿标准) */
+$spacing-col-sm-px: 4px;
+$spacing-col-base-px: 8px;
+$spacing-col-lg-px: 12px;
+
+/* 边框宽度 (基于750rpx设计稿标准) */
 $border-width-thin: 2rpx;
 $border-width-base: 4rpx;
 $border-width-thick: 6rpx;
@@ -119,18 +124,18 @@ $font-size-xs: 20rpx;
 $font-size-md: 32rpx;
 $font-size-xl: 36rpx;
 
-/* 透明度 */ 
-$opacity-disabled: 0.3; // 组件禁用态的透明度 
- 
- /* 文章场景相关 (基于750rpx设计稿标准) */ 
-$color-title: #2C405A; // 文章标题颜色 
-$font-size-title: 40rpx; 
-$color-subtitle: #555555; // 二级标题颜色 
-$font-size-subtitle: 36rpx; 
-$color-paragraph: #3F536E; // 文章段落颜色 
+/* 透明度 */
+$opacity-disabled: 0.3; // 组件禁用态的透明度
+
+/* 文章场景相关 (基于750rpx设计稿标准) */
+$color-title: #2c405a; // 文章标题颜色
+$font-size-title: 40rpx;
+$color-subtitle: #555555; // 二级标题颜色
+$font-size-subtitle: 36rpx;
+$color-paragraph: #3f536e; // 文章段落颜色
 $font-size-paragraph: 30rpx;
 
 /* 兼容px单位 */
-$font-size-title-px: 20px; 
-$font-size-subtitle-px: 18px; 
+$font-size-title-px: 20px;
+$font-size-subtitle-px: 18px;
 $font-size-paragraph-px: 15px;

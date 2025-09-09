@@ -302,15 +302,17 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/variables.scss';
+
 .you-list {
   width: 100%;
-  background: #fff;
+  background: var(--y-color-white, $color-white);
   overflow-y: auto;
 
   &__select-all {
-    padding: 24rpx 32rpx;
-    border-bottom: 1rpx solid #f0f0f0;
-    background: #fafafa;
+    padding: $spacing-base $spacing-md;
+    border-bottom: $border-width-thin solid var(--y-color-border-secondary, $color-border-secondary);
+    background: var(--y-color-bg-secondary, $color-bg-secondary);
   }
 
   &__select-all-checkbox {
@@ -318,30 +320,30 @@ onMounted(() => {
     align-items: center;
     
     input[type="checkbox"] {
-      margin-right: 16rpx;
-      width: 32rpx;
-      height: 32rpx;
+      margin-right: $spacing-sm;
+      width: $spacing-md;
+      height: $spacing-md;
     }
   }
 
   &__select-all-text {
-    font-size: 28rpx;
-    color: #333;
-    font-weight: 500;
+    font-size: $font-size-base;
+    color: var(--y-color-text-primary, $color-text-primary);
+    font-weight: $font-weight-medium;
   }
 
   &__select-count {
-    color: #666;
-    font-weight: normal;
-    margin-left: 8rpx;
+    color: var(--y-color-text-secondary, $color-text-secondary);
+    font-weight: $font-weight-normal;
+    margin-left: $spacing-xs;
   }
 
   &__item {
     display: flex;
     align-items: center;
-    padding: 24rpx 32rpx;
-    border-bottom: 1rpx solid #f0f0f0;
-    transition: background-color 0.2s;
+    padding: $spacing-base $spacing-md;
+    border-bottom: $border-width-thin solid var(--y-color-border-secondary, $color-border-secondary);
+    transition: background-color $transition-duration-fast;
 
     &:last-child {
       border-bottom: none;
@@ -351,17 +353,17 @@ onMounted(() => {
       cursor: pointer;
 
       &:active {
-        background: #f8f9fa;
+        background: var(--y-color-bg-secondary, $color-bg-secondary);
       }
     }
 
     &--selected {
-      background: #e3f2fd;
+      background: var(--y-color-primary-light, $color-primary-light);
     }
   }
 
   &__checkbox {
-    margin-right: 24rpx;
+    margin-right: $spacing-base;
     flex-shrink: 0;
   }
 
@@ -384,7 +386,7 @@ onMounted(() => {
   &__field {
     display: flex;
     align-items: center;
-    margin-bottom: 8rpx;
+    margin-bottom: $spacing-xs;
 
     &:last-child {
       margin-bottom: 0;
@@ -392,29 +394,29 @@ onMounted(() => {
 
     &--text {
       .you-list__field-value {
-        font-size: 28rpx;
-        color: #333;
+        font-size: $font-size-base;
+        color: var(--y-color-text-primary, $color-text-primary);
       }
     }
 
     &--price {
       .you-list__field-value {
-        font-size: 32rpx;
-        font-weight: 600;
+        font-size: $font-size-md;
+        font-weight: $font-weight-semibold;
       }
     }
 
     &--status {
       .you-list__field-value {
-        font-size: 24rpx;
+        font-size: $font-size-sm;
       }
     }
   }
 
   &__field-label {
-    font-size: 24rpx;
-    color: #666;
-    margin-right: 16rpx;
+    font-size: $font-size-sm;
+    color: var(--y-color-text-secondary, $color-text-secondary);
+    margin-right: $spacing-sm;
     flex-shrink: 0;
     min-width: 120rpx;
   }
@@ -429,43 +431,43 @@ onMounted(() => {
     width: 80rpx;
     height: 80rpx;
     object-fit: cover;
-    border-radius: 8rpx;
+    border-radius: $border-radius-sm;
   }
 
   &__price {
-    color: #dc3545;
-    font-weight: 600;
+    color: var(--y-color-danger, $color-danger);
+    font-weight: $font-weight-semibold;
   }
 
   &__status {
     padding: 6rpx 12rpx;
-    border-radius: 16rpx;
-    font-size: 22rpx;
-    font-weight: 500;
+    border-radius: $border-radius-md;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
 
     &--success {
-      background: #d4edda;
-      color: #155724;
+      background: rgba(40, 167, 69, 0.1);
+      color: var(--y-color-success, $color-success);
     }
 
     &--warning {
-      background: #fff3cd;
-      color: #856404;
+      background: rgba(255, 193, 7, 0.1);
+      color: var(--y-color-warning, $color-warning);
     }
 
     &--danger {
-      background: #f8d7da;
-      color: #721c24;
+      background: rgba(220, 53, 69, 0.1);
+      color: var(--y-color-danger, $color-danger);
     }
 
     &--info {
-      background: #d1ecf1;
-      color: #0c5460;
+      background: rgba(23, 162, 184, 0.1);
+      color: var(--y-color-info, $color-info);
     }
   }
 
   &__actions {
-    margin-left: 24rpx;
+    margin-left: $spacing-base;
     flex-shrink: 0;
   }
 
@@ -473,19 +475,19 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 16rpx;
-    width: 32rpx;
-    height: 32rpx;
+    margin-left: $spacing-sm;
+    width: $spacing-md;
+    height: $spacing-md;
     flex-shrink: 0;
   }
 
   &__arrow-icon {
     width: 12rpx;
     height: 12rpx;
-    border-top: 2rpx solid var(--y-color-text-tertiary, #c8c9cc);
-    border-right: 2rpx solid var(--y-color-text-tertiary, #c8c9cc);
+    border-top: $border-width-thin solid var(--y-color-text-tertiary, $color-text-tertiary);
+    border-right: $border-width-thin solid var(--y-color-text-tertiary, $color-text-tertiary);
     transform: rotate(45deg);
-    transition: border-color 0.2s ease;
+    transition: border-color $transition-duration-fast ease;
   }
 
   &__loading,
@@ -493,53 +495,53 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80rpx 32rpx;
-    color: #6c757d;
+    padding: 80rpx $spacing-md;
+    color: var(--y-color-text-secondary, $color-text-secondary);
   }
 
   &__loading-text,
   &__empty-text {
-    font-size: 28rpx;
+    font-size: $font-size-base;
   }
 
   &__load-more {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 32rpx;
-    background: #f8f9fa;
+    padding: $spacing-md;
+    background: var(--y-color-bg-secondary, $color-bg-secondary);
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color $transition-duration-fast;
 
     &:active {
-      background: #e9ecef;
+      background: var(--y-color-gray-200, $color-gray-200);
     }
   }
 
   &__load-more-text {
-    font-size: 28rpx;
-    color: #007bff;
+    font-size: $font-size-base;
+    color: var(--y-color-primary, $color-primary);
   }
 
   &__waterfall-status {
-    padding: 32rpx;
+    padding: $spacing-md;
     text-align: center;
   }
 
   &__waterfall-loading,
   &__waterfall-finished {
-    color: #6c757d;
+    color: var(--y-color-text-secondary, $color-text-secondary);
   }
 
   &__waterfall-loading-text,
   &__waterfall-finished-text {
-    font-size: 28rpx;
+    font-size: $font-size-base;
   }
 
   &__waterfall-error {
-    color: #dc3545;
+    color: var(--y-color-danger, $color-danger);
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: opacity $transition-duration-fast;
 
     &:active {
       opacity: 0.7;
@@ -547,7 +549,7 @@ onMounted(() => {
   }
 
   &__waterfall-error-text {
-    font-size: 28rpx;
+    font-size: $font-size-base;
   }
 }
 </style>
