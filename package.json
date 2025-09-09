@@ -2,6 +2,8 @@
   "name": "you-uniapp-ui",
   "version": "1.0.0",
   "description": "You-UniApp UI 多端组件库",
+  "author": "hourong",
+  "license": "MIT",
   "private": true,
   "workspaces": [
     "packages/*"

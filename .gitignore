@@ -1,7 +1,13 @@
 # Logs
 logs
-*.md
 *.log
+
+# Allow important markdown files
+!README.md
+!CONTRIBUTING.md
+!CODE_OF_CONDUCT.md
+!CHANGELOG.md
+!.github/**/*.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -177,3 +183,6 @@ yarn.lock
 *.njsproj
 *.sln
 *.sw?
+
+# Project specific
+promote/
