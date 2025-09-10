@@ -108,7 +108,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { YCard } from '@you-ui/core'
+import { YCard } from '@you-web/ui-core'
 // 使用public目录下的静态资源
 const cardImage = '/cat.png'
 

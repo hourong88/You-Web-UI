@@ -32,6 +32,11 @@ export interface ComponentBaseProps {
   disabled?: boolean
 }
 
+// YCell 组件事件类型
+export interface YCellClickEvent {
+  index: number
+}
+
 // 按钮组件属性
 export interface ButtonProps extends ComponentBaseProps {
   /** 按钮类型 */
