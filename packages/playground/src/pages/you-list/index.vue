@@ -97,8 +97,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { YList } from '@you-uniapp/you-ui-core'
-import type { DataItem, FieldConfig } from '@you-uniapp/you-ui-core/types'
+import { YList } from '@you-web/ui-core'
+import type { DataItem, FieldConfig } from '@you-web/ui-core/types'
 
 const router = useRouter()
 

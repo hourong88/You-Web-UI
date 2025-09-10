@@ -148,7 +148,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { YLoading, YButton } from '@you-uniapp/ui-core'
+import { YLoading, YButton } from '@you-web/ui-core'
 
 const router = useRouter()
 

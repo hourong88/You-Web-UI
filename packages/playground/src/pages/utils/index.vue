@@ -70,7 +70,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { rpx2px, px2rpx, getSystemInfo } from '@you-uniapp/ui-core'
+import { rpx2px, px2rpx, getSystemInfo } from '@you-web/ui-core'
 
 const router = useRouter()
 

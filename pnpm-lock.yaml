@@ -44,7 +44,7 @@ importers:
 
   packages/docs:
     dependencies:
-      '@you-uniapp/ui-core':
+      '@you-web/ui-core':
         specifier: workspace:*
         version: link:../you-ui-core
       vue:
@@ -105,7 +105,7 @@ importers:
 
   packages/playground:
     dependencies:
-      '@you-uniapp/ui-core':
+      '@you-web/ui-core':
         specifier: workspace:*
         version: link:../you-ui-core
       vue:

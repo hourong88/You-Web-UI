@@ -104,7 +104,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import { YButton } from '@you-uniapp/ui-core'
+import { YButton } from '@you-web/ui-core'
 
 const router = useRouter()
 

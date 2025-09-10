@@ -1,7 +1,7 @@
 {
-  "name": "You-UniApp UI Playground",
-  "appid": "__UNI__YOU_UI_PLAYGROUND",
-  "description": "You-UniApp UI 组件库演示项目",
+  "name": "You-Web UI Playground",
+  "appid": "__UNI__YOU_WEB_UI_PLAYGROUND",
+  "description": "You-Web UI 组件库演示项目",
   "versionName": "1.0.0",
   "versionCode": "100",
   "transformPx": false,
@@ -11,7 +11,7 @@
       "base": "/"
     },
     "publicPath": "/",
-    "title": "You-UniApp UI Playground",
+    "title": "You-Web UI Playground",
     "template": "index.html"
   },
   "app-plus": {

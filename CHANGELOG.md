@@ -1,17 +1,20 @@
-# 更新日志
+# You-Web UI 更新日志
 
-本文档记录了 You-UniApp 项目的所有重要变更。
+本文档记录了 You-Web UI 项目的所有重要变更。
 
-格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)，
-并且本项目遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
+基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/) 格式，本项目遵循 [语义化版本](https://semver.org/lang/zh-CN/) 规范。
 
 ## [未发布]
 
-### 新增
+### 变更
+- 项目重新定位为 Vue 3 Web 组件库
+- 更新项目名称为 You-Web UI
+- 更新平台支持说明，专注于现代浏览器支持
 - 完善开源项目文档结构
 - 添加贡献指南 (CONTRIBUTING.md)
 - 添加行为准则 (CODE_OF_CONDUCT.md)
-- 添加更新日志 (CHANGELOG.md)
+- 配置 GitHub Issue 和 PR 模板
+- 添加更新日志文档
 
 ## [1.0.0] - 2024-01-XX
 

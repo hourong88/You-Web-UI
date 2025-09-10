@@ -1,6 +1,6 @@
-# You-UniApp
+# You-Web UI
 
-🚀 轻量、简洁的移动端组件库，基于最新技术栈构建，支持多端使用
+🚀 基于 Vue 3 + TypeScript 的现代化 Web 组件库，专为 Vue 开发者打造
 
 ## ✨ 特性
 
@@ -13,16 +13,16 @@
 
 ## 🎉 项目背景
 
-在寻找基于最新技术栈且支持多端使用的组件库时，发现市面上缺少满足需求的解决方案，因此决定自己构建一个现代化的移动端组件库。
+You-Web UI 是一个现代化的 Vue 3 组件库，基于 Vue 3 和 TypeScript 构建。它提供了丰富的组件和工具函数，帮助开发者快速构建高质量的 Web 应用。
 
 ## 📦 安装
 
 ```bash
-npm install @you-uniapp/ui-core
+npm install @you-web/ui-core
 # 或
-pnpm add @you-uniapp/ui-core
+pnpm add @you-web/ui-core
 # 或
-yarn add @you-uniapp/ui-core
+yarn add @you-web/ui-core
 ```
 
 ## 🚀 快速开始
@@ -31,8 +31,8 @@ yarn add @you-uniapp/ui-core
 
 ```typescript
 import { createApp } from 'vue'
-import YouUI from '@you-uniapp/ui-core'
-import '@you-uniapp/ui-core/dist/style.css'
+import YouUI from '@you-web/ui-core'
+import '@you-web/ui-core/dist/style.css'
 
 const app = createApp(App)
 app.use(YouUI)
@@ -41,7 +41,7 @@ app.use(YouUI)
 ### 按需引入
 
 ```typescript
-import { YButton, YCard } from '@you-uniapp/ui-core'
+import { YButton, YCard } from '@you-web/ui-core'
 ```
 
 ### 在模板中使用
@@ -57,11 +57,10 @@ import { YButton, YCard } from '@you-uniapp/ui-core'
 
 ## 🎯 支持平台
 
-- ✅ **H5**：完美支持现代浏览器
-- ✅ **微信小程序**：支持微信小程序环境
-- ✅ **支付宝小程序**：支持支付宝小程序环境
-- ✅ **App**：支持 uni-app 打包的原生应用
-- 🔄 **其他小程序**：持续适配中
+- ✅ **现代浏览器**：完美支持 Chrome、Firefox、Safari、Edge 等主流浏览器
+- ✅ **移动端浏览器**：支持移动端 H5 应用
+- ✅ **Vue 3 应用**：专为 Vue 3 项目优化
+- ✅ **TypeScript**：完整的类型支持
 
 ## 📋 组件清单
 
@@ -231,3 +230,238 @@ pnpm test
 ---
 
 ⭐ 如果这个项目对你有帮助，请给我们一个 Star！
+
+---
+
+# You-Web UI (English)
+
+🚀 A modern Web component library based on Vue 3 + TypeScript, crafted for Vue developers
+
+## ✨ Features
+
+- 🎯 **Modern Tech Stack**: Built with Vue 3 + TypeScript + Vite
+- 📱 **Multi-platform Support**: Supports H5, Mini Programs, Apps and more
+- 🎨 **Lightweight & Clean**: Simple component design with small bundle size
+- 🔧 **TypeScript**: Complete TypeScript type support
+- 📖 **Comprehensive Documentation**: Detailed component docs and examples
+- 🎪 **Storybook**: Visual component showcase and debugging
+
+## 🎉 Project Background
+
+You-Web UI is a modern Vue 3 component library built with Vue 3 and TypeScript. It provides rich components and utility functions to help developers quickly build high-quality Web applications.
+
+## 📦 Installation
+
+```bash
+npm install @you-web/ui-core
+# or
+pnpm add @you-web/ui-core
+# or
+yarn add @you-web/ui-core
+```
+
+## 🚀 Quick Start
+
+### Global Import
+
+```typescript
+import { createApp } from 'vue'
+import YouUI from '@you-web/ui-core'
+import '@you-web/ui-core/dist/style.css'
+
+const app = createApp(App)
+app.use(YouUI)
+```
+
+### On-demand Import
+
+```typescript
+import { YButton, YCard } from '@you-web/ui-core'
+```
+
+### Usage in Template
+
+```vue
+<template>
+  <YButton type="primary" @click="handleClick">Click Button</YButton>
+  <YCard title="Card Title">
+    <p>Card content</p>
+  </YCard>
+</template>
+```
+
+## 🎯 Supported Platforms
+
+- ✅ **Modern Browsers**: Perfect support for Chrome, Firefox, Safari, Edge and other mainstream browsers
+- ✅ **Mobile Browsers**: Support for mobile H5 applications
+- ✅ **Vue 3 Applications**: Optimized for Vue 3 projects
+- ✅ **TypeScript**: Complete type support
+
+## 📋 Component List
+
+### ✅ Completed Components
+
+| Component | Description | Status |
+|-----------|-------------|--------|
+| YButton | Button component | ✅ Completed |
+| YCard | Card container | ✅ Completed |
+| YCell | Cell component | ✅ Completed |
+| YInput | Input component | ✅ Completed |
+| YList | List component | ✅ Completed |
+| YLoading | Loading component | ✅ Completed |
+| YSwipeAction | Swipe action | ✅ Completed |
+
+### 📸 Component Preview
+
+Here are the effects of components in actual applications:
+
+#### Component Page Overview
+![Component Page](./projectImg/componentPage.png)
+
+#### YCard Component
+![Card Component](./projectImg/card.png)
+
+#### YCell Component
+![Cell Component](./projectImg/cell.png)
+
+#### YInput Component
+![Input Component](./projectImg/input.png)
+
+#### YLoading Component
+![Loading Component](./projectImg/loading.png)
+
+#### YSwipeAction Component
+![Swipe Action Component](./projectImg/leftMenu.png)
+
+#### Documentation System
+![Documentation System](./projectImg/doc.png)
+
+### 🚧 Components in Development
+
+We plan to develop the following components, community contributors are welcome:
+
+#### Basic Components
+- [ ] YIcon - Icon component
+- [ ] YImage - Image component
+- [ ] YText - Text component
+- [ ] YDivider - Divider
+- [ ] YTag - Tag component
+- [ ] YBadge - Badge component
+
+#### Form Components
+- [ ] YRadio - Radio button
+- [ ] YCheckbox - Checkbox
+- [ ] YSwitch - Switch
+- [ ] YSlider - Slider
+- [ ] YRate - Rate
+- [ ] YPicker - Picker
+- [ ] YDatePicker - Date picker
+- [ ] YUpload - File upload
+
+#### Feedback Components
+- [ ] YToast - Toast
+- [ ] YModal - Modal
+- [ ] YActionSheet - Action sheet
+- [ ] YDialog - Dialog
+- [ ] YNotify - Notification
+- [ ] YProgress - Progress bar
+
+#### Display Components
+- [ ] YCollapse - Collapse panel
+- [ ] YTabs - Tabs
+- [ ] YSwiper - Swiper
+- [ ] YGrid - Grid
+- [ ] YSteps - Steps
+- [ ] YTimeline - Timeline
+
+#### Navigation Components
+- [ ] YNavBar - Navigation bar
+- [ ] YTabBar - Tab bar
+- [ ] YSidebar - Sidebar navigation
+- [ ] YIndexBar - Index bar
+- [ ] YPagination - Pagination
+
+#### Business Components
+- [ ] YSearch - Search
+- [ ] YCalendar - Calendar
+- [ ] YAddressBook - Address book
+- [ ] YGoodsAction - Goods action
+- [ ] YSubmitBar - Submit bar
+
+## 📖 Documentation
+
+- **Online Documentation**: [Storybook Documentation](http://localhost:6006/) (Local development)
+- **Component Examples**: [Playground Demo](http://localhost:3000/) (Local development)
+
+### Running Documentation Locally
+
+```bash
+# Clone the project
+git clone https://github.com/your-username/You-UniApp.git
+cd You-UniApp
+
+# Install dependencies
+pnpm install
+
+# Start Storybook documentation
+pnpm --filter @you-uniapp/docs dev
+
+# Start Playground examples
+pnpm --filter @you-uniapp/playground dev
+```
+
+## 🤝 Contributing
+
+We welcome community contributions! Whether it's new component development, bug fixes, documentation improvements, or feature suggestions, feel free to submit PRs or Issues.
+
+### Contribution Guide
+
+1. **Fork the project** to your GitHub account
+2. **Create a feature branch**: `git checkout -b feature/new-component`
+3. **Commit changes**: `git commit -am 'Add new component'`
+4. **Push branch**: `git push origin feature/new-component`
+5. **Submit Pull Request**
+
+### Development Environment
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build component library
+pnpm build
+
+# Run tests
+pnpm test
+```
+
+### Component Development Standards
+
+- Use Vue 3 Composition API
+- Complete TypeScript type definitions
+- Follow unified naming conventions (Y + ComponentName)
+- Provide complete Props and Events documentation
+- Write Storybook documentation and examples
+- Ensure multi-platform compatibility
+
+## 📄 License
+
+[MIT License](./LICENSE)
+
+## 🙏 Acknowledgments
+
+Thanks to all developers who contributed to this project!
+
+## 📞 Contact Us
+
+If you have any questions or suggestions, feel free to contact us through:
+
+- Submit [Issue](https://github.com/your-username/You-UniApp/issues)
+- Start [Discussion](https://github.com/your-username/You-UniApp/discussions)
+
+---
+
+⭐ If this project helps you, please give us a Star!

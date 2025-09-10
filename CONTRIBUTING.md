@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢您对 You-UniApp 项目的关注！我们欢迎任何形式的贡献，包括但不限于：
+感谢您对 You-Web 项目的关注！我们欢迎任何形式的贡献，包括但不限于：
 
 - 🐛 报告 Bug
 - 💡 提出新功能建议
@@ -20,8 +20,8 @@
 1. **Fork 项目**
    ```bash
    # 克隆你 fork 的仓库
-   git clone https://github.com/hourong88/You-UniApp.git
-   cd You-UniApp
+   git clone https://github.com/hourong88/You-Web.git
+   cd You-Web
    ```
 
 2. **安装依赖**
@@ -40,7 +40,7 @@
 
 4. **项目结构**
    ```
-   You-UniApp/
+   You-Web/
    ├── packages/
    │   ├── you-ui-core/     # 核心组件库
    │   ├── playground/      # 组件预览和测试

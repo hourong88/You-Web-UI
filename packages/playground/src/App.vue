@@ -10,7 +10,7 @@ console.log('App mounted')
 </script>
 
 <style lang="scss">
-@import '@you-uniapp/ui-core/dist/style.css';
+@import '../../you-ui-core/dist/style.css';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

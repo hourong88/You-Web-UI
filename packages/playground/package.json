@@ -1,7 +1,7 @@
 {
-  "name": "@you-uniapp/playground",
+  "name": "@you-web/playground",
   "version": "1.0.0",
-  "description": "You-UniApp UI 示例项目",
+  "description": "You-Web UI 示例项目",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@you-uniapp/ui-core": "workspace:*",
+    "@you-web/ui-core": "workspace:*",
     "vue": "^3.4.0",
     "vue-router": "^4.0.0"
   },

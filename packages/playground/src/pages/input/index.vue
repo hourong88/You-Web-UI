@@ -103,7 +103,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { YInput } from '@you-uniapp/ui-core'
+import { YInput } from '@you-web/ui-core'
 
 const router = useRouter()
 

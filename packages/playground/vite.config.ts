@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      '@you-uniapp/you-ui-core': resolve(__dirname, '../you-ui-core/src'),
+      '@you-web/ui-core': resolve(__dirname, '../you-ui-core/src'),
       '@you-ui/core': resolve(__dirname, '../you-ui-core/src')
     }
   },

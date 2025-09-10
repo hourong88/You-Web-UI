@@ -23,15 +23,14 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'YouUniAppUI',
+      name: 'YouWebUI',
       fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
-      external: ['vue', '@dcloudio/uni-app'],
+      external: ['vue'],
       output: {
         globals: {
-          vue: 'Vue',
-          '@dcloudio/uni-app': 'uni'
+          vue: 'Vue'
         }
       }
     }

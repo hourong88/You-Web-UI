@@ -10,7 +10,7 @@
     "test": "test-storybook"
   },
   "dependencies": {
-    "@you-uniapp/ui-core": "workspace:*",
+    "@you-web/ui-core": "workspace:*",
     "vue": "^3.4.0"
   },
   "devDependencies": {

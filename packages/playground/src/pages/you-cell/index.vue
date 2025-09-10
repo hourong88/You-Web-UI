@@ -162,8 +162,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { YCell } from '@you-uniapp/ui-core'
-import type { YCellClickEvent } from '@you-uniapp/ui-core'
+import { YCell } from '@you-web/ui-core'
+import type { YCellClickEvent } from '@you-web/ui-core'
 
 const router = useRouter()
 const clickMessage = ref('')
