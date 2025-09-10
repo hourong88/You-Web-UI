@@ -1,5 +1,9 @@
 # You-Web UI
 
+[![npm version](https://badge.fury.io/js/@you-web%2Fui-core.svg)](https://badge.fury.io/js/@you-web%2Fui-core)
+[![npm downloads](https://img.shields.io/npm/dm/@you-web/ui-core.svg)](https://www.npmjs.com/package/@you-web/ui-core)
+[![license](https://img.shields.io/npm/l/@you-web/ui-core.svg)](https://github.com/your-username/You-UniApp/blob/main/LICENSE)
+
 🚀 基于 Vue 3 + TypeScript 的现代化 Web 组件库，专为 Vue 开发者打造
 
 ## ✨ 特性
@@ -17,6 +21,8 @@ You-Web UI 是一个现代化的 Vue 3 组件库，基于 Vue 3 和 TypeScript �
 
 ## 📦 安装
 
+### NPM 安装
+
 ```bash
 npm install @you-web/ui-core
 # 或
@@ -24,6 +30,17 @@ pnpm add @you-web/ui-core
 # 或
 yarn add @you-web/ui-core
 ```
+
+### CDN 引入
+
+```html
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/@you-web/ui-core/dist/style.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/@you-web/ui-core/dist/index.umd.js"></script>
+```
+
+> 💡 **提示**：其他开发者现在可以通过 `npm install @you-web/ui-core` 安装使用您的组件库！
 
 ## 🚀 快速开始
 
@@ -409,6 +426,47 @@ pnpm --filter @you-uniapp/docs dev
 # Start Playground examples
 pnpm --filter @you-uniapp/playground dev
 ```
+
+## 🔄 版本管理
+
+### 发布新版本
+
+当您需要发布新版本时，请使用以下命令进行版本管理：
+
+```bash
+# 补丁版本（修复bug）
+npm version patch
+
+# 次要版本（新功能，向后兼容）
+npm version minor
+
+# 主要版本（破坏性更改）
+npm version major
+```
+
+### 发布流程
+
+```bash
+# 1. 构建项目
+pnpm build
+
+# 2. 更新版本号
+npm version patch  # 或 minor/major
+
+# 3. 发布到 NPM
+npm publish --access public
+
+# 4. 推送到 Git
+git push origin main --tags
+```
+
+### 版本规范
+
+我们遵循 [语义化版本](https://semver.org/lang/zh-CN/) 规范：
+
+- **MAJOR**：不兼容的 API 修改
+- **MINOR**：向下兼容的功能性新增
+- **PATCH**：向下兼容的问题修正
 
 ## 🤝 Contributing
 
