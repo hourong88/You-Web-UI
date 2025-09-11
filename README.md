@@ -19,6 +19,14 @@
 
 You-Web UI 是一个现代化的 Vue 3 组件库，基于 Vue 3 和 TypeScript 构建。它提供了丰富的组件和工具函数，帮助开发者快速构建高质量的 Web 应用。
 
+## 📱 关注我们
+
+扫码关注微信公众号，获取最新更新和技术分享：
+
+<div align="center">
+  <img src="./projectImg/qrcode_gzh.jpg" alt="微信公众号" width="200">
+</div>
+
 ## 📦 安装
 
 ### NPM 安装
