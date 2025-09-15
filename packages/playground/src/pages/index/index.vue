@@ -20,6 +20,11 @@
             <span class="component-name">YInput</span>
             <span class="component-desc">输入框组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/y-icon')">
+            <span class="component-icon">🎨</span>
+            <span class="component-name">YIcon</span>
+            <span class="component-desc">图标组件</span>
+          </div>
         </div>
       </div>
 
@@ -93,6 +98,15 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+
+// 声明Vue模板类型
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any
+    }
+  }
+}
 
 const router = useRouter()
 

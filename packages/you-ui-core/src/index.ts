@@ -19,7 +19,7 @@ export { default as YCard } from './components/YCard'
 export { default as YLoading } from './components/YLoading'
 export { default as YCell } from './components/YCell'
 export { default as YSwipeAction } from './components/YSwipeAction'
-// export { default as YIcon } from './components/YIcon'
+export { default as YIcon } from './components/YIcon'
 // export { default as YToast } from './components/YToast'
 
 // 版本信息

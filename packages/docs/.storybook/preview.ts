@@ -2,7 +2,7 @@ import type { Preview } from '@storybook/vue3'
 import { setup } from '@storybook/vue3'
 
 // 导入组件库样式
-import '@you-uniapp/ui-core/dist/style.css'
+import '@you-web/ui-core/dist/style.css'
 
 // 设置 Vue 应用
 setup((app) => {

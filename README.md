@@ -96,6 +96,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YButton | 按钮组件 | ✅ 已完成 |
 | YCard | 卡片容器 | ✅ 已完成 |
 | YCell | 单元格组件 | ✅ 已完成 |
+| YIcon | 图标组件 | ✅ 已完成 |
 | YInput | 输入框组件 | ✅ 已完成 |
 | YList | 列表组件 | ✅ 已完成 |
 | YLoading | 加载组件 | ✅ 已完成 |
@@ -120,18 +121,23 @@ import { YButton, YCard } from '@you-web/ui-core'
 #### YLoading 加载组件
 ![加载组件](./projectImg/loading.png)
 
+#### YIcon 图标组件
+![图标组件](./projectImg/icon.png)
+
 #### YSwipeAction 滑动操作组件
 ![滑动操作组件](./projectImg/leftMenu.png)
 
 #### 文档系统
 ![文档系统](./projectImg/doc.png)
 
+#### YIcon 组件文档
+![图标组件文档](./projectImg/iconDoc.png)
+
 ### 🚧 待开发组件
 
 我们计划开发以下组件，欢迎社区贡献者参与：
 
 #### 基础组件
-- [ ] YIcon - 图标组件
 - [ ] YImage - 图片组件
 - [ ] YText - 文本组件
 - [ ] YDivider - 分割线
@@ -331,6 +337,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YButton | Button component | ✅ Completed |
 | YCard | Card container | ✅ Completed |
 | YCell | Cell component | ✅ Completed |
+| YIcon | Icon component | ✅ Completed |
 | YInput | Input component | ✅ Completed |
 | YList | List component | ✅ Completed |
 | YLoading | Loading component | ✅ Completed |
@@ -366,7 +373,6 @@ Here are the effects of components in actual applications:
 We plan to develop the following components, community contributors are welcome:
 
 #### Basic Components
-- [ ] YIcon - Icon component
 - [ ] YImage - Image component
 - [ ] YText - Text component
 - [ ] YDivider - Divider

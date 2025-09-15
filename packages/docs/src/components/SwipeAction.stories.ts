@@ -1,4 +1,4 @@
-import { YSwipeAction } from '@you-uniapp/ui-core'
+import { YSwipeAction } from '@you-web/ui-core'
 
 export default {
   title: '基础组件/SwipeAction 滑动操作',

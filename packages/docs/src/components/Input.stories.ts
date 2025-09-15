@@ -1,4 +1,4 @@
-import { YInput } from '@you-uniapp/ui-core'
+import { YInput } from "@you-web/ui-core";
 import { ref } from 'vue'
 
 export default {

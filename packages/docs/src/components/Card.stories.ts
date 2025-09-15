@@ -1,4 +1,4 @@
-import { YCard } from '@you-uniapp/ui-core'
+import { YCard } from '@you-web/ui-core'
 
 export default {
   title: '基础组件/Card 卡片',

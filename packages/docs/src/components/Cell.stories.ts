@@ -1,4 +1,4 @@
-import { YCell } from '@you-uniapp/ui-core'
+import { YCell } from '@you-web/ui-core'
 
 export default {
   title: 'Components/YCell',

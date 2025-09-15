@@ -1,4 +1,4 @@
-import { YButton } from '@you-uniapp/ui-core'
+import { YButton } from '@you-web/ui-core'
 
 export default {
   title: '基础组件/Button 按钮',

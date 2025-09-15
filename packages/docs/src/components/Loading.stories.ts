@@ -1,4 +1,4 @@
-import { YLoading } from '@you-uniapp/ui-core'
+import { YLoading } from '@you-web/ui-core'
 
 export default {
   title: '反馈组件/Loading 加载',
