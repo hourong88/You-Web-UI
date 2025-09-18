@@ -106,7 +106,7 @@ const componentCategories = ref<Category[]>([
     components: [
       { name: 'Avatar', desc: '头像', icon: '👤' },
       { name: 'Badge', desc: '徽标', icon: '🏷️' },
-      { name: 'Tag', desc: '标签', icon: '🏷️' },
+      { name: 'YTag', desc: '标签组件', icon: '🏷️', path: '/y-tag' },
       { name: 'Timeline', desc: '时间轴', icon: '⏰' },
     ],
   },

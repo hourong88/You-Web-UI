@@ -14,6 +14,7 @@ import YouCell from './pages/you-cell/index.vue'
 import YouCard from './pages/you-card/index.vue'
 import YSwipeAction from './pages/y-swipe-action/index.vue'
 import YIcon from './pages/y-icon/index.vue'
+import YTag from './pages/y-tag/index.vue'
 
 // 创建路由
 const routes = [
@@ -28,6 +29,7 @@ const routes = [
   { path: '/pages/you-card/index', component: YouCard },
   { path: '/pages/y-swipe-action/index', component: YSwipeAction },
   { path: '/y-icon', component: YIcon },
+  { path: '/y-tag', component: YTag },
 ]
 
 const router = createRouter({

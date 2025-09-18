@@ -66,6 +66,11 @@
             <span class="component-name">YCell</span>
             <span class="component-desc">单元格组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/y-tag')">
+            <span class="component-icon">🏷️</span>
+            <span class="component-name">YTag</span>
+            <span class="component-desc">标签组件</span>
+          </div>
         </div>
       </div>
 

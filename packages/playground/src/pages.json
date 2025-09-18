@@ -53,6 +53,12 @@
       "style": {
         "navigationBarTitleText": "YSwipeAction 左滑菜单"
       }
+    },
+    {
+      "path": "pages/y-tag/index",
+      "style": {
+        "navigationBarTitleText": "YTag 标签"
+      }
     }
   ],
   "globalStyle": {

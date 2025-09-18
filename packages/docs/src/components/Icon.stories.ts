@@ -267,6 +267,40 @@ export const ClickEvent = {
   }
 }
 
+// 自定义间距
+export const CustomMargin = {
+  render: () => ({
+    components: { YIcon },
+    template: `
+      <div style="display: flex; align-items: center; background: #f5f5f5; padding: 20px; border-radius: 8px;">
+        <span style="font-size: 14px; color: #666;">默认间距:</span>
+        <YIcon name="about-fill" :size="24" color="#007aff" />
+        <YIcon name="add-fill" :size="24" color="#007aff" />
+        <YIcon name="add" :size="24" color="#007aff" />
+      </div>
+      <div style="display: flex; align-items: center; background: #f5f5f5; padding: 20px; border-radius: 8px; margin-top: 16px;">
+        <span style="font-size: 14px; color: #666;">自定义间距:</span>
+        <YIcon name="about-fill" :size="24" color="#ff3b30" margin="0 20px" />
+        <YIcon name="add-fill" :size="24" color="#ff3b30" margin="0 20px" />
+        <YIcon name="add" :size="24" color="#ff3b30" margin="0 20px" />
+      </div>
+      <div style="display: flex; align-items: center; background: #f5f5f5; padding: 20px; border-radius: 8px; margin-top: 16px;">
+        <span style="font-size: 14px; color: #666;">大间距:</span>
+        <YIcon name="about-fill" :size="24" color="#34c759" margin="0 40px" />
+        <YIcon name="add-fill" :size="24" color="#34c759" margin="0 40px" />
+        <YIcon name="add" :size="24" color="#34c759" margin="0 40px" />
+      </div>
+    `
+  }),
+  parameters: {
+    docs: {
+      description: {
+        story: '使用 `margin` 属性可以设置图标的外边距，支持CSS margin语法，如 "10px"、"0 20px"、"10px 20px 30px 40px" 等。'
+      }
+    }
+  }
+}
+
 // 自定义样式
 export const CustomStyle = {
   render: () => ({

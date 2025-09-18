@@ -48,6 +48,28 @@
     </div>
 
     <div class="demo-section">
+      <div class="section-title">自定义间距</div>
+      <div class="margin-demo">
+        <text class="demo-label">默认间距:</text>
+        <YIcon name="home" :size="24" color="#007aff" />
+        <YIcon name="star" :size="24" color="#007aff" />
+        <YIcon name="like" :size="24" color="#007aff" />
+      </div>
+      <div class="margin-demo">
+        <text class="demo-label">自定义间距:</text>
+        <YIcon name="home" :size="24" color="#ff3b30" margin="0 20rpx" />
+        <YIcon name="star" :size="24" color="#ff3b30" margin="0 20rpx" />
+        <YIcon name="like" :size="24" color="#ff3b30" margin="0 20rpx" />
+      </div>
+      <div class="margin-demo">
+        <text class="demo-label">大间距:</text>
+        <YIcon name="home" :size="24" color="#34c759" margin="0 40rpx" />
+        <YIcon name="star" :size="24" color="#34c759" margin="0 40rpx" />
+        <YIcon name="like" :size="24" color="#34c759" margin="0 40rpx" />
+      </div>
+    </div>
+
+    <div class="demo-section">
       <div class="section-title">点击事件</div>
       <div class="event-demo">
         <YIcon name="home" :size="32" color="#007aff" @click="handleIconClick" />
@@ -196,6 +218,27 @@ const handleIconClick = () => {
 .svg-icon {
   width: 32rpx;
   height: 32rpx;
+}
+
+.margin-demo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs; // 8rpx
+  padding: $spacing-md; // 24rpx
+  background-color: #fafafa;
+  border-radius: $border-radius-sm; // 8rpx
+  margin-bottom: $spacing-sm; // 16rpx
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.demo-label {
+  font-size: $font-size-sm; // 24rpx
+  color: #666;
+  min-width: 120rpx;
+  margin-right: $spacing-sm; // 16rpx
 }
 
 .event-demo {

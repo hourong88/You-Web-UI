@@ -101,6 +101,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YList | 列表组件 | ✅ 已完成 |
 | YLoading | 加载组件 | ✅ 已完成 |
 | YSwipeAction | 滑动操作 | ✅ 已完成 |
+| YTag | 标签组件 | ✅ 已完成 |
 
 ### 📸 组件预览
 
@@ -127,6 +128,9 @@ import { YButton, YCard } from '@you-web/ui-core'
 #### YSwipeAction 滑动操作组件
 ![滑动操作组件](./projectImg/leftMenu.png)
 
+#### YTag 标签组件
+![标签组件](./projectImg/tag.png)
+
 #### 文档系统
 ![文档系统](./projectImg/doc.png)
 
@@ -141,7 +145,6 @@ import { YButton, YCard } from '@you-web/ui-core'
 - [ ] YImage - 图片组件
 - [ ] YText - 文本组件
 - [ ] YDivider - 分割线
-- [ ] YTag - 标签组件
 - [ ] YBadge - 徽标组件
 
 #### 表单组件
@@ -342,6 +345,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YList | List component | ✅ Completed |
 | YLoading | Loading component | ✅ Completed |
 | YSwipeAction | Swipe action | ✅ Completed |
+| YTag | Tag component | ✅ Completed |
 
 ### 📸 Component Preview
 
@@ -376,7 +380,6 @@ We plan to develop the following components, community contributors are welcome:
 - [ ] YImage - Image component
 - [ ] YText - Text component
 - [ ] YDivider - Divider
-- [ ] YTag - Tag component
 - [ ] YBadge - Badge component
 
 #### Form Components
