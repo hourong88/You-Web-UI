@@ -102,6 +102,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YLoading | 加载组件 | ✅ 已完成 |
 | YSwipeAction | 滑动操作 | ✅ 已完成 |
 | YTag | 标签组件 | ✅ 已完成 |
+| YFooter | 页脚组件 | ✅ 已完成 |
 
 ### 📸 组件预览
 
@@ -130,6 +131,9 @@ import { YButton, YCard } from '@you-web/ui-core'
 
 #### YTag 标签组件
 ![标签组件](./projectImg/tag.png)
+
+#### YFooter 页脚组件
+![页脚组件](./projectImg/footer.png)
 
 #### 文档系统
 ![文档系统](./projectImg/doc.png)
@@ -346,6 +350,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YLoading | Loading component | ✅ Completed |
 | YSwipeAction | Swipe action | ✅ Completed |
 | YTag | Tag component | ✅ Completed |
+| YFooter | Footer component | ✅ Completed |
 
 ### 📸 Component Preview
 

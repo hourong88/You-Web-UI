@@ -49,6 +49,11 @@
             <span class="component-name">YSwipeAction</span>
             <span class="component-desc">左滑菜单组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/y-footer')">
+            <span class="component-icon">📄</span>
+            <span class="component-name">YFooter</span>
+            <span class="component-desc">页脚组件</span>
+          </div>
         </div>
       </div>
 
