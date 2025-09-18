@@ -150,7 +150,15 @@ export interface ComponentSlots {
 // 通用数据项接口
 export interface DataItem {
   id: string | number
-  [key: string]: any // 允许任意其他字段
+  [key: string]: any
+}
+
+// 基础数据项类型，用于不需要额外字段的场景
+export interface BaseDataItem {
+  id: string | number
+  label?: string
+  value?: string | number
+  disabled?: boolean
 }
 
 // 字段配置接口

@@ -1,6 +1,7 @@
 // useDevice Hook - 设备判断工具
 import { ref, onUnmounted, computed } from 'vue'
 import type { DeviceInfo } from '../types'
+import { safeExecute, ErrorType, ErrorLevel } from './errorHandler'
 
 // 声明 uni 全局变量
 declare const uni: any
@@ -29,32 +30,40 @@ export function useDevice(): DeviceInfo {
     // #endif
 
     // 获取屏幕宽度
-    try {
-      // UniApp 环境
-      if (typeof uni !== 'undefined') {
-        const systemInfo = uni.getSystemInfoSync()
-        screenWidth.value = systemInfo.windowWidth || systemInfo.screenWidth || 375
-      }
-      // H5 环境
-      else if (typeof window !== 'undefined') {
-        screenWidth.value = window.innerWidth
-        
-        const handleResize = () => {
-          screenWidth.value = window.innerWidth
+    screenWidth.value = safeExecute(
+      () => {
+        // UniApp 环境
+        if (typeof uni !== 'undefined') {
+          const systemInfo = uni.getSystemInfoSync()
+          return systemInfo.windowWidth || systemInfo.screenWidth || 375
         }
-        
-        // 监听窗口大小变化
-        window.addEventListener('resize', handleResize)
-        
-        // 组件卸载时移除监听
-        onUnmounted(() => {
-          window.removeEventListener('resize', handleResize)
-        })
+        // H5 环境
+        else if (typeof window !== 'undefined') {
+          const width = window.innerWidth
+
+          const handleResize = () => {
+            screenWidth.value = window.innerWidth
+          }
+
+          // 监听窗口大小变化
+          window.addEventListener('resize', handleResize)
+
+          // 组件卸载时移除监听
+          onUnmounted(() => {
+            window.removeEventListener('resize', handleResize)
+          })
+
+          return width
+        }
+        return 375
+      },
+      375,
+      {
+        type: ErrorType.PLATFORM,
+        level: ErrorLevel.WARN,
+        message: '获取设备信息失败'
       }
-    } catch (error) {
-      console.warn('获取设备信息失败:', error)
-      screenWidth.value = 375 // 默认值
-    }
+    )
   }
 
   // 立即初始化

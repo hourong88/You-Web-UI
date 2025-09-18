@@ -91,9 +91,6 @@ const iconStyle = computed(() => {
   if (props.useSvg) {
     // 设置SVG图标的尺寸
     style.width = `${props.size}${props.unit}`
-    console.log('svgPath', svgPath.value)
-    console.log('props.size', props.size)
-    console.log('props.unit', style.width)
     style.height = `${props.size}${props.unit}`
     style.display = 'block'
     style.objectFit = 'contain'

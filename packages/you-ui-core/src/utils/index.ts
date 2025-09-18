@@ -5,6 +5,9 @@ import type { ComponentSize, ComponentSizeAlias } from '../types/index.js'
 // 导出屏幕适配工具函数
 export * from './screen'
 
+// 导出错误处理工具
+export * from './errorHandler'
+
 /**
  * 判断是否为开发环境
  */
@@ -83,18 +86,18 @@ export const debounce = <T extends (...args: any[]) => any>(
   immediate = false
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout | null = null
-  
+
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null
       if (!immediate) func(...args)
     }
-    
+
     const callNow = immediate && !timeout
-    
+
     if (timeout) clearTimeout(timeout)
     timeout = setTimeout(later, wait)
-    
+
     if (callNow) func(...args)
   }
 }
@@ -107,7 +110,7 @@ export const throttle = <T extends (...args: any[]) => any>(
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean
-  
+
   return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
       func(...args)
@@ -145,7 +148,7 @@ export const merge = <T extends Record<string, any>>(
 ): T => {
   if (!sources.length) return target
   const source = sources.shift()
-  
+
   if (isObject(target) && isObject(source)) {
     for (const key in source) {
       if (isObject(source[key])) {
@@ -156,7 +159,7 @@ export const merge = <T extends Record<string, any>>(
       }
     }
   }
-  
+
   return merge(target, ...sources)
 }
 
@@ -187,7 +190,7 @@ export const normalizeSizeAlias = (size: ComponentSize | ComponentSizeAlias): Co
     base: 'medium',
     lg: 'large'
   }
-  
+
   return sizeMap[size as ComponentSizeAlias] || (size as ComponentSize)
 }
 

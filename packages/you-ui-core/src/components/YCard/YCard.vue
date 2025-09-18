@@ -112,12 +112,10 @@ const handleLongClick = () => {
 
 const handleImageLoad = () => {
   // 图片加载完成，触发重新渲染
-  console.log('Image loaded successfully')
 }
 
 const handleImageError = () => {
-  // 图片加载失败
-  console.log('Image load failed')
+  // 图片加载失败，可以在这里处理错误状态
 }
 </script>
 
