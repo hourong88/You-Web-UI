@@ -70,7 +70,7 @@ export const Default: Story = {
       { text: '关于我们', url: '/pages/about/index', type: 'navigate' },
       { text: '联系我们', url: '/pages/contact/index', type: 'navigate' }
     ],
-    copyright: '© 2024 You-UniApp. All Rights Reserved.',
+    copyright: '© 2024 You-Web UI. All Rights Reserved.',
     fixed: false
   }
 }

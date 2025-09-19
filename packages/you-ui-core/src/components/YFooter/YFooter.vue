@@ -1,37 +1,29 @@
 <template>
-  <view 
+  <div 
     class="y-footer" 
     :class="{ 'y-footer--fixed': fixed }"
     :style="footerStyle"
   >
     <!-- 导航链接区域 -->
-    <view v-if="navigate.length > 0" class="y-footer__links" :style="{ color: linkColorValue }">
-      <navigator
+    <div v-if="navigate.length > 0" class="y-footer__links" :style="{ color: linkColorValue }">
+      <a
         v-for="(item, index) in navigate"
         :key="index"
         class="y-footer__link"
-        hover-class="y-footer__link--hover"
-        :hover-stop-propagation="true"
         :style="getLinkStyle(item)"
-        :open-type="item.type"
-        :url="item[urlField]"
-        :target="item.target"
-        :delta="item.delta"
-        :app-id="item.appId"
-        :path="item.path"
-        :extra-data="item.extraData"
-        @success="item.onSuccess"
-        @fail="item.onFail"
+        :href="item[urlField]"
+        :target="item.target || '_self'"
+        @click="handleLinkClick(item, index)"
       >
         {{ item[textField] }}
-      </navigator>
-    </view>
+      </a>
+    </div>
 
     <!-- 版权信息区域 -->
-    <view class="y-footer__copyright" :style="copyrightStyle">
+    <div class="y-footer__copyright" :style="copyrightStyle">
       {{ copyright }}
-    </view>
-  </view>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -54,10 +46,8 @@ interface NavigateItem {
   target?: string
   /** 返回层数 */
   delta?: number
-  /** 小程序 appId */
-  appId?: string
-  /** 小程序路径 */
-  path?: string
+
+
   /** 额外数据 */
   extraData?: Record<string, any>
   /** 成功回调 */

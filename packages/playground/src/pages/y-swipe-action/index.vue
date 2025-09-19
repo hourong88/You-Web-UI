@@ -204,8 +204,10 @@ const iconActions = ref([
 // 处理操作按钮点击
 const handleActionClick = (action: any, index: number) => {
   console.log('操作按钮点击:', action, index)
-  // 兼容uni-app和web环境
-  if (typeof uni !== 'undefined' && uni.showToast) {
+  // Web 环境下的处理逻辑
+  console.log(`点击了: ${action.name}`)
+  // 可以替换为自定义的 toast 组件
+  if (typeof window !== 'undefined') {
     uni.showToast({
       title: `点击了: ${action.name}`,
       icon: 'none',

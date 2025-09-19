@@ -152,8 +152,8 @@ dist
 ehthumbs.db
 Thumbs.db
 
-# UniApp specific
-unpackage/
+# Web build artifacts
+dist/
 
 # Build outputs
 build/

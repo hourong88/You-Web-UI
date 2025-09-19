@@ -134,14 +134,9 @@ const actionIcons = ref([
 ])
 
 const handleIconClick = () => {
-  if (typeof uni !== 'undefined') {
-    uni.showToast({
-      title: '图标被点击了！',
-      icon: 'none',
-    })
-  } else {
-    alert('图标被点击了！')
-  }
+  console.log('图标被点击了！')
+  // 可以替换为自定义 toast 组件
+  alert('图标被点击了！')
 }
 </script>
 

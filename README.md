@@ -2,14 +2,14 @@
 
 [![npm version](https://badge.fury.io/js/@you-web%2Fui-core.svg)](https://badge.fury.io/js/@you-web%2Fui-core)
 [![npm downloads](https://img.shields.io/npm/dm/@you-web/ui-core.svg)](https://www.npmjs.com/package/@you-web/ui-core)
-[![license](https://img.shields.io/npm/l/@you-web/ui-core.svg)](https://github.com/your-username/You-UniApp/blob/main/LICENSE)
+[![license](https://img.shields.io/npm/l/@you-web/ui-core.svg)](https://github.com/your-username/You-Web-UI/blob/main/LICENSE)
 
 🚀 基于 Vue 3 + TypeScript 的现代化 Web 组件库，专为 Vue 开发者打造
 
 ## ✨ 特性
 
 - 🎯 **现代化技术栈**：基于 Vue 3 + TypeScript + Vite 构建
-- 📱 **多端支持**：支持 H5、小程序、App 等多个平台
+- 📱 **Web 优化**：专为现代 Web 应用优化，支持响应式设计
 - 🎨 **轻量简洁**：组件设计简洁，体积小巧
 - 🔧 **TypeScript**：完整的 TypeScript 类型支持
 - 📖 **完善文档**：提供详细的组件文档和示例
@@ -105,6 +105,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YFooter | 页脚组件 | ✅ 已完成 |
 | YGrid | 宫格组件 | ✅ 已完成 |
 | YTips | 消息提示组件 | ✅ 已完成 |
+| YSteps | 步骤条组件 | ✅ 已完成 |
 
 ### 📸 组件预览
 
@@ -142,6 +143,9 @@ import { YButton, YCard } from '@you-web/ui-core'
 
 #### YTips 消息提示组件
 ![消息提示组件](./projectImg/tips.png)
+
+#### YSteps 步骤条组件
+![步骤条组件](./projectImg/steps.png)
 
 #### 文档系统
 ![文档系统](./projectImg/doc.png)
@@ -208,17 +212,17 @@ import { YButton, YCard } from '@you-web/ui-core'
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/You-UniApp.git
-cd You-UniApp
+git clone https://github.com/your-username/You-Web-UI.git
+cd You-Web-UI
 
 # 安装依赖
 pnpm install
 
 # 启动 Storybook 文档
-pnpm --filter @you-uniapp/docs dev
+pnpm --filter @you-web/docs dev
 
 # 启动 Playground 示例
-pnpm --filter @you-uniapp/playground dev
+pnpm --filter @you-web/playground dev
 ```
 
 ## 🤝 参与贡献
@@ -270,8 +274,8 @@ pnpm test
 
 如果你有任何问题或建议，欢迎通过以下方式联系我们：
 
-- 提交 [Issue](https://github.com/your-username/You-UniApp/issues)
-- 发起 [Discussion](https://github.com/your-username/You-UniApp/discussions)
+- 提交 [Issue](https://github.com/your-username/You-Web-UI/issues)
+- 发起 [Discussion](https://github.com/your-username/You-Web-UI/discussions)
 
 ---
 
@@ -359,6 +363,9 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YSwipeAction | Swipe action | ✅ Completed |
 | YTag | Tag component | ✅ Completed |
 | YFooter | Footer component | ✅ Completed |
+| YGrid | Grid component | ✅ Completed |
+| YTips | Tips component | ✅ Completed |
+| YSteps | Steps component | ✅ Completed |
 
 ### 📸 Component Preview
 
@@ -444,17 +451,17 @@ We plan to develop the following components, community contributors are welcome:
 
 ```bash
 # Clone the project
-git clone https://github.com/your-username/You-UniApp.git
-cd You-UniApp
+git clone https://github.com/your-username/You-Web-UI.git
+cd You-Web-UI
 
 # Install dependencies
 pnpm install
 
 # Start Storybook documentation
-pnpm --filter @you-uniapp/docs dev
+pnpm --filter @you-web/docs dev
 
 # Start Playground examples
-pnpm --filter @you-uniapp/playground dev
+pnpm --filter @you-web/playground dev
 ```
 
 ## 🔄 版本管理
@@ -547,8 +554,8 @@ Thanks to all developers who contributed to this project!
 
 If you have any questions or suggestions, feel free to contact us through:
 
-- Submit [Issue](https://github.com/your-username/You-UniApp/issues)
-- Start [Discussion](https://github.com/your-username/You-UniApp/discussions)
+- Submit [Issue](https://github.com/your-username/You-Web-UI/issues)
+- Start [Discussion](https://github.com/your-username/You-Web-UI/discussions)
 
 ---
 

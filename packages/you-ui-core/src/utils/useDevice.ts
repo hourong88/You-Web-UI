@@ -15,8 +15,7 @@ export function useDevice(): DeviceInfo {
   const screenWidth = ref(0)
 
   const initDeviceInfo = () => {
-    // UniApp 平台判断
-    // #ifdef H5
+    // Web 平台判断
     platform.value = 'h5'
     // #endif
     // #ifdef APP-PLUS
@@ -32,9 +31,9 @@ export function useDevice(): DeviceInfo {
     // 获取屏幕宽度
     screenWidth.value = safeExecute(
       () => {
-        // UniApp 环境
-        if (typeof uni !== 'undefined') {
-          const systemInfo = uni.getSystemInfoSync()
+        // Web 环境
+        if (typeof window !== 'undefined') {
+          const systemInfo = { windowWidth: window.innerWidth, screenWidth: window.screen.width }
           return systemInfo.windowWidth || systemInfo.screenWidth || 375
         }
         // H5 环境
@@ -71,8 +70,8 @@ export function useDevice(): DeviceInfo {
 
   // 计算设备类型
   const isMobile = computed(() => {
-    // 小于 768px 宽度为移动端，或者通过 UniApp 平台判断
-    return screenWidth.value < 768 || ['app', 'mp-weixin', 'mp-alipay'].includes(platform.value)
+    // 小于 768px 宽度为移动端
+    return screenWidth.value < 768
   })
 
   const isPC = computed(() => {

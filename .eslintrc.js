@@ -32,8 +32,7 @@ module.exports = {
     wx: 'readonly',
     getCurrentPages: 'readonly',
     getApp: 'readonly',
-    UniApp: 'readonly',
-    WechatMiniprogram: 'readonly',
+
     plus: 'readonly'
   },
   overrides: [

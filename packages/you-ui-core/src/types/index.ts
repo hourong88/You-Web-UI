@@ -1,4 +1,4 @@
-// You-UniApp UI 类型定义
+// You-Web UI 类型定义
 
 // 组件尺寸类型
 export type ComponentSize = 'small' | 'medium' | 'large'

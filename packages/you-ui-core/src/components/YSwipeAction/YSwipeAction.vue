@@ -280,9 +280,10 @@ const manualSwitch = (isOpen: boolean): void => {
 }
 
 const px = (num: number): string => {
-  // 兼容非uni-app环境
-  if (typeof uni !== 'undefined' && uni.upx2px) {
-    return uni.upx2px(num) + 'px'
+  // Web 环境处理
+  if (false) {
+    // 不会执行到这里
+    return num + 'px'
   }
   // 在普通web环境中，直接使用px值
   return num + 'px'

@@ -3,7 +3,7 @@
 1.  **SCSS 变量未正确导入或解析：** 这是最常见的问题。你的 `vite.config.ts` 中的 `additionalData` 配置可能不正确，或者变量文件路径不对。
 2.  **变量名称或值有误：** 变量名拼写错误，或者变量文件中没有定义这些变量。
 3.  **样式优先级/覆盖问题：** 有其他更具体的 CSS 规则或内联样式覆盖了你的新样式。
-4.  **Vite/UniApp 配置问题：** SCSS 预处理器本身没有正确工作。
+4.  **Vite 配置问题：** SCSS 预处理器本身没有正确工作。
 
 让我们一步步来检查：
 
@@ -41,7 +41,7 @@ export default defineConfig({
         // 如果你的 _variables.scss 在 packages/styles/ 目录下
         // 那么你需要一个指向它的路径
         // 注意：这里的路径是相对于 vite.config.ts 所在目录的，或者使用绝对路径
-        // 假设你的项目根目录是 You-UniApp，vite.config.ts 在 packages/playground/
+        // 假设你的项目根目录是 You-Web-UI，vite.config.ts 在 packages/playground/
         // 而 _variables.scss 在 packages/styles/
         // 那么你需要从 packages/playground/ 向上级目录找，或者使用绝对路径
         additionalData: `
@@ -148,7 +148,7 @@ $y-button-height-large: 96rpx;
 
 ### 4. 重启开发服务器
 
-在修改了 `vite.config.ts` 或任何 SCSS 配置文件之后，**务必停止当前的开发服务器并重新启动**。Vite/UniApp 需要重新编译配置。
+在修改了 `vite.config.ts` 或任何 SCSS 配置文件之后，**务必停止当前的开发服务器并重新启动**。Vite 需要重新编译配置。
 
 ```bash
 # 停止当前运行的命令 (Ctrl+C)
@@ -159,7 +159,7 @@ npm run dev # 或 yarn dev
 
 这是最直接的验证方式。
 
-1.  在 H5 模式下运行你的 UniApp 项目 (通常是 `npm run dev:h5`)。
+1.  在开发模式下运行你的 Web 项目 (通常是 `npm run dev`)。
 2.  打开浏览器开发者工具 (F12)。
 3.  选中你的组件元素（例如 `input` 或 `button`）。
 4.  查看 "Elements" 面板中的 "Styles" 或 "Computed" 标签页。

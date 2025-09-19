@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="header">
-      <h1 class="title">You-UniApp UI Playground</h1>
+      <h1 class="title">You-Web UI Playground</h1>
       <p class="subtitle">组件库演示项目</p>
     </div>
 
@@ -58,6 +58,11 @@
             <span class="component-icon">📄</span>
             <span class="component-name">YFooter</span>
             <span class="component-desc">页脚组件</span>
+          </div>
+          <div class="component-item" @click="navigateTo('/pages/y-steps/index')">
+            <span class="component-icon">📊</span>
+            <span class="component-name">YSteps</span>
+            <span class="component-desc">步骤条组件</span>
           </div>
         </div>
       </div>
@@ -131,6 +136,7 @@ declare global {
 const router = useRouter()
 
 const navigateTo = (path: string) => {
+  // 统一使用 Vue Router 进行导航
   router.push(path)
 }
 </script>

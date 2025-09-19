@@ -167,7 +167,7 @@ class ErrorHandler {
   private logError(errorInfo: ErrorInfo): void {
     if (!this.config.enableConsoleLog) return
 
-    const logMessage = `[You-UniApp UI] ${errorInfo.level.toUpperCase()}: ${errorInfo.message}`
+    const logMessage = `[You-Web UI] ${errorInfo.level.toUpperCase()}: ${errorInfo.message}`
 
     switch (errorInfo.level) {
       case ErrorLevel.INFO:
@@ -200,7 +200,7 @@ class ErrorHandler {
     } catch (error) {
       // 上报失败时不再递归处理，避免无限循环
       if (this.config.enableConsoleLog) {
-        console.warn('[You-UniApp UI] Failed to report error:', error)
+        console.warn('[You-Web UI] Failed to report error:', error)
       }
     }
   }

@@ -8,7 +8,7 @@
     </view>
     <div class="header">
       <h1 class="title">组件展示</h1>
-      <p class="subtitle">You-UniApp UI 组件库</p>
+      <p class="subtitle">You-Web UI 组件库</p>
     </div>
 
     <div class="content">

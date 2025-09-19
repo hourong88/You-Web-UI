@@ -122,19 +122,15 @@ const goBack = () => {
 const handleCardClick = (payload: { index: number }) => {
   console.log('卡片点击事件:', payload)
   eventMessage.value = `点击了第 ${payload.index + 1} 个卡片 (${new Date().toLocaleTimeString()})`
-  uni.showToast({
-    title: `点击了第 ${payload.index + 1} 个卡片`,
-    icon: 'none',
-  })
+  console.log(`点击了第 ${payload.index + 1} 个卡片`)
+  alert(`点击了第 ${payload.index + 1} 个卡片`)
 }
 
 const handleCardLongClick = (payload: { index: number }) => {
   console.log('卡片长按事件:', payload)
   eventMessage.value = `长按了第 ${payload.index + 1} 个卡片 (${new Date().toLocaleTimeString()})`
-  uni.showToast({
-    title: `长按了第 ${payload.index + 1} 个卡片`,
-    icon: 'none',
-  })
+  console.log(`长按了第 ${payload.index + 1} 个卡片`)
+  alert(`长按了第 ${payload.index + 1} 个卡片`)
 }
 </script>
 

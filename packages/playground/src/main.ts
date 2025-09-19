@@ -18,6 +18,7 @@ import YTag from './pages/y-tag/index.vue'
 import YFooter from './pages/y-footer/index.vue'
 import YGrid from './pages/y-grid/index.vue'
 import YTips from './pages/y-tips/index.vue'
+import YSteps from './pages/y-steps/index.vue'
 
 // 创建路由
 const routes = [
@@ -31,6 +32,7 @@ const routes = [
   { path: '/you-cell', component: YouCell },
   { path: '/pages/you-card/index', component: YouCard },
   { path: '/pages/y-swipe-action/index', component: YSwipeAction },
+  { path: '/pages/y-steps/index', component: YSteps },
   { path: '/y-icon', component: YIcon },
   { path: '/y-tag', component: YTag },
   { path: '/y-footer', component: YFooter },

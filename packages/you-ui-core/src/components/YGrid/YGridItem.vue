@@ -173,8 +173,7 @@ const handleClick = () => {
   box-sizing: border-box;
 }
 
-// 兼容百度小程序的点击效果
-/* #ifdef MP-BAIDU */
+
 .y-grid-item:active {
   background-color: $bg-color-hover;
 }

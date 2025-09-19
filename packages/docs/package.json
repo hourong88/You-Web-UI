@@ -1,7 +1,7 @@
 {
-  "name": "@you-uniapp/docs",
+  "name": "@you-web/docs",
   "version": "1.0.0",
-  "description": "You-UniApp UI 文档站点",
+  "description": "You-Web UI 文档站点",
   "private": true,
   "scripts": {
     "dev": "storybook dev -p 6006",

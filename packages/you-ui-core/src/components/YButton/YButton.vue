@@ -63,8 +63,7 @@ interface Props {
   text?: string // 按钮文本，如果使用 slot 则忽略
   throttle?: number // 节流时间，单位ms，防止重复点击
   customStyle?: string | CSSProperties // 自定义样式
-  // UniApp hover 属性
-  hoverClass?: string
+
   hoverStartTime?: number
   hoverStayTime?: number
   // 自定义颜色覆盖

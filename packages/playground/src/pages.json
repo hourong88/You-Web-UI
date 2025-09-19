@@ -59,11 +59,17 @@
       "style": {
         "navigationBarTitleText": "YTag 标签"
       }
+    },
+    {
+      "path": "pages/y-steps/index",
+      "style": {
+        "navigationBarTitleText": "YSteps 步骤条"
+      }
     }
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "You-UniApp UI Playground",
+    "navigationBarTitleText": "You-Web UI Playground",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },

@@ -67,7 +67,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import { YTag } from '@you-ui/core'
+import { YTag } from '@you-web/ui-core'
 
 const router = useRouter()
 
@@ -76,10 +76,8 @@ const goBack = () => {
 }
 
 const handleClick = () => {
-  uni.showToast({
-    title: '标签被点击了',
-    icon: 'none'
-  })
+  console.log('标签被点击了')
+  alert('标签被点击了')
 }
 </script>
 

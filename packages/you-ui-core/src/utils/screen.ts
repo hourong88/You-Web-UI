@@ -15,14 +15,11 @@ export function getWindowWidth(): number {
   if (_windowWidth === null) {
     _windowWidth = safeExecute(
       () => {
-        // 在UniApp环境中使用uni.getSystemInfoSync()
-        const uniGlobal = (globalThis as any).uni || (window as any).uni;
-        if (uniGlobal && uniGlobal.getSystemInfoSync) {
-          return uniGlobal.getSystemInfoSync().windowWidth;
-        } else {
-          // 在H5环境中使用window.innerWidth
+        // 在Web环境中使用window API
+        if (typeof window !== 'undefined') {
           return window.innerWidth || document.documentElement.clientWidth || 375;
         }
+        return 375;
       },
       375,
       {
@@ -43,11 +40,8 @@ export function getWindowWidth(): number {
 export function rpx2px(rpxValue: number): number {
   return safeExecute(
     () => {
-      // 优先使用UniApp官方提供的转换API
-      const uniGlobal = (globalThis as any).uni || (window as any).uni;
-      if (uniGlobal && uniGlobal.upx2px) {
-        return uniGlobal.upx2px(rpxValue);
-      }
+      // Web环境下的rpx转换
+      // 手动实现转换逻辑
 
       // 手动实现转换逻辑
       const currentWindowWidth = getWindowWidth();
@@ -84,18 +78,13 @@ export function px2rpx(pxValue: number): number {
 export function getSystemInfo() {
   return safeExecute(
     () => {
-      const uniGlobal = (globalThis as any).uni || (window as any).uni;
-      if (uniGlobal && uniGlobal.getSystemInfoSync) {
-        return uniGlobal.getSystemInfoSync();
-      } else {
-        // H5环境下的模拟设备信息
-        return {
-          windowWidth: getWindowWidth(),
-          windowHeight: window.innerHeight || document.documentElement.clientHeight || 667,
-          platform: 'h5',
-          pixelRatio: window.devicePixelRatio || 1
-        };
-      }
+      // Web环境下的设备信息
+      return {
+        windowWidth: getWindowWidth(),
+        windowHeight: window.innerHeight || document.documentElement.clientHeight || 667,
+        platform: 'web',
+        pixelRatio: window.devicePixelRatio || 1
+      };
     },
     {
       windowWidth: 375,

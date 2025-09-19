@@ -87,8 +87,8 @@ jspm_packages/
 ehthumbs.db
 Thumbs.db
 
-# UniApp
-unpackage/
+# Web build artifacts
+dist/
 
 # History
 .history/

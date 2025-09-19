@@ -65,7 +65,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { YTips } from '@you-ui/core'
+import { YTips } from '@you-web/ui-core'
 
 // 组件引用
 const topTipsRef = ref<InstanceType<typeof YTips>>()
@@ -166,7 +166,7 @@ const showPersistentTips = () => {
 
 // 返回上一页
 const goBack = () => {
-  uni.navigateBack()
+  history.back()
 }
 </script>
 

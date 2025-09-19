@@ -1,15 +1,18 @@
 // 全局类型声明文件
 
-// UniApp 全局对象声明
-declare const uni: {
-  showToast: (options: {
-    title: string
-    icon?: 'success' | 'error' | 'loading' | 'none'
-    duration?: number
-    mask?: boolean
-  }) => void
-  // 可以根据需要添加更多 uni API
+// Web 环境全局对象声明
+declare const window: Window & typeof globalThis
+declare const document: Document
+
+// 自定义 Toast 接口
+interface ToastOptions {
+  title: string
+  icon?: 'success' | 'error' | 'loading' | 'none'
+  duration?: number
+  mask?: boolean
 }
+
+declare const showToast: (options: ToastOptions) => void
 
 // Vue 模板类型声明
 declare global {
@@ -20,4 +23,4 @@ declare global {
   }
 }
 
-export {}
+export { }

@@ -1,4 +1,4 @@
-// You-UniApp UI 工具函数
+// You-Web UI 工具函数
 
 import type { ComponentSize, ComponentSizeAlias } from '../types/index.js'
 
@@ -22,31 +22,7 @@ export const isProd = process.env.NODE_ENV === 'production'
  * 获取当前平台
  */
 export const getPlatform = (): string => {
-  // #ifdef H5
-  return 'h5'
-  // #endif
-  // #ifdef MP-WEIXIN
-  return 'mp-weixin'
-  // #endif
-  // #ifdef MP-ALIPAY
-  return 'mp-alipay'
-  // #endif
-  // #ifdef MP-BAIDU
-  return 'mp-baidu'
-  // #endif
-  // #ifdef MP-TOUTIAO
-  return 'mp-toutiao'
-  // #endif
-  // #ifdef MP-QQ
-  return 'mp-qq'
-  // #endif
-  // #ifdef APP-PLUS
-  return 'app-plus'
-  // #endif
-  // #ifdef APP-NVUE
-  return 'app-nvue'
-  // #endif
-  return 'unknown'
+  return 'web'
 }
 
 /**
@@ -209,7 +185,7 @@ export const addUnit = (value: string | number, unit = 'px'): string => {
   return value as string
 }
 
-// UniApp specific utilities removed for component library compatibility
+// Web specific utilities for component library
 
 /**
  * 日志工具
@@ -217,17 +193,17 @@ export const addUnit = (value: string | number, unit = 'px'): string => {
 export const logger = {
   log: (...args: any[]) => {
     if (isDev) {
-      console.log('[You-UniApp UI]', ...args)
+      console.log('[You-Web UI]', ...args)
     }
   },
   warn: (...args: any[]) => {
     if (isDev) {
-      console.warn('[You-UniApp UI]', ...args)
+      console.warn('[You-Web UI]', ...args)
     }
   },
   error: (...args: any[]) => {
     if (isDev) {
-      console.error('[You-UniApp UI]', ...args)
+      console.error('[You-Web UI]', ...args)
     }
   }
 }

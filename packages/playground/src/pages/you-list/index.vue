@@ -179,10 +179,8 @@ const customFields: FieldConfig[] = [
 // 事件处理
 const handleItemClick = (item: DataItem, index: number) => {
   console.log('Item clicked:', item, index)
-  uni.showToast({
-    title: `点击了: ${item.name || item.title}`,
-    icon: 'none',
-  })
+  console.log(`点击了: ${item.name || item.title}`)
+  alert(`点击了: ${item.name || item.title}`)
 }
 
 const handleSelectedItemsUpdate = (items: DataItem[]) => {
@@ -233,17 +231,13 @@ const getStatusText = (status: string) => {
 }
 
 const handleCall = (item: DataItem) => {
-  uni.showToast({
-    title: `拨打电话: ${item.phone}`,
-    icon: 'none',
-  })
+  console.log(`拨打电话: ${item.phone}`)
+  alert(`拨打电话: ${item.phone}`)
 }
 
 const handleMessage = (item: DataItem) => {
-  uni.showToast({
-    title: `发送消息给: ${item.name}`,
-    icon: 'none',
-  })
+  console.log(`发送消息给: ${item.name}`)
+  alert(`发送消息给: ${item.name}`)
 }
 
 // 瀑布流加载处理

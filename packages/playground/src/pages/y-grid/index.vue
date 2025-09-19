@@ -88,7 +88,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { YGrid, YGridItem } from '@you-ui/core'
+import { YGrid, YGridItem } from '@you-web/ui-core'
 
 // 基础网格数据
 const basicItems = ref([
@@ -139,15 +139,13 @@ const colorItems = ref([
 // 处理网格项点击
 const handleItemClick = (payload: { index: number }) => {
   console.log('点击了网格项:', payload.index)
-  uni.showToast({
-    title: `点击了第 ${payload.index + 1} 个网格`,
-    icon: 'none'
-  })
+  console.log(`点击了第 ${payload.index + 1} 个网格`)
+  alert(`点击了第 ${payload.index + 1} 个网格`)
 }
 
 // 返回上一页
 const goBack = () => {
-  uni.navigateBack()
+  history.back()
 }
 </script>
 

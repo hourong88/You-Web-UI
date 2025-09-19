@@ -14,7 +14,7 @@
       <div class="demo-container">
         <YFooter 
           :navigate="basicLinks"
-          copyright="© 2024 You-UniApp. All Rights Reserved."
+          copyright="© 2024 You-Web UI. All Rights Reserved."
         />
       </div>
     </div>
@@ -77,7 +77,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { YFooter } from '@you-ui/core'
+import { YFooter } from '@you-web/ui-core'
 
 // 基础链接数据
 const basicLinks = ref([
@@ -129,16 +129,14 @@ const moreLinks = ref([
 
 // 返回上一页
 const goBack = () => {
-  uni.navigateBack()
+  history.back()
 }
 
 // 处理链接点击事件
 const handleLinkClick = (payload: any) => {
   console.log('链接点击:', payload)
-  uni.showToast({
-    title: `点击了: ${payload.item.text}`,
-    icon: 'none'
-  })
+  console.log(`点击了: ${payload.item.text}`)
+  alert(`点击了: ${payload.item.text}`)
 }
 </script>
 
