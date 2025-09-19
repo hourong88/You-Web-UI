@@ -103,6 +103,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YSwipeAction | 滑动操作 | ✅ 已完成 |
 | YTag | 标签组件 | ✅ 已完成 |
 | YFooter | 页脚组件 | ✅ 已完成 |
+| YGrid | 宫格组件 | ✅ 已完成 |
 
 ### 📸 组件预览
 
@@ -134,6 +135,9 @@ import { YButton, YCard } from '@you-web/ui-core'
 
 #### YFooter 页脚组件
 ![页脚组件](./projectImg/footer.png)
+
+#### YGrid 宫格组件
+![宫格组件](./projectImg/grid.png)
 
 #### 文档系统
 ![文档系统](./projectImg/doc.png)

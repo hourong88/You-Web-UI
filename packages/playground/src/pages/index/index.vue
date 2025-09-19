@@ -37,6 +37,11 @@
             <span class="component-name">YCard</span>
             <span class="component-desc">基础卡片组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/y-grid')">
+            <span class="component-icon">⚏</span>
+            <span class="component-name">YGrid</span>
+            <span class="component-desc">宫格组件</span>
+          </div>
         </div>
       </div>
 

@@ -3,6 +3,8 @@
  * 包含页面头部、演示区域等通用组件样式
  */
 
+@import './variables.scss';
+
 /* 页面容器样式 */
 .demo-page-container {
   padding: $spacing-xl; // 40rpx
