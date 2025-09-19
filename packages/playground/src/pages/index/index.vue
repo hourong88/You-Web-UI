@@ -93,6 +93,11 @@
             <span class="component-name">YLoading</span>
             <span class="component-desc">加载状态组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/y-tips')">
+            <span class="component-icon">💬</span>
+            <span class="component-name">YTips</span>
+            <span class="component-desc">消息提示组件</span>
+          </div>
         </div>
       </div>
 

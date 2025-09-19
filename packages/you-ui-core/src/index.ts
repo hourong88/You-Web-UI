@@ -1,4 +1,4 @@
-// You-UniApp UI 组件库主入口文件
+// You-ui组件库主入口文件
 // 统一导出所有组件和工具函数
 
 // 导入样式
@@ -23,6 +23,7 @@ export { default as YIcon } from './components/YIcon'
 export { default as YTag } from './components/YTag'
 export { default as YFooter } from './components/YFooter'
 export { YGrid, YGridItem } from './components/YGrid'
+export { default as YTips } from './components/YTips'
 // export { default as YToast } from './components/YToast'
 
 // 版本信息

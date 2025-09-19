@@ -104,6 +104,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YTag | 标签组件 | ✅ 已完成 |
 | YFooter | 页脚组件 | ✅ 已完成 |
 | YGrid | 宫格组件 | ✅ 已完成 |
+| YTips | 消息提示组件 | ✅ 已完成 |
 
 ### 📸 组件预览
 
@@ -138,6 +139,9 @@ import { YButton, YCard } from '@you-web/ui-core'
 
 #### YGrid 宫格组件
 ![宫格组件](./projectImg/grid.png)
+
+#### YTips 消息提示组件
+![消息提示组件](./projectImg/tips.png)
 
 #### 文档系统
 ![文档系统](./projectImg/doc.png)

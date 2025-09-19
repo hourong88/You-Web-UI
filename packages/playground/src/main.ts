@@ -17,6 +17,7 @@ import YIcon from './pages/y-icon/index.vue'
 import YTag from './pages/y-tag/index.vue'
 import YFooter from './pages/y-footer/index.vue'
 import YGrid from './pages/y-grid/index.vue'
+import YTips from './pages/y-tips/index.vue'
 
 // 创建路由
 const routes = [
@@ -34,6 +35,7 @@ const routes = [
   { path: '/y-tag', component: YTag },
   { path: '/y-footer', component: YFooter },
   { path: '/y-grid', component: YGrid },
+  { path: '/y-tips', component: YTips },
 ]
 
 const router = createRouter({
