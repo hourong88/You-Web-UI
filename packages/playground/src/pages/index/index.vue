@@ -69,6 +69,11 @@
             <span class="component-name">YDrawer</span>
             <span class="component-desc">抽屉组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/pages/y-tabs/index')">
+            <span class="component-icon">📑</span>
+            <span class="component-name">YTabs</span>
+            <span class="component-desc">标签页组件</span>
+          </div>
         </div>
       </div>
 

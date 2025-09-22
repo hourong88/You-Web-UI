@@ -21,6 +21,7 @@ import YTips from './pages/y-tips/index.vue'
 import YSteps from './pages/y-steps/index.vue'
 import YDrawer from './components/YDrawer.vue'
 import YModal from './components/YModal.vue'
+import YTabs from './components/YTabs.vue'
 
 // 创建路由
 const routes = [
@@ -37,6 +38,7 @@ const routes = [
   { path: '/pages/y-steps/index', component: YSteps },
   { path: '/pages/y-drawer/index', component: YDrawer },
   { path: '/pages/y-modal/index', component: YModal },
+  { path: '/pages/y-tabs/index', component: YTabs },
   { path: '/y-icon', component: YIcon },
   { path: '/y-tag', component: YTag },
   { path: '/y-footer', component: YFooter },
