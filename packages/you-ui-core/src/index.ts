@@ -26,6 +26,7 @@ export { YGrid, YGridItem } from './components/YGrid'
 export { default as YTips } from './components/YTips'
 export { default as YSteps } from './components/YSteps'
 export { default as YDrawer } from './components/YDrawer'
+export { default as YModal } from './components/YModal'
 // export { default as YToast } from './components/YToast'
 
 // 版本信息

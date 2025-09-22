@@ -108,6 +108,11 @@
             <span class="component-name">YTips</span>
             <span class="component-desc">消息提示组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/pages/y-modal/index')">
+            <span class="component-icon">🔔</span>
+            <span class="component-name">YModal</span>
+            <span class="component-desc">弹窗组件</span>
+          </div>
         </div>
       </div>
 
