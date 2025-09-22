@@ -19,6 +19,7 @@ import YFooter from './pages/y-footer/index.vue'
 import YGrid from './pages/y-grid/index.vue'
 import YTips from './pages/y-tips/index.vue'
 import YSteps from './pages/y-steps/index.vue'
+import YDrawer from './components/YDrawer.vue'
 
 // 创建路由
 const routes = [
@@ -33,6 +34,7 @@ const routes = [
   { path: '/pages/you-card/index', component: YouCard },
   { path: '/pages/y-swipe-action/index', component: YSwipeAction },
   { path: '/pages/y-steps/index', component: YSteps },
+  { path: '/pages/y-drawer/index', component: YDrawer },
   { path: '/y-icon', component: YIcon },
   { path: '/y-tag', component: YTag },
   { path: '/y-footer', component: YFooter },

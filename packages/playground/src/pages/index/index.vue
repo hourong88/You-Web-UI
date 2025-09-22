@@ -64,6 +64,11 @@
             <span class="component-name">YSteps</span>
             <span class="component-desc">步骤条组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/pages/y-drawer/index')">
+            <span class="component-icon">📱</span>
+            <span class="component-name">YDrawer</span>
+            <span class="component-desc">抽屉组件</span>
+          </div>
         </div>
       </div>
 
