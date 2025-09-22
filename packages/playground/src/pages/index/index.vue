@@ -15,11 +15,6 @@
             <span class="component-name">YButton</span>
             <span class="component-desc">按钮组件</span>
           </div>
-          <div class="component-item" @click="navigateTo('/input')">
-            <span class="component-icon">📝</span>
-            <span class="component-name">YInput</span>
-            <span class="component-desc">输入框组件</span>
-          </div>
           <div class="component-item" @click="navigateTo('/y-icon')">
             <span class="component-icon">🎨</span>
             <span class="component-name">YIcon</span>
@@ -28,15 +23,22 @@
         </div>
       </div>
 
+      <!-- 表单组件 -->
+      <div class="section">
+        <h2 class="section-title">表单组件</h2>
+        <div class="component-list">
+          <div class="component-item" @click="navigateTo('/input')">
+            <span class="component-icon">📝</span>
+            <span class="component-name">YInput</span>
+            <span class="component-desc">输入框组件</span>
+          </div>
+        </div>
+      </div>
+
       <!-- 布局组件 -->
       <div class="section">
         <h2 class="section-title">布局组件</h2>
         <div class="component-list">
-          <div class="component-item" @click="navigateTo('/pages/you-card/index')">
-            <span class="component-icon">🎴</span>
-            <span class="component-name">YCard</span>
-            <span class="component-desc">基础卡片组件</span>
-          </div>
           <div class="component-item" @click="navigateTo('/y-grid')">
             <span class="component-icon">⚏</span>
             <span class="component-name">YGrid</span>
@@ -53,6 +55,33 @@
             <span class="component-icon">👆</span>
             <span class="component-name">YSwipeAction</span>
             <span class="component-desc">左滑菜单组件</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 展示组件 -->
+      <div class="section">
+        <h2 class="section-title">展示组件</h2>
+        <div class="component-list">
+          <div class="component-item" @click="navigateTo('/pages/you-card/index')">
+            <span class="component-icon">🎴</span>
+            <span class="component-name">YCard</span>
+            <span class="component-desc">基础卡片组件</span>
+          </div>
+          <div class="component-item" @click="navigateTo('/you-list')">
+            <span class="component-icon">📝</span>
+            <span class="component-name">YList</span>
+            <span class="component-desc">移动端列表组件</span>
+          </div>
+          <div class="component-item" @click="navigateTo('/you-cell')">
+            <span class="component-icon">📋</span>
+            <span class="component-name">YCell</span>
+            <span class="component-desc">单元格组件</span>
+          </div>
+          <div class="component-item" @click="navigateTo('/y-tag')">
+            <span class="component-icon">🏷️</span>
+            <span class="component-name">YTag</span>
+            <span class="component-desc">标签组件</span>
           </div>
           <div class="component-item" @click="navigateTo('/y-footer')">
             <span class="component-icon">📄</span>
@@ -73,28 +102,6 @@
             <span class="component-icon">📑</span>
             <span class="component-name">YTabs</span>
             <span class="component-desc">标签页组件</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 展示组件 -->
-      <div class="section">
-        <h2 class="section-title">展示组件</h2>
-        <div class="component-list">
-          <div class="component-item" @click="navigateTo('/you-list')">
-            <span class="component-icon">📝</span>
-            <span class="component-name">YList</span>
-            <span class="component-desc">移动端列表组件</span>
-          </div>
-          <div class="component-item" @click="navigateTo('/you-cell')">
-            <span class="component-icon">📋</span>
-            <span class="component-name">YCell</span>
-            <span class="component-desc">单元格组件</span>
-          </div>
-          <div class="component-item" @click="navigateTo('/y-tag')">
-            <span class="component-icon">🏷️</span>
-            <span class="component-name">YTag</span>
-            <span class="component-desc">标签组件</span>
           </div>
         </div>
       </div>

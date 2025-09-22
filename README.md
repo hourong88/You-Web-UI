@@ -106,6 +106,9 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YGrid | 宫格组件 | ✅ 已完成 |
 | YTips | 消息提示组件 | ✅ 已完成 |
 | YSteps | 步骤条组件 | ✅ 已完成 |
+| YDrawer | 抽屉组件 | ✅ 已完成 |
+| YModal | 弹窗组件 | ✅ 已完成 |
+| YTabs | 标签页组件 | ✅ 已完成 |
 
 ### 📸 组件预览
 
@@ -147,6 +150,15 @@ import { YButton, YCard } from '@you-web/ui-core'
 #### YSteps 步骤条组件
 ![步骤条组件](./projectImg/steps.png)
 
+#### YDrawer 抽屉组件
+![抽屉组件](./projectImg/drawer.png)
+
+#### YModal 弹窗组件
+![弹窗组件](./projectImg/modal.png)
+
+#### YTabs 标签页组件
+![标签页组件](./projectImg/tabs.png)
+
 #### 文档系统
 ![文档系统](./projectImg/doc.png)
 
@@ -175,7 +187,6 @@ import { YButton, YCard } from '@you-web/ui-core'
 
 #### 反馈组件
 - [ ] YToast - 轻提示
-- [ ] YModal - 模态框
 - [ ] YActionSheet - 动作面板
 - [ ] YDialog - 对话框
 - [ ] YNotify - 消息通知
@@ -183,10 +194,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 
 #### 展示组件
 - [ ] YCollapse - 折叠面板
-- [ ] YTabs - 标签页
 - [ ] YSwiper - 轮播图
-- [ ] YGrid - 宫格
-- [ ] YSteps - 步骤条
 - [ ] YTimeline - 时间轴
 
 #### 导航组件
@@ -366,6 +374,9 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YGrid | Grid component | ✅ Completed |
 | YTips | Tips component | ✅ Completed |
 | YSteps | Steps component | ✅ Completed |
+| YDrawer | Drawer component | ✅ Completed |
+| YModal | Modal component | ✅ Completed |
+| YTabs | Tabs component | ✅ Completed |
 
 ### 📸 Component Preview
 
@@ -388,6 +399,15 @@ Here are the effects of components in actual applications:
 
 #### YSwipeAction Component
 ![Swipe Action Component](./projectImg/leftMenu.png)
+
+#### YDrawer Component
+![Drawer Component](./projectImg/drawer.png)
+
+#### YModal Component
+![Modal Component](./projectImg/modal.png)
+
+#### YTabs Component
+![Tabs Component](./projectImg/tabs.png)
 
 #### Documentation System
 ![Documentation System](./projectImg/doc.png)
@@ -414,7 +434,6 @@ We plan to develop the following components, community contributors are welcome:
 
 #### Feedback Components
 - [ ] YToast - Toast
-- [ ] YModal - Modal
 - [ ] YActionSheet - Action sheet
 - [ ] YDialog - Dialog
 - [ ] YNotify - Notification
@@ -422,10 +441,7 @@ We plan to develop the following components, community contributors are welcome:
 
 #### Display Components
 - [ ] YCollapse - Collapse panel
-- [ ] YTabs - Tabs
 - [ ] YSwiper - Swiper
-- [ ] YGrid - Grid
-- [ ] YSteps - Steps
 - [ ] YTimeline - Timeline
 
 #### Navigation Components
