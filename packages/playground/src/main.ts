@@ -24,6 +24,7 @@ import YModal from './components/YModal.vue'
 import YTabs from './components/YTabs.vue'
 import YCountdown from './components/YCountdown.vue'
 import YToast from './components/YToast.vue'
+import YCascadeSelection from './components/YCascadeSelection.vue'
 
 // 创建路由
 const routes = [
@@ -43,6 +44,7 @@ const routes = [
   { path: '/pages/y-tabs/index', component: YTabs },
   { path: '/pages/y-countdown/index', component: YCountdown },
   { path: '/YToast', component: YToast },
+  { path: '/YCascadeSelection', component: YCascadeSelection },
   { path: '/y-icon', component: YIcon },
   { path: '/y-tag', component: YTag },
   { path: '/y-footer', component: YFooter },

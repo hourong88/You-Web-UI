@@ -138,6 +138,23 @@
         </div>
       </div>
 
+      <!-- 表单组件 -->
+      <div class="section">
+        <h2 class="section-title">表单组件</h2>
+        <div class="component-list">
+          <div class="component-item" @click="navigateTo('/input')">
+            <span class="component-icon">📝</span>
+            <span class="component-name">YInput</span>
+            <span class="component-desc">输入框组件</span>
+          </div>
+          <div class="component-item" @click="navigateTo('/YCascadeSelection')">
+            <span class="component-icon">🔗</span>
+            <span class="component-name">YCascadeSelection</span>
+            <span class="component-desc">级联选择器</span>
+          </div>
+        </div>
+      </div>
+
       <!-- 工具函数 -->
       <div class="section">
         <h2 class="section-title">工具函数</h2>
