@@ -103,6 +103,11 @@
             <span class="component-name">YTabs</span>
             <span class="component-desc">标签页组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/pages/y-countdown/index')">
+            <span class="component-icon">⏰</span>
+            <span class="component-name">YCountdown</span>
+            <span class="component-desc">倒计时组件</span>
+          </div>
         </div>
       </div>
 
@@ -124,6 +129,11 @@
             <span class="component-icon">🔔</span>
             <span class="component-name">YModal</span>
             <span class="component-desc">弹窗组件</span>
+          </div>
+          <div class="component-item" @click="navigateTo('/YToast')">
+            <span class="component-icon">💬</span>
+            <span class="component-name">YToast</span>
+            <span class="component-desc">消息提示组件</span>
           </div>
         </div>
       </div>

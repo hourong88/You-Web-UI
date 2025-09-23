@@ -28,7 +28,8 @@ export { default as YSteps } from './components/YSteps'
 export { default as YDrawer } from './components/YDrawer'
 export { default as YModal } from './components/YModal'
 export { default as YTabs } from './components/YTabs'
-// export { default as YToast } from './components/YToast'
+export { default as YCountdown } from './components/YCountdown'
+export { default as YToast } from './components/YToast'
 
 // 版本信息
 export const version = '1.0.0'

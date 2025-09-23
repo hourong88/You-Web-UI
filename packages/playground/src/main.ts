@@ -22,6 +22,8 @@ import YSteps from './pages/y-steps/index.vue'
 import YDrawer from './components/YDrawer.vue'
 import YModal from './components/YModal.vue'
 import YTabs from './components/YTabs.vue'
+import YCountdown from './components/YCountdown.vue'
+import YToast from './components/YToast.vue'
 
 // 创建路由
 const routes = [
@@ -39,6 +41,8 @@ const routes = [
   { path: '/pages/y-drawer/index', component: YDrawer },
   { path: '/pages/y-modal/index', component: YModal },
   { path: '/pages/y-tabs/index', component: YTabs },
+  { path: '/pages/y-countdown/index', component: YCountdown },
+  { path: '/YToast', component: YToast },
   { path: '/y-icon', component: YIcon },
   { path: '/y-tag', component: YTag },
   { path: '/y-footer', component: YFooter },
