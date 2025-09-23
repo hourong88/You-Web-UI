@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/@you-web%2Fui-core.svg)](https://badge.fury.io/js/@you-web%2Fui-core)
 [![npm downloads](https://img.shields.io/npm/dm/@you-web/ui-core.svg)](https://www.npmjs.com/package/@you-web/ui-core)
-[![license](https://img.shields.io/npm/l/@you-web/ui-core.svg)](https://github.com/your-username/You-Web-UI/blob/main/LICENSE)
+[![license](https://img.shields.io/npm/l/@you-web/ui-core.svg)](https://github.com/hourong88/You-Web-UI/blob/main/LICENSE)
 
 🚀 基于 Vue 3 + TypeScript 的现代化 Web 组件库，专为 Vue 开发者打造
 
@@ -14,10 +14,40 @@
 - 🔧 **TypeScript**：完整的 TypeScript 类型支持
 - 📖 **完善文档**：提供详细的组件文档和示例
 - 🎪 **Storybook**：可视化组件展示和调试
+- 🎨 **设计原则与价值观**：基于一致性、易用性、可扩展性的设计理念
+- 🎯 **设计令牌驱动**：通过设计令牌确保视觉一致性和主题化能力
+- ♿ **无障碍支持**：遵循 WCAG 2.1 标准，确保可访问性
+- 🌍 **国际化就绪**：支持多语言和本地化
+- 🎭 **主题化系统**：灵活的主题定制和品牌适配
+- 🧩 **原子化设计**：基于原子设计理论，确保组件的组合性和复用性
 
 ## 🎉 项目背景
 
-You-Web UI 是一个现代化的 Vue 3 组件库，基于 Vue 3 和 TypeScript 构建。它提供了丰富的组件和工具函数，帮助开发者快速构建高质量的 Web 应用。
+You-Web UI 不仅仅是一个组件库，更是一套完整的设计系统。我们的核心理念是：**设计系统是一套完整的设计原则、组件、模式和工具的集合，旨在确保产品在不同平台、不同场景下都能提供一致且高质量的用户体验，同时提高开发效率和协作效率。**
+
+### 🎯 设计原则与价值观
+
+我们的设计系统基于以下核心原则：
+
+- **🎨 一致性 (Consistency)**：通过统一的设计语言和视觉规范，确保用户在不同场景下的体验一致性
+- **⚡ 高效性 (Efficiency)**：提供开箱即用的组件和模式，显著提升开发效率
+- **🎯 易用性 (Usability)**：注重用户体验，遵循直觉化的交互设计原则
+- **🔧 可扩展性 (Scalability)**：灵活的架构设计，支持业务快速迭代和扩展
+- **♿ 包容性 (Inclusivity)**：遵循无障碍设计标准，确保所有用户都能平等使用
+- **🌱 可持续性 (Sustainability)**：考虑长期维护和演进，建立可持续的设计生态
+
+### 🎨 设计令牌驱动
+
+我们采用设计令牌 (Design Tokens) 作为设计系统的基础，它们是可编程的变量，定义了所有视觉元素：
+
+- **🎨 颜色系统**：主色、辅助色、中性色、功能色的完整色彩体系
+- **📝 字体系统**：字号、字重、行高的层次化排版规范
+- **📏 间距系统**：内外边距、组件间距的统一规范
+- **🔘 形状系统**：圆角、边框、阴影的一致性定义
+- **🎬 动效系统**：过渡、动画的统一时间曲线和持续时间
+- **🎯 图标系统**：统一的图标风格和使用规范
+
+这些设计令牌确保了跨平台、跨技术栈的视觉一致性，同时支持灵活的主题定制。
 
 ## 📱 关注我们
 
@@ -220,6 +250,71 @@ import { YButton, YCard } from '@you-web/ui-core'
 - [ ] YGoodsAction - 商品导航
 - [ ] YSubmitBar - 提交订单栏
 
+## 🏗️ 设计系统架构
+
+You-Web UI 设计系统采用分层架构，从基础的设计令牌到复杂的业务模式，形成完整的设计生态：
+
+### 1️⃣ 基础层 (Foundation Layer)
+**设计令牌 (Design Tokens)**
+- 颜色令牌：`--color-primary-500`, `--color-neutral-100` 等
+- 字体令牌：`--font-size-base`, `--font-weight-medium` 等  
+- 间距令牌：`--spacing-xs`, `--spacing-lg` 等
+- 动效令牌：`--duration-fast`, `--easing-standard` 等
+
+### 2️⃣ 组件层 (Component Layer)
+**原子组件 (Atoms)**
+- YButton, YIcon, YInput 等基础组件
+- 高度可复用，功能单一
+
+**分子组件 (Molecules)**  
+- YCard, YCell, YSwipeAction 等组合组件
+- 由多个原子组件组合而成
+
+**有机体组件 (Organisms)**
+- YModal, YDrawer, YTabs 等复杂组件
+- 具备完整的业务功能
+
+### 3️⃣ 模式层 (Pattern Layer)
+**交互模式 (Interaction Patterns)**
+- 表单布局模式
+- 列表展示模式  
+- 数据筛选模式
+- 导航结构模式
+- 错误处理模式
+
+**业务模式 (Business Patterns)**
+- 用户认证流程
+- 数据展示模板
+- 操作反馈模式
+
+### 4️⃣ 应用层 (Application Layer)
+**页面模板 (Page Templates)**
+- 基于模式和组件构建的完整页面
+- 提供最佳实践示例
+
+### 🔄 设计系统建设思路
+
+1. **明确核心设计原则与价值观** ✅
+   - 已建立一致性、高效性、易用性等核心原则
+   - 指导所有设计和开发决策
+
+2. **建立设计语言与视觉规范** 🚧
+   - 正在完善设计令牌系统
+   - 建立可编程的视觉变量体系
+
+3. **完善组件库** 🚧
+   - 持续优化现有组件的原子性与组合性
+   - 增强无障碍支持和国际化能力
+   - 完善主题化系统
+
+4. **定义设计模式** 📋
+   - 规划中：建立常见交互模式库
+   - 提供业务场景的最佳实践
+
+5. **构建工具生态** 🔮
+   - 未来计划：设计令牌管理工具
+   - 代码生成工具和设计协作工具
+
 ## 📖 文档
 
 - **在线文档**：[Storybook 文档](http://localhost:6006/) (本地开发)
@@ -229,7 +324,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/You-Web-UI.git
+git clone https://github.com/hourong88/You-Web-UI.git
 cd You-Web-UI
 
 # 安装依赖
@@ -291,8 +386,8 @@ pnpm test
 
 如果你有任何问题或建议，欢迎通过以下方式联系我们：
 
-- 提交 [Issue](https://github.com/your-username/You-Web-UI/issues)
-- 发起 [Discussion](https://github.com/your-username/You-Web-UI/discussions)
+- 提交 [Issue](https://github.com/hourong88/You-Web-UI/issues)
+- 发起 [Discussion](https://github.com/hourong88/You-Web-UI/discussions)
 
 ---
 
@@ -312,10 +407,40 @@ pnpm test
 - 🔧 **TypeScript**: Complete TypeScript type support
 - 📖 **Comprehensive Documentation**: Detailed component docs and examples
 - 🎪 **Storybook**: Visual component showcase and debugging
+- 🎨 **Design Principles & Values**: Based on consistency, usability, and scalability
+- 🎯 **Design Token Driven**: Ensures visual consistency and theming capabilities
+- ♿ **Accessibility Support**: Follows WCAG 2.1 standards for accessibility
+- 🌍 **Internationalization Ready**: Supports multiple languages and localization
+- 🎭 **Theming System**: Flexible theme customization and brand adaptation
+- 🧩 **Atomic Design**: Based on atomic design theory for composability and reusability
 
 ## 🎉 Project Background
 
-You-Web UI is a modern Vue 3 component library built with Vue 3 and TypeScript. It provides rich components and utility functions to help developers quickly build high-quality Web applications.
+You-Web UI is more than just a component library - it's a complete design system. Our core philosophy is: **A design system is a comprehensive collection of design principles, components, patterns, and tools that ensures consistent and high-quality user experiences across different platforms and scenarios, while improving development and collaboration efficiency.**
+
+### 🎯 Design Principles & Values
+
+Our design system is built on the following core principles:
+
+- **🎨 Consistency**: Unified design language and visual standards ensure consistent user experience across different scenarios
+- **⚡ Efficiency**: Out-of-the-box components and patterns significantly improve development efficiency
+- **🎯 Usability**: Focus on user experience with intuitive interaction design principles
+- **🔧 Scalability**: Flexible architecture design supporting rapid business iteration and expansion
+- **♿ Inclusivity**: Following accessibility design standards to ensure equal access for all users
+- **🌱 Sustainability**: Considering long-term maintenance and evolution, building a sustainable design ecosystem
+
+### 🎨 Design Token Driven
+
+We use Design Tokens as the foundation of our design system - programmable variables that define all visual elements:
+
+- **🎨 Color System**: Complete color palette including primary, secondary, neutral, and functional colors
+- **📝 Typography System**: Hierarchical typography standards for font sizes, weights, and line heights
+- **📏 Spacing System**: Unified standards for padding, margins, and component spacing
+- **🔘 Shape System**: Consistent definitions for border radius, borders, and shadows
+- **🎬 Motion System**: Unified timing curves and durations for transitions and animations
+- **🎯 Icon System**: Consistent icon style and usage guidelines
+
+These design tokens ensure visual consistency across platforms and tech stacks while supporting flexible theme customization.
 
 ## 📦 Installation
 
@@ -485,7 +610,7 @@ We plan to develop the following components, community contributors are welcome:
 
 ```bash
 # Clone the project
-git clone https://github.com/your-username/You-Web-UI.git
+git clone https://github.com/hourong88/You-Web-UI.git
 cd You-Web-UI
 
 # Install dependencies
@@ -588,8 +713,8 @@ Thanks to all developers who contributed to this project!
 
 If you have any questions or suggestions, feel free to contact us through:
 
-- Submit [Issue](https://github.com/your-username/You-Web-UI/issues)
-- Start [Discussion](https://github.com/your-username/You-Web-UI/discussions)
+- Submit [Issue](https://github.com/hourong88/You-Web-UI/issues)
+- Start [Discussion](https://github.com/hourong88/You-Web-UI/discussions)
 
 ---
 
