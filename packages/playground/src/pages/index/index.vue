@@ -32,6 +32,11 @@
             <span class="component-name">YInput</span>
             <span class="component-desc">输入框组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/textarea')">
+            <span class="component-icon">📄</span>
+            <span class="component-name">YTextarea</span>
+            <span class="component-desc">文本域组件</span>
+          </div>
         </div>
       </div>
 

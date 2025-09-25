@@ -14,6 +14,7 @@ export * from './types'
 // 组件导出
 export { default as YButton } from './components/YButton'
 export { default as YInput } from './components/YInput'
+export { default as YTextarea } from './components/YTextarea'
 export { default as YList } from './components/YList'
 export { default as YCard } from './components/YCard'
 export { default as YLoading } from './components/YLoading'

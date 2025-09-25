@@ -6,6 +6,7 @@ import App from './App.vue'
 import Home from './pages/index/index.vue'
 import Button from './pages/button/index.vue'
 import Input from './pages/input/index.vue'
+import Textarea from './pages/textarea/index.vue'
 import Components from './pages/components/index.vue'
 import Utils from './pages/utils/index.vue'
 import YouList from './pages/you-list/index.vue'
@@ -31,6 +32,7 @@ const routes = [
   { path: '/', component: Home },
   { path: '/button', component: Button },
   { path: '/input', component: Input },
+  { path: '/textarea', component: Textarea },
   { path: '/components', component: Components },
   { path: '/utils', component: Utils },
   { path: '/you-list', component: YouList },
