@@ -18,8 +18,9 @@
 - 🎯 **设计令牌驱动**：通过设计令牌确保视觉一致性和主题化能力
 - ♿ **无障碍支持**：遵循 WCAG 2.1 标准，确保可访问性
 - 🌍 **国际化就绪**：支持多语言和本地化
-- 🎭 **主题化系统**：灵活的主题定制和品牌适配
+- 🎭 **主题化系统**：灵活的主题定制和品牌适配，支持浅色/深色/跟随系统三种主题模式
 - 🧩 **原子化设计**：基于原子设计理论，确保组件的组合性和复用性
+- 🌓 **智能主题切换**：支持实时主题切换，自动适配系统偏好，持久化存储用户选择
 
 ## 🎉 项目背景
 
@@ -48,6 +49,161 @@ You-Web UI 不仅仅是一个组件库，更是一套完整的设计系统。我
 - **🎯 图标系统**：统一的图标风格和使用规范
 
 这些设计令牌确保了跨平台、跨技术栈的视觉一致性，同时支持灵活的主题定制。
+
+## 🌓 主题系统
+
+You-Web UI 提供了完整的主题系统，支持浅色、深色和跟随系统三种主题模式，让用户可以根据自己的偏好选择合适的主题。
+
+### ✨ 主题特性
+
+- **🎨 三种主题模式**：浅色主题、深色主题、跟随系统主题
+- **🔄 实时切换**：主题切换即时生效，无需刷新页面
+- **💾 持久化存储**：自动保存用户的主题选择偏好
+- **🎯 全局作用域**：主题切换影响整个应用，包括所有页面和组件
+- **📱 响应式设计**：主题切换按钮在移动端自动适配
+- **⚡ 平滑过渡**：所有元素都有流畅的主题切换动画效果
+
+### 🎯 主题效果预览
+
+![主题切换效果](./projectImg/theme.png)
+
+*支持浅色、深色、跟随系统三种主题模式，用户可以根据使用环境和个人偏好自由切换*
+
+### 🚀 使用主题系统
+
+#### 在 Playground 中体验
+
+```bash
+# 启动 Playground 演示
+pnpm --filter @you-web/playground dev
+```
+
+访问 `http://localhost:3001`，点击右上角的主题切换按钮即可体验主题切换功能。
+
+#### 在项目中集成主题系统
+
+1. **引入主题样式**：
+
+```typescript
+// main.ts
+import '@you-web/ui-core/dist/style.css'
+// 引入主题系统样式
+import './styles/design-tokens.scss'
+```
+
+2. **使用主题管理 Composable**：
+
+```vue
+<script setup lang="ts">
+import { useTheme } from './composables/useTheme'
+
+const { currentTheme, setTheme, themeOptions } = useTheme()
+
+// 切换主题
+const handleThemeChange = (theme: 'light' | 'dark' | 'system') => {
+  setTheme(theme)
+}
+</script>
+
+<template>
+  <div class="theme-selector">
+    <button 
+      v-for="option in themeOptions" 
+      :key="option.value"
+      @click="handleThemeChange(option.value)"
+      :class="{ active: currentTheme === option.value }"
+    >
+      {{ option.label }}
+    </button>
+  </div>
+</template>
+```
+
+3. **在组件中使用主题变量**：
+
+```scss
+.my-component {
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-primary);
+  
+  // 平滑过渡效果
+  transition: all var(--transition-fast);
+  
+  &:hover {
+    background-color: var(--color-background-secondary);
+  }
+}
+```
+
+### 🎨 设计令牌
+
+主题系统基于完整的设计令牌体系：
+
+#### 颜色令牌
+```scss
+// 浅色主题
+:root[data-theme="light"] {
+  --color-primary: #3b82f6;
+  --color-background-primary: #ffffff;
+  --color-text-primary: #1f2937;
+  --color-border-primary: #e5e7eb;
+}
+
+// 深色主题  
+:root[data-theme="dark"] {
+  --color-primary: #60a5fa;
+  --color-background-primary: #1f2937;
+  --color-text-primary: #f3f4f6;
+  --color-border-primary: #374151;
+}
+```
+
+#### 间距令牌
+```scss
+:root {
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+}
+```
+
+#### 动效令牌
+```scss
+:root {
+  --transition-fast: 0.15s ease-out;
+  --transition-base: 0.25s ease-out;
+  --transition-slow: 0.35s ease-out;
+}
+```
+
+### 🔧 自定义主题
+
+你可以通过覆盖CSS变量来自定义主题：
+
+```scss
+// 自定义品牌主题
+:root[data-theme="brand"] {
+  --color-primary: #your-brand-color;
+  --color-background-primary: #your-background;
+  --color-text-primary: #your-text-color;
+  // ... 其他变量
+}
+```
+
+然后在主题选项中添加你的自定义主题：
+
+```typescript
+const customThemeOptions = [
+  { label: '浅色', value: 'light' },
+  { label: '深色', value: 'dark' },
+  { label: '品牌主题', value: 'brand' },
+  { label: '跟随系统', value: 'system' }
+]
+```
 
 ## 📱 关注我们
 
@@ -418,8 +574,9 @@ pnpm test
 - 🎯 **Design Token Driven**: Ensures visual consistency and theming capabilities
 - ♿ **Accessibility Support**: Follows WCAG 2.1 standards for accessibility
 - 🌍 **Internationalization Ready**: Supports multiple languages and localization
-- 🎭 **Theming System**: Flexible theme customization and brand adaptation
+- 🎭 **Theming System**: Flexible theme customization and brand adaptation, supports light/dark/system theme modes
 - 🧩 **Atomic Design**: Based on atomic design theory for composability and reusability
+- 🌓 **Smart Theme Switching**: Supports real-time theme switching, auto-adapts to system preferences, persistent user choice storage
 
 ## 🎉 Project Background
 
@@ -448,6 +605,161 @@ We use Design Tokens as the foundation of our design system - programmable varia
 - **🎯 Icon System**: Consistent icon style and usage guidelines
 
 These design tokens ensure visual consistency across platforms and tech stacks while supporting flexible theme customization.
+
+## 🌓 Theme System
+
+You-Web UI provides a complete theme system that supports light, dark, and system theme modes, allowing users to choose the appropriate theme according to their preferences.
+
+### ✨ Theme Features
+
+- **🎨 Three Theme Modes**: Light theme, dark theme, and system theme
+- **🔄 Real-time Switching**: Theme changes take effect instantly without page refresh
+- **💾 Persistent Storage**: Automatically saves user theme preferences
+- **🎯 Global Scope**: Theme switching affects the entire application, including all pages and components
+- **📱 Responsive Design**: Theme toggle button automatically adapts on mobile devices
+- **⚡ Smooth Transitions**: All elements have smooth theme switching animation effects
+
+### 🎯 Theme Effect Preview
+
+![Theme Switching Effect](./projectImg/theme.png)
+
+*Supports light, dark, and system theme modes. Users can freely switch according to their usage environment and personal preferences*
+
+### 🚀 Using the Theme System
+
+#### Experience in Playground
+
+```bash
+# Start Playground demo
+pnpm --filter @you-web/playground dev
+```
+
+Visit `http://localhost:3001` and click the theme toggle button in the top right corner to experience the theme switching functionality.
+
+#### Integrating Theme System in Your Project
+
+1. **Import Theme Styles**:
+
+```typescript
+// main.ts
+import '@you-web/ui-core/dist/style.css'
+// Import theme system styles
+import './styles/design-tokens.scss'
+```
+
+2. **Use Theme Management Composable**:
+
+```vue
+<script setup lang="ts">
+import { useTheme } from './composables/useTheme'
+
+const { currentTheme, setTheme, themeOptions } = useTheme()
+
+// Switch theme
+const handleThemeChange = (theme: 'light' | 'dark' | 'system') => {
+  setTheme(theme)
+}
+</script>
+
+<template>
+  <div class="theme-selector">
+    <button 
+      v-for="option in themeOptions" 
+      :key="option.value"
+      @click="handleThemeChange(option.value)"
+      :class="{ active: currentTheme === option.value }"
+    >
+      {{ option.label }}
+    </button>
+  </div>
+</template>
+```
+
+3. **Use Theme Variables in Components**:
+
+```scss
+.my-component {
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-primary);
+  
+  // Smooth transition effects
+  transition: all var(--transition-fast);
+  
+  &:hover {
+    background-color: var(--color-background-secondary);
+  }
+}
+```
+
+### 🎨 Design Tokens
+
+The theme system is based on a complete design token system:
+
+#### Color Tokens
+```scss
+// Light theme
+:root[data-theme="light"] {
+  --color-primary: #3b82f6;
+  --color-background-primary: #ffffff;
+  --color-text-primary: #1f2937;
+  --color-border-primary: #e5e7eb;
+}
+
+// Dark theme  
+:root[data-theme="dark"] {
+  --color-primary: #60a5fa;
+  --color-background-primary: #1f2937;
+  --color-text-primary: #f3f4f6;
+  --color-border-primary: #374151;
+}
+```
+
+#### Spacing Tokens
+```scss
+:root {
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+}
+```
+
+#### Motion Tokens
+```scss
+:root {
+  --transition-fast: 0.15s ease-out;
+  --transition-base: 0.25s ease-out;
+  --transition-slow: 0.35s ease-out;
+}
+```
+
+### 🔧 Custom Themes
+
+You can customize themes by overriding CSS variables:
+
+```scss
+// Custom brand theme
+:root[data-theme="brand"] {
+  --color-primary: #your-brand-color;
+  --color-background-primary: #your-background;
+  --color-text-primary: #your-text-color;
+  // ... other variables
+}
+```
+
+Then add your custom theme to the theme options:
+
+```typescript
+const customThemeOptions = [
+  { label: 'Light', value: 'light' },
+  { label: 'Dark', value: 'dark' },
+  { label: 'Brand Theme', value: 'brand' },
+  { label: 'Follow System', value: 'system' }
+]
+```
 
 ## 📦 Installation
 

@@ -270,7 +270,7 @@ const handleActionClick = (action: any, index: number) => {
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: darken($color-primary, 10%);
+    background-color: var(--color-primary-hover, #2563eb);
   }
 
   &:active {

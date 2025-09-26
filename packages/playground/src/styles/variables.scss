@@ -1,41 +1,42 @@
 /** 
   * scss预处理 内置的常用样式变量 
   * 标准 Vue 项目样式变量 
+  * 注意：这些变量将逐步迁移到设计令牌系统
  */
 
-/* 颜色变量 */
+/* 颜色变量 - 使用CSS变量以支持主题切换 */
 
 /* 行为相关颜色  */
-$color-primary: #5677fc;
-$color-success: #19be6b;
-$color-warning: #ff7900;
-$color-error: #eb0909;
-$color-blue: #007aff;
-$color-black: #000000;
-$color-white: #ffffff;
+$color-primary: var(--color-primary, #5677fc);
+$color-success: var(--color-success, #19be6b);
+$color-warning: var(--color-warning, #ff7900);
+$color-error: var(--color-error, #eb0909);
+$color-blue: var(--color-info, #007aff);
+$color-black: var(--color-gray-900, #000000);
+$color-white: var(--color-gray-50, #ffffff);
 $color-pink: #f74d54;
 $color-link: #586c94;
-$color-danger: #eb0909; // 别名，指向 $color-error
-$color-info: #007aff; // 别名，指向 $color-blue
-$color-grey: #999999; // 灰色
+$color-danger: var(--color-error, #eb0909); // 别名，指向 $color-error
+$color-info: var(--color-info, #007aff); // 别名，指向 $color-blue
+$color-grey: var(--color-text-tertiary, #999999); // 灰色
 
 /* 文字基本颜色 */
-$text-color: #333; //基本色
-$text-color-inverse: #fff; //反色
-$text-color-grey: #999; //辅助灰色，如加载更多的提示信息
-$text-color-placeholder: #bfbfbf;
-$text-color-disable: #c0c0c0;
-$color-text-secondary: #666; // 次要文本颜色
-$color-text-tertiary: #999; // 第三级文本颜色
+$text-color: var(--color-text-primary, #333); //基本色
+$text-color-inverse: var(--color-text-inverse, #fff); //反色
+$text-color-grey: var(--color-text-tertiary, #999); //辅助灰色，如加载更多的提示信息
+$text-color-placeholder: var(--color-text-placeholder, #bfbfbf);
+$text-color-disable: var(--color-text-disabled, #c0c0c0);
+$color-text-secondary: var(--color-text-secondary, #666); // 次要文本颜色
+$color-text-tertiary: var(--color-text-tertiary, #999); // 第三级文本颜色
 
 /* 背景颜色 */
-$bg-color: #ffffff;
-$bg-color-grey: #fafafa;
-$bg-color-hover: #f1f1f1; //点击状态颜色
-$bg-color-mask: rgba(0, 0, 0, 0.4); //遮罩颜色
+$bg-color: var(--color-bg-primary, #ffffff);
+$bg-color-grey: var(--color-bg-secondary, #fafafa);
+$bg-color-hover: var(--color-bg-hover, #f1f1f1); //点击状态颜色
+$bg-color-mask: var(--color-bg-mask, rgba(0, 0, 0, 0.4)); //遮罩颜色
 
 /* 边框颜色 */
-$border-color: #eaeef1;
+$border-color: var(--color-border-primary, #eaeef1);
 
 /* 阴影 */
 $box-shadow-base: 0 4rpx 16rpx rgba(0, 0, 0, 0.1); // 基础阴影

@@ -1,8 +1,15 @@
 <template>
   <div class="container">
     <div class="header">
-      <h1 class="title">You-Web UI Playground</h1>
-      <p class="subtitle">组件库演示项目</p>
+      <div class="header-content">
+        <div class="header-text">
+          <h1 class="title">You-Web UI Playground</h1>
+          <p class="subtitle">组件库演示项目</p>
+        </div>
+        <div class="header-actions">
+          <ThemeToggle />
+        </div>
+      </div>
     </div>
 
     <div class="content">
@@ -170,6 +177,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import ThemeToggle from '../../components/ThemeToggle.vue'
 
 // 声明Vue模板类型
 declare global {
@@ -190,35 +198,88 @@ const navigateTo = (path: string) => {
 
 <style lang="scss" scoped>
 .container {
-  padding: $spacing-lg;
-  background-color: $bg-color-grey;
+  padding: var(--spacing-6);
+  background-color: var(--color-bg-secondary);
   min-height: 100vh;
 }
 
 .header {
-  text-align: center;
-  padding: 60px 0;
-  background: #777676;
-  border-radius: $border-radius-lg;
-  margin-bottom: $spacing-xl;
-  color: $color-white;
+  padding: var(--spacing-16) var(--spacing-8);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-600) 100%);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--spacing-8);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: visible;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.header-text {
+  text-align: left;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
 }
 
 .title {
-  font-size: $font-size-title;
-  font-weight: bold;
-  display: block;
-  margin-bottom: $spacing-lg;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 var(--spacing-3) 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .subtitle {
-  font-size: $font-size-subtitle;
-  opacity: 0.8;
-  display: block;
+  font-size: var(--font-size-lg);
+  opacity: 0.9;
+  margin: 0;
+  font-weight: var(--font-weight-normal);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: var(--spacing-6);
+    text-align: center;
+  }
+  
+  .header-text {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .subtitle {
+    font-size: var(--font-size-base);
+  }
 }
 
 .content {
-  padding: 0 $spacing-lg;
+  padding: 0 var(--spacing-6);
 }
 
 .section {
@@ -226,27 +287,29 @@ const navigateTo = (path: string) => {
 }
 
 .section-title {
-  font-size: $font-size-xl;
-  font-weight: bold;
-  color: $text-color;
-  margin-bottom: $spacing-xl;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-8);
   display: block;
 }
 
 .component-list {
-  background: $color-white;
-  border-radius: $border-radius-md;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-base);
   overflow: hidden;
+  border: 1px solid var(--color-border-primary);
 }
 
 .component-item {
   display: flex;
   align-items: center;
-  padding: $spacing-lg $spacing-xl;
-  border-bottom: 1px solid $border-color;
+  padding: var(--spacing-6) var(--spacing-8);
+  border-bottom: 1px solid var(--color-border-primary);
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all var(--transition-base);
+  background-color: var(--color-bg-primary);
 }
 
 .component-item:last-child {
@@ -254,31 +317,32 @@ const navigateTo = (path: string) => {
 }
 
 .component-item:hover {
-  background-color: $bg-color-hover;
+  background-color: var(--color-bg-hover);
 }
 
 .component-item:active {
-  background-color: $bg-color-grey;
+  background-color: var(--color-bg-active);
 }
 
 .component-icon {
-  font-size: $font-size-xl;
-  margin-right: $spacing-lg;
+  font-size: var(--font-size-xl);
+  margin-right: var(--spacing-6);
   width: 40px;
   text-align: center;
+  opacity: 0.8;
 }
 
 .component-name {
-  font-size: $font-size-lg;
-  font-weight: bold;
-  color: $text-color;
-  margin-right: $spacing-lg;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-right: var(--spacing-6);
   min-width: 120px;
 }
 
 .component-desc {
-  font-size: $font-size-base;
-  color: $text-color-grey;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
   flex: 1;
 }
 </style>

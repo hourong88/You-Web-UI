@@ -3,57 +3,72 @@
  * 包含页面头部、演示区域等通用组件样式
  */
 
+@import './design-tokens.scss';
 @import './variables.scss';
 
 /* 页面容器样式 */
 .demo-page-container {
-  padding: $spacing-xl; // 40rpx
-  background-color: #f5f5f5;
+  padding: var(--spacing-10, 40px);
+  background-color: var(--color-bg-secondary);
   min-height: 100vh;
+  transition: background-color var(--transition-base);
 }
 
 /* 页面头部样式 */
 .page-header {
   display: flex;
   align-items: center;
-  margin-bottom: 40rpx;
-  padding: 24rpx 32rpx;
-  background: white;
-  border-radius: 16rpx;
-  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--spacing-10, 40px);
+  padding: var(--spacing-6, 24px) var(--spacing-8, 32px);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-base);
+  border: 1px solid var(--color-border-primary);
+  transition: all var(--transition-base);
 }
 
 .back-button {
-  font-size: 4.8vw;
-  color: #333;
+  font-size: var(--font-size-lg, 18px);
+  color: var(--color-text-primary);
   cursor: pointer;
-  margin-right: 20rpx;
+  margin-right: var(--spacing-5, 20px);
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--color-primary);
+  }
 }
 
 .back-icon {
-  font-size: 4.8vw;
-  color: #333;
+  font-size: var(--font-size-lg, 18px);
+  color: var(--color-text-primary);
+  transition: color var(--transition-fast);
 }
 
 .page-title {
-  font-size: 36rpx;
-  font-weight: bold;
-  color: #333;
+  font-size: var(--font-size-xl, 20px);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  transition: color var(--transition-base);
 }
 
 /* 演示区域样式 */
 .demo-section {
-  margin-bottom: $spacing-row-lg; // 60rpx
-  background-color: #fff;
-  border-radius: $border-radius-md; // 16rpx
-  padding: $spacing-xl; // 40rpx
+  margin-bottom: var(--spacing-16, 64px);
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-lg, 16px);
+  padding: var(--spacing-10, 40px);
+  box-shadow: var(--shadow-base);
+  border: 1px solid var(--color-border-primary);
+  transition: all var(--transition-base);
 }
 
 .section-title {
-  font-size: $font-size-lg; // 32rpx
-  font-weight: 600;
-  color: #333;
-  margin-bottom: $spacing-row-base; // 30rpx
-  padding-bottom: $spacing-sm; // 16rpx
-  border-bottom: $border-width-thin solid #eee; // 2rpx
+  font-size: var(--font-size-lg, 18px);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-8, 32px);
+  padding-bottom: var(--spacing-4, 16px);
+  border-bottom: 1px solid var(--color-border-primary);
+  transition: all var(--transition-base);
 }

@@ -50,17 +50,17 @@
 
   // 辅助色
   --y-color-success: #{$color-success};
-  --y-color-success-light: #{lighten($color-success, 10%)};
-  --y-color-success-dark: #{darken($color-success, 10%)};
+  --y-color-success-light: #22c55e;
+  --y-color-success-dark: #16a34a;
   --y-color-warning: #{$color-warning};
-  --y-color-warning-light: #{lighten($color-warning, 10%)};
-  --y-color-warning-dark: #{darken($color-warning, 10%)};
+  --y-color-warning-light: #f59e0b;
+  --y-color-warning-dark: #d97706;
   --y-color-danger: #{$color-danger};
-  --y-color-danger-light: #{lighten($color-danger, 10%)};
-  --y-color-danger-dark: #{darken($color-danger, 10%)};
+  --y-color-danger-light: #ef4444;
+  --y-color-danger-dark: #dc2626;
   --y-color-info: #{$color-info};
-  --y-color-info-light: #{lighten($color-info, 10%)};
-  --y-color-info-dark: #{darken($color-info, 10%)};
+  --y-color-info-light: #60a5fa;
+  --y-color-info-dark: #2563eb;
 
   // 中性色
   --y-color-white: #{$color-white};
@@ -172,10 +172,57 @@
 
 // 暗色主题
 [data-theme="dark"] {
-  --you-color-text-primary: #{$color-white};
-  --you-color-text-secondary: #{$color-gray-300};
-  --you-color-bg-primary: #{$color-gray-900};
-  --you-color-bg-secondary: #{$color-gray-800};
-  --you-color-border-primary: #{$color-gray-700};
-  --you-color-border-secondary: #{$color-gray-800};
+  // ==================== 主色调适配深色主题 ====================
+  --you-color-primary: #60a5fa;
+  --you-color-primary-light: #93c5fd;
+  --you-color-primary-dark: #3b82f6;
+
+  // ==================== 辅助色适配深色主题 ====================
+  --you-color-success: #22c55e;
+  --you-color-warning: #f59e0b;
+  --you-color-danger: #ef4444;
+  --you-color-info: #60a5fa;
+
+  // ==================== 文本颜色适配深色主题 ====================
+  --you-color-text-primary: #f3f4f6;
+  --you-color-text-secondary: #d1d5db;
+  --you-color-text-disabled: #6b7280;
+  --you-color-text-inverse: #111827;
+
+  // ==================== 背景色适配深色主题 ====================
+  --you-color-bg-primary: #1f2937;
+  --you-color-bg-secondary: #111827;
+  --you-color-bg-disabled: #374151;
+
+  // ==================== 边框色适配深色主题 ====================
+  --you-color-border-primary: #374151;
+  --you-color-border-secondary: #4b5563;
+
+  // ==================== 按钮组件专用变量适配深色主题 ====================
+  --y-color-primary: #60a5fa;
+  --y-color-primary-light: #93c5fd;
+  --y-color-primary-dark: #3b82f6;
+
+  --y-color-success: #22c55e;
+  --y-color-success-light: #4ade80;
+  --y-color-success-dark: #16a34a;
+
+  --y-color-warning: #f59e0b;
+  --y-color-warning-light: #fbbf24;
+  --y-color-warning-dark: #d97706;
+
+  --y-color-danger: #ef4444;
+  --y-color-danger-light: #f87171;
+  --y-color-danger-dark: #dc2626;
+
+  --y-color-info: #60a5fa;
+  --y-color-info-light: #93c5fd;
+  --y-color-info-dark: #3b82f6;
+
+  --y-color-white: #1f2937;
+  --y-color-black: #f3f4f6;
+  --y-color-gray-1: #374151;
+
+  --y-color-text-primary: #f3f4f6;
+  --y-color-border: #374151;
 }
