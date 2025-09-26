@@ -65,6 +65,42 @@
       "style": {
         "navigationBarTitleText": "YSteps 步骤条"
       }
+    },
+    {
+      "path": "pages/y-radio/index",
+      "style": {
+        "navigationBarTitleText": "YRadio 单选框"
+      }
+    },
+    {
+      "path": "pages/y-cascade-selection/index",
+      "style": {
+        "navigationBarTitleText": "YCascadeSelection 级联选择器"
+      }
+    },
+    {
+      "path": "pages/y-toast/index",
+      "style": {
+        "navigationBarTitleText": "YToast 消息提示"
+      }
+    },
+    {
+      "path": "pages/y-modal/index",
+      "style": {
+        "navigationBarTitleText": "YModal 弹窗"
+      }
+    },
+    {
+      "path": "pages/y-tabs/index",
+      "style": {
+        "navigationBarTitleText": "YTabs 标签页"
+      }
+    },
+    {
+      "path": "pages/y-countdown/index",
+      "style": {
+        "navigationBarTitleText": "YCountdown 倒计时"
+      }
     }
   ],
   "globalStyle": {

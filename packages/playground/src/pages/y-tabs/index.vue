@@ -249,8 +249,8 @@ const handleCustomFieldChange = ({ index }: { index: number }) => {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/variables.scss';
-@import '../styles/common.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/common.scss';
 
 .tab-content {
   padding: $spacing-lg;

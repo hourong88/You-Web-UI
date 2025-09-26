@@ -157,7 +157,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import YCascadeSelection from '../../../you-ui-core/src/components/YCascadeSelection/YCascadeSelection.vue'
+import { YCascadeSelection } from '@you-web/ui-core'
 
 // 基础数据
 const basicData = ref([

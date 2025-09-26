@@ -232,8 +232,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/variables.scss';
-@import '../styles/common.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/common.scss';
 
 .demo-desc {
   margin-top: $spacing-base;

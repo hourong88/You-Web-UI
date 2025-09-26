@@ -1,15 +1,15 @@
 <template>
-  <div class="demo-container">
-    <div class="page-header">
-      <div class="back-button" @click="goBack">
-        <span class="back-icon">←</span>
-      </div>
-      <h1 class="page-title">YRadio 单选框</h1>
-    </div>
+  <div class="demo-page-container">
+    <view class="page-header">
+      <view class="back-button" @click="goBack">
+        <text class="back-icon">←</text>
+      </view>
+      <text class="page-title">YRadio 单选框</text>
+    </view>
     
     <!-- 默认样式 -->
     <div class="demo-section">
-      <h2>默认样式</h2>
+      <div class="section-title">默认样式</div>
       <YRadioGroup v-model="basicValue" @change="onBasicChange">
         <YRadio value="selected" label="选中" />
         <YRadio value="unselected" label="未选中" />
@@ -21,7 +21,7 @@
 
     <!-- 推荐展示｜改变颜色 -->
     <div class="demo-section">
-      <h2>推荐展示｜改变颜色</h2>
+      <div class="section-title">推荐展示｜改变颜色</div>
       <YRadioGroup v-model="colorValue" color="#07c160" @change="onColorChange">
         <YRadio value="china" label="中国" />
         <YRadio value="usa" label="美国" />
@@ -34,7 +34,7 @@
 
     <!-- 推荐展示｜改变大小 -->
     <div class="demo-section">
-      <h2>推荐展示｜改变大小</h2>
+      <div class="section-title">推荐展示｜改变大小</div>
       <YRadioGroup v-model="sizeValue" @change="onSizeChange">
         <div class="size-demo">
           <div class="size-item">
@@ -73,7 +73,7 @@
 
     <!-- 水平排列 -->
     <div class="demo-section">
-      <h2>水平排列</h2>
+      <div class="section-title">水平排列</div>
       <YRadioGroup v-model="horizontalValue" direction="horizontal" @change="onHorizontalChange">
         <YRadio value="option1" label="选项1" />
         <YRadio value="option2" label="选项2" />
@@ -86,7 +86,7 @@
 
     <!-- 禁用状态 -->
     <div class="demo-section">
-      <h2>禁用状态</h2>
+      <div class="section-title">禁用状态</div>
       <YRadioGroup v-model="disabledValue" disabled>
         <YRadio value="disabled1" label="禁用选项1" />
         <YRadio value="disabled2" label="禁用选项2" />
@@ -98,7 +98,7 @@
 
     <!-- 自定义样式组合 -->
     <div class="demo-section">
-      <h2>自定义样式组合</h2>
+      <div class="section-title">自定义样式组合</div>
       <YRadioGroup 
         v-model="customValue" 
         color="#9c88ff" 
@@ -118,7 +118,7 @@
 
     <!-- 单独使用Radio -->
     <div class="demo-section">
-      <h2>单独使用Radio</h2>
+      <div class="section-title">单独使用Radio</div>
       <div class="single-radio-demo">
         <YRadio 
           v-model="singleValue1" 
@@ -146,7 +146,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { YRadio, YRadioGroup } from '../../../you-ui-core/src/components/YRadio'
+import { YRadio, YRadioGroup } from '@you-web/ui-core'
 
 const router = useRouter()
 
@@ -194,75 +194,9 @@ const onSingleChange2 = (value: string | number | boolean) => {
 }
 </script>
 
-<style scoped lang="scss">
-$color-primary: #5677fc;
-$color-text-primary: #333;
-$color-text-secondary: #666;
-$color-border-light: #eee;
-
-.demo-container {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.page-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid $color-border-light;
-}
-
-.back-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: $color-primary;
-  color: white;
-  cursor: pointer;
-  margin-right: 16px;
-  transition: all 0.2s ease;
-  
-  &:hover {
-    background: color-mix(in srgb, $color-primary 90%, black 10%);
-    transform: translateX(-2px);
-  }
-}
-
-.back-icon {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.page-title {
-  color: $color-text-primary;
-  margin: 0;
-  font-size: 24px;
-}
-
-h1 {
-  color: $color-text-primary;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.demo-section {
-  margin-bottom: 40px;
-  padding: 24px;
-  border: 1px solid $color-border-light;
-  border-radius: 8px;
-  background: #fff;
-
-  h2 {
-    color: $color-text-secondary;
-    margin-bottom: 20px;
-    font-size: 18px;
-  }
-}
+<style lang="scss" scoped>
+@import '../../styles/variables.scss';
+@import '../../styles/common.scss';
 
 .result {
   margin-top: 20px;
@@ -273,7 +207,7 @@ h1 {
 
   p {
     margin: 0;
-    color: $color-text-secondary;
+    color: #666;
     font-size: 14px;
     
     & + p {
@@ -296,7 +230,7 @@ h1 {
 
 .size-label {
   font-size: 12px;
-  color: $color-text-secondary;
+  color: #666;
   background: #f0f0f0;
   padding: 2px 8px;
   border-radius: 12px;

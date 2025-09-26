@@ -37,12 +37,12 @@
             <span class="component-name">YTextarea</span>
             <span class="component-desc">文本域组件</span>
           </div>
-          <div class="component-item" @click="navigateTo('/YCascadeSelection')">
+          <div class="component-item" @click="navigateTo('/pages/y-cascade-selection/index')">
             <span class="component-icon">🔗</span>
             <span class="component-name">YCascadeSelection</span>
             <span class="component-desc">级联选择器</span>
           </div>
-          <div class="component-item" @click="navigateTo('/YRadio')">
+          <div class="component-item" @click="navigateTo('/pages/y-radio/index')">
             <span class="component-icon">🔘</span>
             <span class="component-name">YRadio</span>
             <span class="component-desc">单选框组件</span>
@@ -140,7 +140,7 @@
             <span class="component-name">YModal</span>
             <span class="component-desc">弹窗组件</span>
           </div>
-          <div class="component-item" @click="navigateTo('/YToast')">
+          <div class="component-item" @click="navigateTo('/pages/y-toast/index')">
             <span class="component-icon">💬</span>
             <span class="component-name">YToast</span>
             <span class="component-desc">消息提示组件</span>
