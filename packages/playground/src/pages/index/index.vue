@@ -10,7 +10,7 @@
       <div class="section">
         <h2 class="section-title">基础组件</h2>
         <div class="component-list">
-          <div class="component-item" @click="navigateTo('/button')">
+          <div class="component-item" @click="navigateTo('/y-button')">
             <span class="component-icon">🔘</span>
             <span class="component-name">YButton</span>
             <span class="component-desc">按钮组件</span>
@@ -27,15 +27,25 @@
       <div class="section">
         <h2 class="section-title">表单组件</h2>
         <div class="component-list">
-          <div class="component-item" @click="navigateTo('/input')">
+          <div class="component-item" @click="navigateTo('/y-input')">
             <span class="component-icon">📝</span>
             <span class="component-name">YInput</span>
             <span class="component-desc">输入框组件</span>
           </div>
-          <div class="component-item" @click="navigateTo('/textarea')">
+          <div class="component-item" @click="navigateTo('/y-textarea')">
             <span class="component-icon">📄</span>
             <span class="component-name">YTextarea</span>
             <span class="component-desc">文本域组件</span>
+          </div>
+          <div class="component-item" @click="navigateTo('/YCascadeSelection')">
+            <span class="component-icon">🔗</span>
+            <span class="component-name">YCascadeSelection</span>
+            <span class="component-desc">级联选择器</span>
+          </div>
+          <div class="component-item" @click="navigateTo('/YRadio')">
+            <span class="component-icon">🔘</span>
+            <span class="component-name">YRadio</span>
+            <span class="component-desc">单选框组件</span>
           </div>
         </div>
       </div>
@@ -68,17 +78,17 @@
       <div class="section">
         <h2 class="section-title">展示组件</h2>
         <div class="component-list">
-          <div class="component-item" @click="navigateTo('/pages/you-card/index')">
+          <div class="component-item" @click="navigateTo('/pages/y-card/index')">
             <span class="component-icon">🎴</span>
             <span class="component-name">YCard</span>
             <span class="component-desc">基础卡片组件</span>
           </div>
-          <div class="component-item" @click="navigateTo('/you-list')">
+          <div class="component-item" @click="navigateTo('/y-list')">
             <span class="component-icon">📝</span>
             <span class="component-name">YList</span>
             <span class="component-desc">移动端列表组件</span>
           </div>
-          <div class="component-item" @click="navigateTo('/you-cell')">
+          <div class="component-item" @click="navigateTo('/y-cell')">
             <span class="component-icon">📋</span>
             <span class="component-name">YCell</span>
             <span class="component-desc">单元格组件</span>
@@ -98,11 +108,6 @@
             <span class="component-name">YSteps</span>
             <span class="component-desc">步骤条组件</span>
           </div>
-          <div class="component-item" @click="navigateTo('/pages/y-drawer/index')">
-            <span class="component-icon">📱</span>
-            <span class="component-name">YDrawer</span>
-            <span class="component-desc">抽屉组件</span>
-          </div>
           <div class="component-item" @click="navigateTo('/pages/y-tabs/index')">
             <span class="component-icon">📑</span>
             <span class="component-name">YTabs</span>
@@ -120,7 +125,7 @@
       <div class="section">
         <h2 class="section-title">反馈组件</h2>
         <div class="component-list">
-          <div class="component-item" @click="navigateTo('/you-loading')">
+          <div class="component-item" @click="navigateTo('/y-loading')">
             <span class="component-icon">⏳</span>
             <span class="component-name">YLoading</span>
             <span class="component-desc">加载状态组件</span>
@@ -140,22 +145,10 @@
             <span class="component-name">YToast</span>
             <span class="component-desc">消息提示组件</span>
           </div>
-        </div>
-      </div>
-
-      <!-- 表单组件 -->
-      <div class="section">
-        <h2 class="section-title">表单组件</h2>
-        <div class="component-list">
-          <div class="component-item" @click="navigateTo('/input')">
-            <span class="component-icon">📝</span>
-            <span class="component-name">YInput</span>
-            <span class="component-desc">输入框组件</span>
-          </div>
-          <div class="component-item" @click="navigateTo('/YCascadeSelection')">
-            <span class="component-icon">🔗</span>
-            <span class="component-name">YCascadeSelection</span>
-            <span class="component-desc">级联选择器</span>
+          <div class="component-item" @click="navigateTo('/pages/y-drawer/index')">
+            <span class="component-icon">📱</span>
+            <span class="component-name">YDrawer</span>
+            <span class="component-desc">抽屉组件</span>
           </div>
         </div>
       </div>

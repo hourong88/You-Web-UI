@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import YCascadeSelection from '../../../you-ui-core/src/components/YCascadeSelection/YCascadeSelection.vue'
 
 const meta: Meta<typeof YCascadeSelection> = {
-  title: 'Components/YCascadeSelection',
+  title: '表单组件/YCascadeSelection',
   component: YCascadeSelection,
   parameters: {
     layout: 'centered',

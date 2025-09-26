@@ -1,7 +1,7 @@
 import { YCell } from '@you-web/ui-core'
 
 export default {
-  title: 'Components/YCell',
+  title: '展示组件/YCell',
   component: YCell,
   parameters: {
     layout: 'centered',

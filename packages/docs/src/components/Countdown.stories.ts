@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import { YCountdown } from '../../../you-ui-core/src'
 
 const meta: Meta<typeof YCountdown> = {
-  title: 'Components/YCountdown',
+  title: '展示组件/YCountdown',
   component: YCountdown,
   parameters: {
     layout: 'centered',

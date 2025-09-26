@@ -1,7 +1,7 @@
 import { YButton } from '@you-web/ui-core'
 
 export default {
-  title: '基础组件/Button 按钮',
+  title: '基础组件/YButton',
   component: YButton,
   parameters: {
     layout: 'centered',

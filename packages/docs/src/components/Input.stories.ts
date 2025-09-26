@@ -2,7 +2,7 @@ import { YInput } from "@you-web/ui-core";
 import { ref } from 'vue'
 
 export default {
-  title: '表单组件/Input 输入框',
+  title: '表单组件/YInput',
   component: YInput,
   parameters: {
     layout: 'centered',

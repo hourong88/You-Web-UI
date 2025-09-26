@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import YTips from '../../../you-ui-core/src/components/YTips/YTips.vue'
 
 const meta = {
-  title: '反馈组件/YTips 消息提示',
+  title: '反馈组件/YTips',
   component: YTips,
   parameters: {
     docs: {

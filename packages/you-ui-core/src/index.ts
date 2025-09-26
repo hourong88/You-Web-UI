@@ -32,6 +32,7 @@ export { default as YTabs } from './components/YTabs'
 export { default as YCountdown } from './components/YCountdown'
 export { default as YToast } from './components/YToast'
 export { default as YCascadeSelection } from './components/YCascadeSelection'
+export { YRadio, YRadioGroup } from './components/YRadio'
 
 // 版本信息
 export const version = '1.0.0'

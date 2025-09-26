@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import YSteps from '../../../you-ui-core/src/components/YSteps/YSteps.vue'
 
 const meta = {
-  title: '导航组件/YSteps 步骤条',
+  title: '导航组件/YSteps',
   component: YSteps,
   parameters: {
     docs: {

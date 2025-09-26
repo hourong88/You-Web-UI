@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import YFooter from '../../../you-ui-core/src/components/YFooter/YFooter.vue'
 
 const meta = {
-  title: '导航组件/YFooter 页脚',
+  title: '布局组件/YFooter',
   component: YFooter,
   parameters: {
     docs: {

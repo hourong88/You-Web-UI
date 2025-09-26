@@ -1,7 +1,7 @@
 import { YLoading } from '@you-web/ui-core'
 
 export default {
-  title: '反馈组件/Loading 加载',
+  title: '反馈组件/YLoading',
   component: YLoading,
   parameters: {
     layout: 'centered',

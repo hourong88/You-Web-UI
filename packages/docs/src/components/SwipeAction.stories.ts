@@ -1,7 +1,7 @@
 import { YSwipeAction } from '@you-web/ui-core'
 
 export default {
-  title: '基础组件/SwipeAction 滑动操作',
+  title: '导航组件/YSwipeAction',
   component: YSwipeAction,
   parameters: {
     layout: 'centered',
@@ -122,12 +122,12 @@ export const MultipleActions = {
           width: 70
         }
       ]
-      
+
       const handleClick = (payload) => {
         console.log('点击了:', payload)
         alert(`点击了: ${payload.item.name}`)
       }
-      
+
       return { actions, handleClick }
     },
     template: `
@@ -169,12 +169,12 @@ export const CustomWidth = {
           width: 60
         }
       ]
-      
+
       const handleClick = (payload) => {
         console.log('点击了:', payload)
         alert(`点击了: ${payload.item.name}`)
       }
-      
+
       return { actions, handleClick }
     },
     template: `
@@ -222,12 +222,12 @@ export const WithIcon = {
           imgHeight: 20
         }
       ]
-      
+
       const handleClick = (payload) => {
         console.log('点击了:', payload)
         alert(`点击了: ${payload.item.name}`)
       }
-      
+
       return { actions, handleClick }
     },
     template: `
@@ -263,7 +263,7 @@ export const Disabled = {
           width: 80
         }
       ]
-      
+
       return { actions }
     },
     template: `
@@ -296,7 +296,7 @@ export const ListExample = {
         { id: 2, title: '系统更新', content: '系统将在今晚进行更新', time: '昨天' },
         { id: 3, title: '新消息', content: '您有一条新的私信', time: '2天前' }
       ]
-      
+
       const actions = [
         {
           name: '标记',
@@ -311,12 +311,12 @@ export const ListExample = {
           width: 70
         }
       ]
-      
+
       const handleClick = (payload) => {
         console.log('点击了:', payload)
         alert(`点击了: ${payload.item.name}`)
       }
-      
+
       return { items, actions, handleClick }
     },
     template: `

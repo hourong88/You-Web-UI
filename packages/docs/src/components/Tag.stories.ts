@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import { YTag } from '@you-web/ui-core'
 
 const meta: Meta<typeof YTag> = {
-  title: '展示组件/YTag 标签',
+  title: '展示组件/YTag',
   component: YTag,
   parameters: {
     layout: 'centered',
@@ -20,8 +20,8 @@ const meta: Meta<typeof YTag> = {
     type: {
       control: 'select',
       options: [
-        'primary', 'white', 'danger', 'pink', 'warning', 
-        'green', 'gray', 'black', 'light-danger', 'light-blue', 
+        'primary', 'white', 'danger', 'pink', 'warning',
+        'green', 'gray', 'black', 'light-danger', 'light-blue',
         'light-brownish', 'light-orange', 'light-green'
       ],
       description: '标签样式类型'

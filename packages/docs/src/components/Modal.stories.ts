@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import YModal from '../../../you-ui-core/src/components/YModal/YModal.vue'
 
 const meta: Meta<typeof YModal> = {
-  title: 'Components/YModal',
+  title: '反馈组件/YModal',
   component: YModal,
   parameters: {
     layout: 'centered',

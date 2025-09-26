@@ -13,15 +13,15 @@
       }
     },
     {
-      "path": "pages/button/index",
+      "path": "pages/y-button/index",
       "style": {
-        "navigationBarTitleText": "Button 按钮"
+        "navigationBarTitleText": "YButton 按钮"
       }
     },
     {
-      "path": "pages/input/index",
+      "path": "pages/y-input/index",
       "style": {
-        "navigationBarTitleText": "Input 输入框"
+        "navigationBarTitleText": "YInput 输入框"
       }
     },
     {
@@ -31,13 +31,13 @@
       }
     },
     {
-      "path": "pages/you-loading/index",
+      "path": "pages/y-loading/index",
       "style": {
-        "navigationBarTitleText": "Loading 加载"
+        "navigationBarTitleText": "YLoading 加载"
       }
     },
     {
-      "path": "pages/you-card/index",
+      "path": "pages/y-card/index",
       "style": {
         "navigationBarTitleText": "YCard 基础卡片"
       }

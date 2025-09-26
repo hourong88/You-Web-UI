@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import { YGrid, YGridItem } from '../../../you-ui-core/src/components/YGrid'
 
 const meta = {
-  title: '布局组件/YGrid 宫格',
+  title: '布局组件/YGrid',
   component: YGrid,
   parameters: {
     docs: {

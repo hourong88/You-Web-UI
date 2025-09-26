@@ -1,7 +1,7 @@
 import { YIcon } from '@you-web/ui-core'
 
 export default {
-  title: '基础组件/Icon 图标',
+  title: '基础组件/YIcon',
   component: YIcon,
   parameters: {
     layout: 'centered',

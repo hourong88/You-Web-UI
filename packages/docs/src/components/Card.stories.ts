@@ -1,7 +1,7 @@
 import { YCard } from '@you-web/ui-core'
 
 export default {
-  title: '基础组件/Card 卡片',
+  title: '布局组件/YCard',
   component: YCard,
   parameters: {
     layout: 'centered',

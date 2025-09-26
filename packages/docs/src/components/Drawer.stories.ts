@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import YDrawer from '../../../you-ui-core/src/components/YDrawer/YDrawer.vue'
 
 const meta: Meta<typeof YDrawer> = {
-  title: 'Components/YDrawer',
+  title: '反馈组件/YDrawer',
   component: YDrawer,
   parameters: {
     layout: 'centered',

@@ -3,7 +3,7 @@ import YToast from '../../../you-ui-core/src/components/YToast'
 import { ref } from 'vue'
 
 const meta: Meta<typeof YToast> = {
-  title: 'Components/YToast',
+  title: '反馈组件/YToast',
   component: YToast,
   parameters: {
     layout: 'centered'

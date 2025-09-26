@@ -142,6 +142,8 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YCountdown | 倒计时组件 | ✅ 已完成 |
 | YToast | 消息提示组件 | ✅ 已完成 |
 | YCascadeSelection | 级联选择器 | ✅ 已完成 |
+| YRadio | 单选框组件 | ✅ 已完成 |
+| YTextarea | 多行文本框组件 | ✅ 已完成 |
 
 ### 📸 组件预览
 
@@ -198,6 +200,12 @@ import { YButton, YCard } from '@you-web/ui-core'
 #### YCascadeSelection 级联选择器
 ![级联选择器](./projectImg/casecade-selection.png)
 
+#### YRadio 单选框组件
+![单选框组件](./projectImg/radio.png)
+
+#### YTextarea 多行文本框组件
+![多行文本框组件](./projectImg/textarea.png)
+
 #### 文档系统
 ![文档系统](./projectImg/doc.png)
 
@@ -215,7 +223,6 @@ import { YButton, YCard } from '@you-web/ui-core'
 - [ ] YBadge - 徽标组件
 
 #### 表单组件
-- [ ] YRadio - 单选框
 - [ ] YCheckbox - 复选框
 - [ ] YSwitch - 开关
 - [ ] YSlider - 滑块

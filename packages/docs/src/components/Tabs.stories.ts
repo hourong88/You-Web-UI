@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import { YTabs } from '../../../you-ui-core/src'
 
 const meta: Meta<typeof YTabs> = {
-  title: 'Components/YTabs',
+  title: '导航组件/YTabs',
   component: YTabs,
   parameters: {
     layout: 'centered',
