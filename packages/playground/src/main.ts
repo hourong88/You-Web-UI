@@ -27,6 +27,7 @@ import YCountdown from './pages/y-countdown/index.vue'
 import YToast from './pages/y-toast/index.vue'
 import YCascadeSelection from './pages/y-cascade-selection/index.vue'
 import YRadio from './pages/y-radio/index.vue'
+import YSwitch from './pages/y-switch/index.vue'
 
 // 创建路由
 const routes = [
@@ -49,6 +50,7 @@ const routes = [
   { path: '/pages/y-toast/index', component: YToast },
   { path: '/pages/y-cascade-selection/index', component: YCascadeSelection },
   { path: '/pages/y-radio/index', component: YRadio },
+  { path: '/y-switch', component: YSwitch },
   { path: '/y-icon', component: YIcon },
   { path: '/y-tag', component: YTag },
   { path: '/y-footer', component: YFooter },

@@ -296,6 +296,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YModal | 弹窗组件 | ✅ 已完成 |
 | YTabs | 标签页组件 | ✅ 已完成 |
 | YCountdown | 倒计时组件 | ✅ 已完成 |
+| YSwitch | 开关组件 | ✅ 已完成 |
 | YToast | 消息提示组件 | ✅ 已完成 |
 | YCascadeSelection | 级联选择器 | ✅ 已完成 |
 | YRadio | 单选框组件 | ✅ 已完成 |
@@ -346,6 +347,9 @@ import { YButton, YCard } from '@you-web/ui-core'
 
 #### YModal 弹窗组件
 ![弹窗组件](./projectImg/modal.png)
+
+#### YSwitch 开关组件
+![开关组件](./projectImg/switch.png)
 
 #### YTabs 标签页组件
 ![标签页组件](./projectImg/tabs.png)

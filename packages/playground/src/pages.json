@@ -101,6 +101,12 @@
       "style": {
         "navigationBarTitleText": "YCountdown 倒计时"
       }
+    },
+    {
+      "path": "pages/y-switch/index",
+      "style": {
+        "navigationBarTitleText": "YSwitch 开关"
+      }
     }
   ],
   "globalStyle": {

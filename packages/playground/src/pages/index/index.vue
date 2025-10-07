@@ -49,6 +49,11 @@
             <span class="component-name">YCascadeSelection</span>
             <span class="component-desc">级联选择器</span>
           </div>
+          <div class="component-item" @click="navigateTo('/y-switch')">
+            <span class="component-icon">🔄</span>
+            <span class="component-name">YSwitch</span>
+            <span class="component-desc">开关组件</span>
+          </div>
           <div class="component-item" @click="navigateTo('/pages/y-radio/index')">
             <span class="component-icon">🔘</span>
             <span class="component-name">YRadio</span>
