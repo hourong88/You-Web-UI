@@ -59,6 +59,11 @@
             <span class="component-name">YRadio</span>
             <span class="component-desc">单选框组件</span>
           </div>
+          <div class="component-item" @click="navigateTo('/y-checkbox')">
+            <span class="component-icon">☑️</span>
+            <span class="component-name">YCheckbox</span>
+            <span class="component-desc">多选框组件</span>
+          </div>
         </div>
       </div>
 

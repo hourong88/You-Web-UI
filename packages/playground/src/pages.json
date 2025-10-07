@@ -107,6 +107,12 @@
       "style": {
         "navigationBarTitleText": "YSwitch 开关"
       }
+    },
+    {
+      "path": "pages/y-checkbox/index",
+      "style": {
+        "navigationBarTitleText": "YCheckbox 多选框"
+      }
     }
   ],
   "globalStyle": {
