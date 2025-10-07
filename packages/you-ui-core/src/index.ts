@@ -36,6 +36,7 @@ export { YRadio, YRadioGroup } from './components/YRadio'
 export { default as YSwitch } from './components/YSwitch'
 export { default as YCheckbox } from './components/YCheckbox'
 export { default as YCheckboxGroup } from './components/YCheckboxGroup'
+export { default as YPicker } from './components/YPicker'
 
 // 版本信息
 export const version = '1.0.0'

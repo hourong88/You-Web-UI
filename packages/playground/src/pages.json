@@ -113,6 +113,12 @@
       "style": {
         "navigationBarTitleText": "YCheckbox 多选框"
       }
+    },
+    {
+      "path": "pages/y-picker/index",
+      "style": {
+        "navigationBarTitleText": "YPicker 联动选择器"
+      }
     }
   ],
   "globalStyle": {

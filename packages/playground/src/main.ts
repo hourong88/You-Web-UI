@@ -29,6 +29,7 @@ import YCascadeSelection from './pages/y-cascade-selection/index.vue'
 import YRadio from './pages/y-radio/index.vue'
 import YSwitch from './pages/y-switch/index.vue'
 import YCheckbox from './pages/y-checkbox/index.vue'
+import YPicker from './pages/y-picker/index.vue'
 
 // 创建路由
 const routes = [
@@ -53,6 +54,7 @@ const routes = [
   { path: '/pages/y-radio/index', component: YRadio },
   { path: '/y-switch', component: YSwitch },
   { path: '/y-checkbox', component: YCheckbox },
+  { path: '/y-picker', component: YPicker },
   { path: '/y-icon', component: YIcon },
   { path: '/y-tag', component: YTag },
   { path: '/y-footer', component: YFooter },

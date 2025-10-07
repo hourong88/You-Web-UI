@@ -64,6 +64,12 @@
             <span class="component-name">YCheckbox</span>
             <span class="component-desc">多选框组件</span>
           </div>
+          
+          <div class="component-item" @click="navigateTo('/y-picker')">
+            <span class="component-icon">🎯</span>
+            <span class="component-name">YPicker</span>
+            <span class="component-desc">联动选择器组件</span>
+          </div>
         </div>
       </div>
 

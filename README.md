@@ -301,6 +301,7 @@ import { YButton, YCard } from '@you-web/ui-core'
 | YCascadeSelection | 级联选择器 | ✅ 已完成 |
 | YRadio | 单选框组件 | ✅ 已完成 |
 | YCheckbox | 多选框组件 | ✅ 已完成 |
+| YPicker | 联动选择器组件 | ✅ 已完成 |
 | YTextarea | 多行文本框组件 | ✅ 已完成 |
 
 ### 📸 组件预览
